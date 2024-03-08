@@ -1,0 +1,73 @@
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\x86\sqlite3.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\x64\sqlite3.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.exe.config
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\PdfiumViewer.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\PdfiumViewer.xml
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.xml
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\nl\PdfiumViewer.resources.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csprojAssemblyReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormEbook.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormLogin.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormMain.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormSetting.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.Properties.Resources.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.GenerateResource.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.CopyComplete
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\x86\sqlite3.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\x64\sqlite3.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.exe.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\itextsharp.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\PdfiumViewer.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\PdfiumViewer.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.dll.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\bin\Debug\nl\PdfiumViewer.resources.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormChangePassword.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormEbook.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormHistory.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormLogin.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormMain.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormReservation.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormSetting.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormSplash.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormUserCreation.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.CopyComplete
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\x86\sqlite3.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\x64\sqlite3.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.exe.config
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\CodeAchi LMS Search.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\PdfiumViewer.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\PdfiumViewer.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\System.Data.SQLite.dll.config
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\bin\Debug\nl\PdfiumViewer.resources.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormChangePassword.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormEbook.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormHistory.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormLogin.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormMain.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormReservation.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormSetting.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormSplash.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.FormUserCreation.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi_LMS_Search.Properties.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.CoreCompileInputs.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.csproj.CopyComplete
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchi LMS Search\obj\Debug\CodeAchi LMS Search.pdb

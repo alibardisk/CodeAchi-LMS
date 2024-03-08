@@ -1,0 +1,16 @@
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\bin\Debug\Updater.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\bin\Debug\Updater.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\bin\Debug\Updater.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\bin\Debug\DotNetZip.dll
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\obj\Debug\Updater.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\obj\Debug\Updater.FormUpdate.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\obj\Debug\Updater.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\obj\Debug\Updater.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\obj\Debug\Updater.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\Updater\Updater\obj\Debug\Updater.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\Updater\Updater\bin\Debug\Updater.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\Updater\Updater\obj\Debug\Updater.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\Updater\Updater\obj\Debug\Updater.pdb
+\\ALIBARDISK\AliShare\CodeAchi\Updater\Updater\bin\Debug\Updater.exe.config
+\\ALIBARDISK\AliShare\CodeAchi\Updater\Updater\obj\Debug\Updater.exe
+\\ALIBARDISK\AliShare\CodeAchi\Updater\Updater\obj\Debug\Updater.pdb

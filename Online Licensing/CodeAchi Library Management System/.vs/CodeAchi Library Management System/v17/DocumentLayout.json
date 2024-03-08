@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|e:\\currentprojects\\github\\codeachiproject\\codeachil lms\\online licensing\\codeachi library management system\\codeachi library management system\\ucaddborrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\ucaddborrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|e:\\currentprojects\\github\\codeachiproject\\codeachil lms\\online licensing\\codeachi library management system\\codeachi library management system\\formimportborrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\formimportborrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|e:\\currentprojects\\github\\codeachiproject\\codeachil lms\\online licensing\\codeachi library management system\\codeachi library management system\\formimportitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\formimportitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|e:\\currentprojects\\github\\codeachiproject\\codeachil lms\\online licensing\\codeachi library management system\\codeachi library management system\\ucitemnormalentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\ucitemnormalentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|e:\\currentprojects\\github\\codeachiproject\\codeachil lms\\online licensing\\codeachi library management system\\codeachi library management system\\ucitemnormalentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\ucitemnormalentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\codeachi library management system\\ucaddborrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\ucaddborrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\codeachi library management system\\formsplash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A30B465E-BB88-47D6-AEAD-F0EED5374DD6}|CodeAchi Library Management System\\CodeAchi Library Management System.csproj|solutionrelative:codeachi library management system\\formsplash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormImportItems.cs",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\FormImportItems.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\FormImportItems.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\FormImportItems.cs",
+              "RelativeToolTip": "CodeAchi Library Management System\\FormImportItems.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAIAwwJEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T06:29:46.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormImportBorrower.cs",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\FormImportBorrower.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\FormImportBorrower.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\FormImportBorrower.cs",
+              "RelativeToolTip": "CodeAchi Library Management System\\FormImportBorrower.cs",
+              "ViewState": "AQIAAJgCAAAAAAAAAIAwwKQCAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T06:28:40.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UcItemNormalEntry.cs",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcItemNormalEntry.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\UcItemNormalEntry.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcItemNormalEntry.cs",
+              "RelativeToolTip": "CodeAchi Library Management System\\UcItemNormalEntry.cs",
+              "ViewState": "AQIAAKEBAAAAAAAAAAAewIwCAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T06:27:31.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UcItemNormalEntry.cs [Design]",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcItemNormalEntry.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\UcItemNormalEntry.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcItemNormalEntry.cs [Design]",
+              "RelativeToolTip": "CodeAchi Library Management System\\UcItemNormalEntry.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T06:27:29.772Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UcAddBorrower.cs",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcAddBorrower.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\UcAddBorrower.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcAddBorrower.cs",
+              "RelativeToolTip": "CodeAchi Library Management System\\UcAddBorrower.cs",
+              "ViewState": "AQIAAD0CAAAAAAAAAAAewEYCAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T06:20:24.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UcAddBorrower.cs [Design]",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcAddBorrower.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\UcAddBorrower.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\UcAddBorrower.cs [Design]",
+              "RelativeToolTip": "CodeAchi Library Management System\\UcAddBorrower.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T06:20:21.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormSplash.cs [Design]",
+              "DocumentMoniker": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\FormSplash.cs",
+              "RelativeDocumentMoniker": "CodeAchi Library Management System\\FormSplash.cs",
+              "ToolTip": "E:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchil LMS\\Online Licensing\\CodeAchi Library Management System\\CodeAchi Library Management System\\FormSplash.cs [Design]",
+              "RelativeToolTip": "CodeAchi Library Management System\\FormSplash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T10:21:28.13Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

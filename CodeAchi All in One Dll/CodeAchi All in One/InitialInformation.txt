@@ -1,0 +1,11 @@
+Data1=MechineId
+Data2=License
+Data3=Mechine Limits
+Data4=Block Status
+Data5=Expiry Date
+Data6=Last Check Date
+Data7=Current Date
+Data8=Block Reason
+Data9=DatabasePath
+Data10=Connection String
+

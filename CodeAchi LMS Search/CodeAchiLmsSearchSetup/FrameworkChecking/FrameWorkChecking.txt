@@ -1,0 +1,54 @@
+ // Opens the registry key for the .NET Framework entry. 
+using (RegistryKey ndpKey =RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, "").OpenSubKey(@"SOFTWARE\Microsoft\NET Framework Setup\NDP\"))
+{
+	// As an alternative, if you know the computers you will query are running .NET Framework 4.5  
+	// or later, you can use: 
+	// using (RegistryKey ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine,  
+	// RegistryView.Registry32).OpenSubKey(@"SOFTWARE\Microsoft\NET Framework Setup\NDP\"))
+	foreach (string versionKeyName in ndpKey.GetSubKeyNames())
+	{
+		if (versionKeyName.StartsWith("v4"))//versionKeyName.StartsWith("v")
+		{
+			RegistryKey versionKey = ndpKey.OpenSubKey(versionKeyName);
+			string versionName = (string)versionKey.GetValue("Version", "");
+			string sp = versionKey.GetValue("SP", "").ToString();
+			string install = versionKey.GetValue("Install", "").ToString();
+			if (install == "") //no install info, must be later.
+				MessageBox.Show(versionKeyName + "  " + versionName + "--1");
+			else
+			{
+				if (sp != "" && install == "1")
+				{
+					MessageBox.Show(versionKeyName + "  " + versionName + "  SP" + sp + "--2");
+				}
+			}
+			if (versionName != "")
+			{
+				continue;
+			}
+			foreach (string subKeyName in versionKey.GetSubKeyNames())
+			{
+				RegistryKey subKey = versionKey.OpenSubKey(subKeyName);
+				versionName = (string)subKey.GetValue("Version", "");
+				if (versionName != "")
+					sp = subKey.GetValue("SP", "").ToString();
+				install = subKey.GetValue("Install", "").ToString();
+				if (install == "") //no install info, must be later.
+				{
+					////MessageBox.Show(versionKeyName + "  " + versionName + "--3");
+				}
+				else
+				{
+					if (sp != "" && install == "1")
+					{
+						////MessageBox.Show("  " + subKeyName + "  " + versionName + "  SP" + sp + "--4");
+					}
+					else if (install == "1")
+					{
+						MessageBox.Show(versionName.ToString());
+					}
+				}
+			}
+		}
+	}
+}

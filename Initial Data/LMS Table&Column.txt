@@ -1,0 +1,51 @@
+borrowerSettings -categoryId,catName,catDesc,catlogAccess,capInfo,maxCheckin,maxDue,membershipFees,avoidFine,defaultPass
+
+itemSettings -catName,catDesc,capInfo,isConsume;
+
+itemSubCategory - catName,subCatName,shortName,issueDays,subCatFine,subCatDesc,notReference
+
+borrowerDetails - brrId,brrName,brrCategory,brrAddress,brrGender,brrMailId,brrContact,mbershipDuration,addInfo1,addInfo2,
+addInfo3,addInfo4,addInfo5,entryDate,brrImage,opkPermission,renewDate,brrPass,memPlan,memFreq
+
+mbershipSetting- membrshpName,planFreqncy,membrDurtn,membrFees,issueLimit,planDesc
+
+itemDetails - itemTitle,itemIsbn,itemAccession,itemCat,itemSubCat,itemAuthor,itemClassification,itemSubject,rackNo,
+totalPages,itemPrice,addInfo1,addInfo2,addInfo3,addInfo4,addInfo5,addInfo6,addInfo7,addInfo8,entryDate,itemAvailable,
+isLost,isDamage,itemImage,digitalReference
+
+issuedItem - brrId,itemAccession,issueDate,returnDate,expectedReturnDate,reissuedDate,itemReturned,issueComment,
+reissuedComment,returnedComment,issuedBy,reissuedBy,returnedBy
+
+paymentDetails - feesDate,invId,memberId,itemAccn,feesDesc,dueAmount,isPaid,isRemited,discountAmnt,payDate,
+collctedBy,invidCount,paymentMode,paymentRef;
+
+accnSetting - isAutoGenerate,isManualPrefix,prefixText,joiningChar,lastNumber
+
+brrIdSetting - isAutoGenerate,isManualPrefix,prefixText,joiningChar,lastNumber
+
+generalSettings - instName,instShortName,instAddress,cityCode,instLogo,instContact,instWebsite,instMail,libraryName,countryName,
+dialCode,currencyName,currShortName,currSymbol,databasePath,backupPath,backupHour,printerName,licenseType,licenseKey,stepComplete,
+productBlocked,productExpired,reserveSystemLimit,machineId,settingsData,opacAvailable,notificationData;
+
+reportSetting - isFullname,isShortName,isAddress,isContact,isMail,isWebsite
+
+userDetails - userName,userDesig,userMail,userContact,userPassword,userAddress,userPriviledge,isActive,isAdmin,userImage
+
+userActivity - userId,itemAccn,brrId,taskDesc,dateTime
+
+countryDetails - countryName,currencyName,cuurShort,currSymbol,dialCode
+
+lostDamage - itemAccn,itemStatus,statusComment,brrId,entryDate,entryBy
+
+noticeTemplate-tempName,senderId,htmlBody,bodyText,noticeType
+
+wishList - itemType,itemTitle,itemAuthor,itemPublication,queryDate,queryCount
+
+reservationList - brrId,itemAccn,itemTitle,itemAuthor,reserveLocation,reserveDate,availableDate
+
+Smart User Name - lmssl@codeachi.com
+Password - codeachi@lmssl
+https://stackoverflow.com/questions/2043618/proper-way-to-rename-solution-and-directories-in-visual-studio
+
+
+

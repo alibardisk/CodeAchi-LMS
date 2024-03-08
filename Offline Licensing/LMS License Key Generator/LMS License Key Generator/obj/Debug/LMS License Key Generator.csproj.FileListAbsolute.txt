@@ -1,0 +1,10 @@
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\bin\Debug\LMS License Key Generator.exe.config
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\bin\Debug\LMS License Key Generator.exe
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\bin\Debug\LMS License Key Generator.pdb
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS License Key Generator.csprojAssemblyReference.cache
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS_License_Key_Generator.Form1.resources
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS_License_Key_Generator.Properties.Resources.resources
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS License Key Generator.csproj.GenerateResource.cache
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS License Key Generator.csproj.CoreCompileInputs.cache
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS License Key Generator.exe
+E:\CodeAchi\Offline Licensing\LMS License Key Generator\LMS License Key Generator\obj\Debug\LMS License Key Generator.pdb

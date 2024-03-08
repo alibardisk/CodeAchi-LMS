@@ -1,0 +1,63 @@
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\TestSqliteLanConnection.exe.config
+E:\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csprojResolveAssemblyReference.cache
+E:\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.Form1.resources
+E:\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.Properties.Resources.resources
+E:\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csproj.GenerateResource.Cache
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\x86\sqlite3.dll
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\x64\sqlite3.dll
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\TestSqliteLanConnection.exe
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\TestSqliteLanConnection.pdb
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.dll
+E:\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.xml
+E:\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.exe
+E:\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\x86\sqlite3.dll
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\x64\sqlite3.dll
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.dll
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.xml
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormMain.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\CodeAchi LMS Reservation System.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\CodeAchi LMS Reservation System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\bin\Debug\CodeAchi LMS Reservation System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\CodeAchi LMS Reservation System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\CodeAchi LMS Reservation System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormSetting.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\TestSqliteLanConnection\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormLogin.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\x86\sqlite3.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\x64\sqlite3.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormLogin.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormMain.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormSetting.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\codeachi-lms-search.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\bin\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Reservation System\TestSqliteLanConnection\obj\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\x86\sqlite3.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\x64\sqlite3.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\itextsharp.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\PdfiumViewer.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\PdfiumViewer.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\System.Data.SQLite.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\nl\PdfiumViewer.resources.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormEbook.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormLogin.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormMain.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.FormSetting.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\TestSqliteLanConnection.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\CodeAchi LMS Search.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\CodeAchi LMS Search.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\bin\Debug\CodeAchi LMS Search.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\CodeAchi LMS Search.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi LMS Search\TestSqliteLanConnection\obj\Debug\CodeAchi LMS Search.pdb

@@ -1,0 +1,437 @@
+F:\Setup\Setup\bin\Debug\Setup.exe.config
+F:\Setup\Setup\bin\Debug\Setup.exe
+F:\Setup\Setup\bin\Debug\Setup.pdb
+F:\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+F:\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+F:\Setup\Setup\obj\Debug\Setup.exe
+F:\Setup\Setup\obj\Debug\Setup.pdb
+F:\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+F:\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+F:\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+F:\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+F:\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+F:\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+F:\Setup\Setup\obj\Debug\Setup.frmTask.resources
+F:\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+D:\Setup\Setup\bin\Debug\Setup.exe.config
+D:\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+D:\Setup\Setup\obj\Debug\Setup.exe
+D:\Setup\Setup\obj\Debug\Setup.pdb
+D:\Setup\Setup\bin\Debug\Setup.exe
+D:\Setup\Setup\bin\Debug\Setup.pdb
+D:\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+D:\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+D:\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+D:\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+D:\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+D:\Setup\Setup\obj\Debug\Setup.frmStart.resources
+D:\Setup\Setup\obj\Debug\Setup.frmTask.resources
+D:\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+D:\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+D:\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+F:\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+F:\Setup - Copy\Setup\bin\Debug\Setup.exe.config
+F:\Setup - Copy\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+F:\Setup - Copy\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+F:\Setup - Copy\Setup\obj\Debug\Setup.exe
+F:\Setup - Copy\Setup\obj\Debug\Setup.pdb
+F:\Setup - Copy\Setup\bin\Debug\Setup.exe
+F:\Setup - Copy\Setup\bin\Debug\Setup.pdb
+F:\Setup - Copy\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmAppFolder.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmFinish.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmLicense.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmProgress.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmStart.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmTask.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.frmWelcome.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.Properties.Resources.resources
+F:\Setup - Copy\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.frmTask.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\bin\Debug\CubexSoft PST to PDF.exe.config
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\bin\Debug\CubexSoft PST to PDF.exe
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\bin\Debug\CubexSoft PST to PDF.pdb
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\bin\Debug\DotNetZip.dll
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\CubexSoft PST to PDF.exe
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\obj\Debug\CubexSoft PST to PDF.pdb
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\Setup\bin\Debug\DotNetZip.xml
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\bin\Debug\DotNetZip.dll
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\bin\Debug\DotNetZip.xml
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.frmTask.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.exe.config
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.exe
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.pdb
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\cubexsoft-dxl-to-pdf.exe
+G:\Project\Cubexsoft\DXL to PDF\Setup\Setup\obj\Debug\cubexsoft-dxl-to-pdf.pdb
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.exe.config
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.exe
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.pdb
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\bin\Debug\DotNetZip.dll
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\bin\Debug\DotNetZip.xml
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.frmTask.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\cubexsoft-dxl-to-pdf.exe
+G:\Project\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\cubexsoft-dxl-to-pdf.pdb
+F:\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\bin\Debug\cubexsoft-dxl-to-pdf.exe.config
+F:\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+F:\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+F:\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\cubexsoft-dxl-to-pdf.exe
+F:\Cubexsoft\CubexSoft DXL to PDF\Setup\Setup\obj\Debug\cubexsoft-dxl-to-pdf.pdb
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.exe.config
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.exe
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.pdb
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\DotNetZip.dll
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\System.Net.Http.dll
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\DotNetZip.xml
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\System.Net.Http.xml
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmTask.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\cubexsoft-ost-export.exe
+F:\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\cubexsoft-ost-export.pdb
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\DotNetZip.dll
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\DotNetZip.xml
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmTask.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.exe.config
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.exe
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.pdb
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\cubexsoft-ost-export.exe
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\Setup\obj\Debug\cubexsoft-ost-export.pdb
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.exe.config
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\cubexsoft-ost-export.exe
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\cubexsoft-ost-export.pdb
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.exe
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\bin\Debug\cubexsoft-ost-export.pdb
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\bin\Debug\DotNetZip.dll
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\bin\Debug\DotNetZip.xml
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmTask.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+C:\Users\PC13\Desktop\Setup\Setup\bin\Debug\DotNetZip.xml
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.frmTask.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+C:\Users\PC13\Desktop\Setup\Setup\bin\Debug\ignissta-ost-export.exe.config
+C:\Users\PC13\Desktop\Setup\Setup\bin\Debug\ignissta-ost-export.exe
+C:\Users\PC13\Desktop\Setup\Setup\bin\Debug\ignissta-ost-export.pdb
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\ignissta-ost-export.exe
+C:\Users\PC13\Desktop\Setup\Setup\obj\Debug\ignissta-ost-export.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\bin\Debug\DotNetZip.xml
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.frmTask.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\bin\Debug\ignissta-ost-converter.exe.config
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\bin\Debug\ignissta-ost-converter.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\bin\Debug\ignissta-ost-converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\ignissta-ost-converter.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\Setup\obj\Debug\ignissta-ost-converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\bin\Debug\ignissta-ost-converter.exe.config
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\bin\Debug\ignissta-ost-converter.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\bin\Debug\ignissta-ost-converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.frmTask.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\ignissta-ost-converter.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\Setup\obj\Debug\ignissta-ost-converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\bin\Debug\ignissta-pst-splitter&merger.exe.config
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\bin\Debug\ignissta-pst-splitter&merger.exe
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\bin\Debug\ignissta-pst-splitter&merger.pdb
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.frmTask.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\ignissta-pst-splitter&merger.exe
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\ignissta-pst-splitter&merger.pdb
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\bin\Debug\ignissta-eml_converter.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\bin\Debug\ignissta-eml_converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\bin\Debug\ignissta-eml_converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.frmAppFolder.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.frmFinish.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.frmLicense.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.frmProgress.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.frmTask.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.frmWelcome.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\ignissta-eml_converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\Setup\obj\Debug\ignissta-eml_converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\bin\Debug\ignissta-eml_converter.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\ignissta-eml_converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\ignissta-eml_converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\bin\Debug\ignissta-eml_converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\bin\Debug\ignissta-eml_converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\bin\Debug\ignissta-eml_converter.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\bin\Debug\ignissta-eml_converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\bin\Debug\ignissta-eml_converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\bin\Debug\DotNetZip.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\ignissta-eml_converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\Setup\obj\Debug\ignissta-eml_converter.pdb
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\bin\Debug\ignissta-eml_converter.exe.config
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\ignissta-eml_converter.exe
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\ignissta-eml_converter.pdb
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\bin\Debug\ignissta-eml_converter.exe
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\bin\Debug\ignissta-eml_converter.pdb
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\Setup.Properties.Resources.resources
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+C:\Users\ALIBARDI SK\Desktop\Ignissta Setup\Setup\obj\Debug\Setup.FormInstall.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\Setup.FormInstall.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi Library Management System\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe.config
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\bin\Debug\CodeAchi Library Management System.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchiLmsSetup\Setup\obj\Debug\CodeAchi Library Management System.pdb
+E:\CodeAchi\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe.config
+E:\CodeAchi\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe
+E:\CodeAchi\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.pdb
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.exe
+E:\CodeAchi\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.pdb
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe.config
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.pdb
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csprojAssemblyReference.cache
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.exe
+F:\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.pdb
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe.config
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.pdb
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CopyComplete
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.exe
+E:\CodeAchi\CodeAchi LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe.config
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.AssemblyReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.Up2Date

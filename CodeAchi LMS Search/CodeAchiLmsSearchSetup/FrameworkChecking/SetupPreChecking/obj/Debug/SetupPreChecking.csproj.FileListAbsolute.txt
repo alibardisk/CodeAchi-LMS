@@ -1,0 +1,101 @@
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\bin\Debug\ignissta-eml-converter.exe.config
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\bin\Debug\ignissta-eml-converter.exe
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\bin\Debug\ignissta-eml-converter.pdb
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\obj\Debug\ignissta-eml-converter.exe
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\obj\Debug\ignissta-eml-converter.pdb
+E:\CurrentProjects\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\bin\Debug\ignissta-eml-converter.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\obj\Debug\ignissta-eml-converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\obj\Debug\ignissta-eml-converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\bin\Debug\ignissta-eml-converter.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\bin\Debug\ignissta-eml-converter.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\obj\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\bin\Debug\codeachi-library-setup.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\SetupPreChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe.config
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojAssemblyReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\CodeAchiProject\CodeAchi LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe.config
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojAssemblyReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.CoreCompileInputs.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe.config
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\bin\Debug\codeachi-lms-search.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csprojAssemblyReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.FormChecking.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.Properties.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\SetupPreChecking.csproj.CoreCompileInputs.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search\CodeAchiLmsSearchSetup\FrameworkChecking\SetupPreChecking\obj\Debug\codeachi-lms-search.pdb

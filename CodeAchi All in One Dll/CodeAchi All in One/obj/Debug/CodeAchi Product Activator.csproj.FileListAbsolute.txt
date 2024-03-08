@@ -1,0 +1,15 @@
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi Product Activator.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi Product Activator.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormActivate.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormNotification.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormAbout.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormReportProblem.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormTechnicalSupport.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormEvent.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi_Product_Activator.FormUpgrade.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\bin\Debug\CodeAchi All in One.dll.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\bin\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\bin\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi Product Activator\CodeAchi Product Activator\obj\Debug\CodeAchi All in One.pdb

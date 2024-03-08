@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LMS_License_Key_Generator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="jsonData" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{
+  "_id": "jhgasgdaggsa",
+  "_mid": "1C:1B:0D:B5:AA:E0:13:03:03:31:52:2020",
+  "_ilmt": "1000",
+  "_vs": "Starter",
+  "_vm": "12"
+}</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

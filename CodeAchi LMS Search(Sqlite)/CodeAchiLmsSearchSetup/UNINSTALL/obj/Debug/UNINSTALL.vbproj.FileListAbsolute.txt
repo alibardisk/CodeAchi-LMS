@@ -1,0 +1,284 @@
+F:\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+F:\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+F:\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+F:\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+G:\Project\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+G:\Project\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+G:\Project\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+G:\Project\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+G:\Project\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+G:\Project\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+D:\Setupold\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+D:\Setupold\UNINSTALL\bin\Debug\UNINSTALL.exe
+D:\Setupold\UNINSTALL\bin\Debug\UNINSTALL.pdb
+D:\Setupold\UNINSTALL\bin\Debug\UNINSTALL.xml
+D:\Setupold\UNINSTALL\obj\Debug\Interop.Scripting.dll
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.exe
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.xml
+D:\Setupold\UNINSTALL\obj\Debug\UNINSTALL.pdb
+F:\Setup - Copy\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+F:\Setup - Copy\UNINSTALL\bin\Debug\UNINSTALL.exe
+F:\Setup - Copy\UNINSTALL\bin\Debug\UNINSTALL.pdb
+F:\Setup - Copy\UNINSTALL\bin\Debug\UNINSTALL.xml
+F:\Setup - Copy\UNINSTALL\obj\Debug\Interop.Scripting.dll
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.exe
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.xml
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.pdb
+F:\Setup - Copy\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+F:\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+F:\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+G:\Project\Cubexsoft\CubexSoft PST to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+G:\Project\Cubexsoft\DXL to PDF\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+F:\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\CubexSoft\CobexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\CubexSoft\CubexSoft OST Export\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+C:\Users\PC13\Desktop\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+C:\Users\PC13\Desktop\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+C:\Users\PC13\Desktop\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+C:\Users\PC13\Desktop\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+C:\Users\PC13\Desktop\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta OST Recovery(New)\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta PST Splitter&Merger\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.Form1.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta EML Converter Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\Ignissta\Ignissta EML Converter\Ignissta Setup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchi Library Management System\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiSetup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbprojResolveAssemblyReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.Cache
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\CodeAchi\CodeAchi LMS\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbprojAssemblyReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+C:\Users\ALIBARDI SK\Desktop\CodeAchi LMS Search\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbprojAssemblyReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\LMS\CodeAchi LMS Search(Sqlite)\CodeAchiLmsSearchSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.CoreCompileInputs.cache

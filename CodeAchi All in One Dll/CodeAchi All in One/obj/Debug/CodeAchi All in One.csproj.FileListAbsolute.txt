@@ -1,0 +1,255 @@
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll.config
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\bin\Debug\CodeAchi All in One.pdb
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.csprojAssemblyReference.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormActivate.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormEvent.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormNotification.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormAbout.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormReportProblem.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormTechnicalSupport.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormUpgrade.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.Properties.Resources.resources
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.GenerateResource.cache
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.dll
+C:\Users\ALIBARDI SK\Desktop\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.BatchParser.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.XE.Core.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.XEvent.Linq.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.AzureStorageEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.BatchParserClient.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Diagnostics.Strace.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Common.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.SmoMetadataProvider.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Utility.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.UtilityEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Smo.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlTDiagm.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SString.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Newtonsoft.Json.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.AzureStorageEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfo.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Common.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.SmoMetadataProvider.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Utility.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.UtilityEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Smo.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SmoExtended.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Types.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\bin\Debug\Newtonsoft.Json.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormActivate.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormEvent.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormNotification.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormAbout.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormReportProblem.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormServerSetting.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormTechnicalSupport.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormUpgrade.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.CopyComplete
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One\CodeAchi All in One\obj\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.BatchParser.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.XE.Core.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.XEvent.Linq.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.AzureStorageEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.BatchParserClient.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Diagnostics.Strace.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Common.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.SmoMetadataProvider.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Utility.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.UtilityEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Smo.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlTDiagm.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SString.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Newtonsoft.Json.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.AzureStorageEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfo.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Common.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.SmoMetadataProvider.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Utility.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.UtilityEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Smo.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SmoExtended.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Types.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Newtonsoft.Json.xml
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormActivate.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormAdobeReader.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormEvent.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormNotification.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormAbout.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormReportProblem.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormServerSetting.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormTechnicalSupport.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormUpgrade.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.Properties.Resources.resources
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.GenerateResource.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.CopyComplete
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csprojAssemblyReference.cache
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll.config
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\CodeAchiProject\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.BatchParser.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.XE.Core.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.XEvent.Linq.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll.config
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\CodeAchi All in One.pdb
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.AzureStorageEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.BatchParserClient.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Diagnostics.Strace.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Common.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.SmoMetadataProvider.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Utility.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.UtilityEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEvent.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.PolicyEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Smo.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlTDiagm.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SString.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Newtonsoft.Json.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.AzureStorageEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfo.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Dmf.Common.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Collector.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.CollectorEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Common.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.RegisteredServers.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.SmoMetadataProvider.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.Utility.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.UtilityEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEvent.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScoped.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventDbScopedEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Management.XEventEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.PolicyEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.RegSvrEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Smo.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SmoExtended.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.Types.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Microsoft.SqlServer.WmiEnum.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\bin\Debug\Newtonsoft.Json.xml
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csprojAssemblyReference.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormActivate.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormAdobeReader.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormEvent.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormNotification.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormAbout.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormQuotation.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormReportProblem.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormServerSetting.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormTechnicalSupport.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.FormUpgrade.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi_AllinOne.Properties.Resources.resources
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.GenerateResource.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.CoreCompileInputs.cache
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.csproj.CopyComplete
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.dll
+E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-All-in-One-Dll\CodeAchi All in One Dll\CodeAchi All in One\obj\Debug\CodeAchi All in One.pdb

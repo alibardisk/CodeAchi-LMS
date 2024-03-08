@@ -1,0 +1,22 @@
+Normal Entry - Ctrl+A
+Item Edit - Ctrl+E
+Print Barcode - Ctrl+B
+Lost/Damage - Ctrl+D
+Item Setting- Ctrl+S
+Wish List- Ctrl+W
+
+Borrower Add - Alt+A
+Borrower Edit - Alt+E
+Print Barcode- Alt+B
+Membership Renew - Alt+R
+Borrower Setting - Alt+S
+
+Issue Item - Ctrl+I
+Return - Ctrl+R
+
+Report - Ctrl+Alt+ R
+Search & Lookup - Ctrl+F
+Payment - Ctrl+Alt+P
+Mail/SMS - Ctrl+Alt+E
+
+
