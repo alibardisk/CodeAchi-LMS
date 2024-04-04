@@ -26,7 +26,7 @@ namespace CodeAchi_Library_Management_System
         {
             cmbIssueMail.Items.Add("Please select a email template...");
             cmbIssueSms.Items.Add("Please select a SMS template...");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

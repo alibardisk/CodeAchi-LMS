@@ -1363,3 +1363,118 @@ E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAch
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi.003362DC.Up2Date
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.exe
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\x86\pdfium.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\CodeAchi Library Management System.exe.config
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\CodeAchi Library Management System.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\CodeAchi Library Management System.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\DocumentFormat.OpenXml.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\EntityFramework.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\EntityFramework.SqlServer.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Google.Protobuf.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\K4os.Compression.LZ4.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\K4os.Compression.LZ4.Streams.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\K4os.Hash.xxHash.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\MySql.Data.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\MySqlBackup.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Newtonsoft.Json.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\PdfiumViewer.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\PrinterUtility.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Renci.SshNet.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Buffers.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Data.SQLite.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Data.SQLite.EF6.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Data.SQLite.Linq.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Memory.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.ValueTuple.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Ubiety.Dns.Core.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\ZstdNet.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\DocumentFormat.OpenXml.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\EntityFramework.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\EntityFramework.SqlServer.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Google.Protobuf.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Google.Protobuf.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\K4os.Compression.LZ4.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\K4os.Compression.LZ4.Streams.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\K4os.Hash.xxHash.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\MySql.Data.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Newtonsoft.Json.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\PdfiumViewer.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\Renci.SshNet.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Buffers.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Data.SQLite.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Data.SQLite.dll.config
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Memory.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\System.ValueTuple.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\bin\Debug\nl\PdfiumViewer.resources.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.csproj.AssemblyReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.csproj.ResolveComReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormAbout.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormBackup.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormBorrowerEdit.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormDetails.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormEmailSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormEvent.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormFont.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormIsbnItems.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormItemBarCode.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMembershipPlan.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMissingAccession.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMoreSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormOtp.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormRecieptSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormSearchLookup.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormItemEdit.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormItemLookup.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormLostDamage.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMail.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMemberLookup.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMigration.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormMultipleEntry.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormNotification.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormLogin.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormAccnSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormActivate.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormAddLibrarian.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormBorrowerId.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormBrrIdSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormChnagePassword.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormDashBoard.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormDatabaseSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormGeneralSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormImportBorrower.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormImportItems.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormNotificationSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormOpacSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormPayment.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormPicture.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormProblemReport.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormQuotation.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormRenewMember.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormReport.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormReportSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormReservation.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormReservationSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormServerConnection.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormSmsSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormSplash.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormSplineLabel.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormTechnicalSupport.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormUpgrade.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormWishList.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.FormWizard.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.Properties.Resources.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.UcAddBorrower.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.UcBorrewerSetting.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.UcItemIssue.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.UcItemNormalEntry.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.UcItemReissueReturn.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi_Library_Management_System.UcItemSettings.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.csproj.GenerateResource.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.csproj.CoreCompileInputs.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi.003362DC.Up2Date
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchi Library Management System\CodeAchi Library Management System\obj\Debug\CodeAchi Library Management System.pdb

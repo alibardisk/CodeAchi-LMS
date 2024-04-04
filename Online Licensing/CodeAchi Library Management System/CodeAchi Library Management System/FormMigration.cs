@@ -80,7 +80,7 @@ namespace CodeAchi_Library_Management_System
                     int itemCount = 0;
                     DateTime tempDate;
                     string brrId, itemAccession, issueDate, expectedReturnDate, issueComment, issuedBy;
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -329,7 +329,7 @@ namespace CodeAchi_Library_Management_System
                     DateTime tempDate;
                     string brrId, itemAccession, returnDate, returnComment, returnBy;
 
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)

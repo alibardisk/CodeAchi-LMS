@@ -25,7 +25,7 @@ namespace CodeAchi_Library_Management_System
             chkbActive.Checked = true;
             dgvUserList.RowsDefaultCellStyle.BackColor = Color.AntiqueWhite;//FromArgb(255, 255, 192);
             dgvUserList.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -233,7 +233,7 @@ namespace CodeAchi_Library_Management_System
             string queryString = "";
             if (btnAdd.Text=="Add")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -329,7 +329,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -456,7 +456,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (dgvUserList.SelectedRows.Count == 1)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -619,7 +619,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (dgvUserList.Rows.Count > 0)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

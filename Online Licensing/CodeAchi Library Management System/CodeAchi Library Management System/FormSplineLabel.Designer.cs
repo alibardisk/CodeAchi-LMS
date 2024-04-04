@@ -55,6 +55,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblNotification = new System.Windows.Forms.Label();
             this.dgvAccnList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.accnNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classiFication = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbInfo = new System.Windows.Forms.TextBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.rdbLocation = new System.Windows.Forms.RadioButton();
@@ -75,12 +81,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.btnToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.accnNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classiFication = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panelMargin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMargin)).BeginInit();
@@ -286,24 +286,24 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label9.Location = new System.Drawing.Point(210, 7);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 18);
+            this.label9.Size = new System.Drawing.Size(54, 16);
             this.label9.TabIndex = 6094;
             this.label9.Text = "        To :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label11.Location = new System.Drawing.Point(3, 7);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 18);
+            this.label11.Size = new System.Drawing.Size(68, 16);
             this.label11.TabIndex = 6093;
             this.label11.Text = "        From :";
             // 
@@ -404,6 +404,47 @@
             this.dgvAccnList.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvAccnList_RowsAdded);
             this.dgvAccnList.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvAccnList_RowsRemoved);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 30;
+            // 
+            // accnNo
+            // 
+            this.accnNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.accnNo.FillWeight = 131.7365F;
+            this.accnNo.HeaderText = "Accession No.";
+            this.accnNo.Name = "accnNo";
+            this.accnNo.ReadOnly = true;
+            this.accnNo.Width = 120;
+            // 
+            // itemTitle
+            // 
+            this.itemTitle.FillWeight = 68.26347F;
+            this.itemTitle.HeaderText = "Title";
+            this.itemTitle.Name = "itemTitle";
+            this.itemTitle.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Author";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            // 
+            // location
+            // 
+            this.location.HeaderText = "Location";
+            this.location.Name = "location";
+            this.location.Visible = false;
+            // 
+            // classiFication
+            // 
+            this.classiFication.HeaderText = "Classification";
+            this.classiFication.Name = "classiFication";
+            this.classiFication.Visible = false;
+            // 
             // txtbInfo
             // 
             this.txtbInfo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -482,7 +523,8 @@
             this.cmbPaper.ForeColor = System.Drawing.Color.Black;
             this.cmbPaper.FormattingEnabled = true;
             this.cmbPaper.Items.AddRange(new object[] {
-            "A4_21L (3x7)"});
+            "A4_21L (3x7)",
+            "A4_40L (4x10)"});
             this.cmbPaper.Location = new System.Drawing.Point(17, 266);
             this.cmbPaper.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbPaper.Name = "cmbPaper";
@@ -614,47 +656,6 @@
             this.btnToolTip.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnToolTip.InitialDelay = 50;
             this.btnToolTip.ReshowDelay = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 30;
-            // 
-            // accnNo
-            // 
-            this.accnNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.accnNo.FillWeight = 131.7365F;
-            this.accnNo.HeaderText = "Accession No.";
-            this.accnNo.Name = "accnNo";
-            this.accnNo.ReadOnly = true;
-            this.accnNo.Width = 120;
-            // 
-            // itemTitle
-            // 
-            this.itemTitle.FillWeight = 68.26347F;
-            this.itemTitle.HeaderText = "Title";
-            this.itemTitle.Name = "itemTitle";
-            this.itemTitle.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Author";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
-            // 
-            // location
-            // 
-            this.location.HeaderText = "Location";
-            this.location.Name = "location";
-            this.location.Visible = false;
-            // 
-            // classiFication
-            // 
-            this.classiFication.HeaderText = "Classification";
-            this.classiFication.Name = "classiFication";
-            this.classiFication.Visible = false;
             // 
             // FormSplineLabel
             // 

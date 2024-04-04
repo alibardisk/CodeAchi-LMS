@@ -57,7 +57,7 @@ namespace CodeAchi_Library_Management_System
                 txtbConfirm.SelectAll();
                 return;
             }
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

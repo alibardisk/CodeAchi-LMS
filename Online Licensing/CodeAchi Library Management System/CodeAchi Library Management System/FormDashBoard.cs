@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -59,13 +60,16 @@ namespace CodeAchi_Library_Management_System
         bool htmlBody = false;
         string jsonString = "", sederId = "", mailBody,smsBody, issuedBorrower, reciverId, reciverAddress,
             reciverName,reciverContact="", reciverId1;
+        APIRequest apiRequest = new APIRequest();
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string configFilePath = Application.StartupPath + "/clms.json";
 
         [DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
 
         private void FormDashBoard_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.licenseType == "Demo")
+            if (!globalVarLms.isLicensed)
             {
                 pcbPremium.Visible = false;
             }
@@ -119,7 +123,7 @@ namespace CodeAchi_Library_Management_System
             ucBorrewerSetting1.dgvBrrCategory.RowsDefaultCellStyle.BackColor = Color.AntiqueWhite;//FromArgb(255, 255, 192);
             ucBorrewerSetting1.dgvBrrCategory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -296,30 +300,22 @@ namespace CodeAchi_Library_Management_System
             ucBorrewerSetting1.Visible = true;
             ucBorrewerSetting1.UcBorrewerSetting_Load(null, null);
 
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if(globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
         }
 
@@ -336,7 +332,7 @@ namespace CodeAchi_Library_Management_System
             ucAddBorrower1.cmbPlan.Items.Clear();
             ucAddBorrower1.cmbPlan.Items.Add("--Select--");
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -495,30 +491,22 @@ namespace CodeAchi_Library_Management_System
                 }
             }
 
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             EnableMenuItem(hMenu, SC_CLOSE, MF_ENABLED);
         }
@@ -536,7 +524,7 @@ namespace CodeAchi_Library_Management_System
             ucItemNormalEntry1.cmbItemCategory.Items.Clear();
             ucItemNormalEntry1.cmbItemCategory.Items.Add("Please select a Category...");
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             { 
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -659,30 +647,22 @@ namespace CodeAchi_Library_Management_System
                 mysqlConn.Close();
             }
             ucItemNormalEntry1.cmbItemCategory.Select();
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             EnableMenuItem(hMenu, SC_CLOSE, MF_ENABLED);
         }
@@ -696,7 +676,7 @@ namespace CodeAchi_Library_Management_System
             ucItemSettings1.dgvItemSubcat.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
             ucItemSettings1.dgvItemCategory.Rows.Clear();
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -761,30 +741,22 @@ namespace CodeAchi_Library_Management_System
             ucItemSettings1.Visible = true;
             ucItemSettings1.UcItemSettings_Load(null, null);
 
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
         }
 
@@ -816,30 +788,22 @@ namespace CodeAchi_Library_Management_System
             ucItemIssue1.rdbAccn.Checked = false;
             ucItemIssue1.rdbIsbn.Checked = false;
 
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
         }
 
@@ -862,30 +826,22 @@ namespace CodeAchi_Library_Management_System
             ucItemReissueReturn1.Visible = true;
             Application.DoEvents();
 
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
         }
 
@@ -952,7 +908,7 @@ namespace CodeAchi_Library_Management_System
             this.Text = Application.ProductName + " (v" + Application.ProductVersion + ")";
             
             string compareString = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1047,7 +1003,7 @@ namespace CodeAchi_Library_Management_System
                     int daysLate = 0;
                     string exprDate = "";
 
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -1170,7 +1126,7 @@ namespace CodeAchi_Library_Management_System
                     dgvReservationList.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                     dgvReservationList.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -1315,7 +1271,7 @@ namespace CodeAchi_Library_Management_System
             {
                 int totalBooks = 0, totalType = 0, damageBooks = 0, lostBooks = 0, totalIssued = 0,
                      totalReturn = 0;
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1445,7 +1401,7 @@ namespace CodeAchi_Library_Management_System
             {
                 int totalAdded = 0, totalIssued = 0, totalReturn = 0;
                 string compareString = "%/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1639,30 +1595,22 @@ namespace CodeAchi_Library_Management_System
 
         private void printBarcodeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormItemBarCode barCodePrint = new FormItemBarCode();
             barCodePrint.ShowDialog();
@@ -1670,30 +1618,22 @@ namespace CodeAchi_Library_Management_System
 
         private void printIdCardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormBorrowerId idCardPrint = new FormBorrowerId();
             idCardPrint.ShowDialog();
@@ -1703,8 +1643,7 @@ namespace CodeAchi_Library_Management_System
         {
             if(lblInstName.Text== "DEMO COLLEGE")
             {
-                //DatabaseChecking.CreerBase();
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1818,11 +1757,11 @@ namespace CodeAchi_Library_Management_System
                 label9.Text = "";
                 label14.Text = "";
             }
-            if (globalVarLms.licenseType != "Demo")
+            if (globalVarLms.isLicensed)
             {
-                if (this.Text != Application.ProductName + " (v" + Application.ProductVersion + " - " + globalVarLms.licenseType + ")")
+                if (this.Text != Application.ProductName + " (v" + Application.ProductVersion + " - " + globalVarLms.licenseName + ")")
                 {
-                    this.Text = Application.ProductName + " (v" + Application.ProductVersion + " - " + globalVarLms.licenseType + ")";
+                    this.Text = Application.ProductName + " (v" + Application.ProductVersion + " - " + globalVarLms.licenseName + ")";
                     pcbPremium.Visible = true;
                     Application.DoEvents();
                 }
@@ -1833,34 +1772,26 @@ namespace CodeAchi_Library_Management_System
 
         private void generalSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormGeneralSetting generalSetting = new FormGeneralSetting();
             generalSetting.ShowDialog();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1941,30 +1872,22 @@ namespace CodeAchi_Library_Management_System
 
         private void adminSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormAddLibrarian adminSetting = new FormAddLibrarian();
             adminSetting.ShowDialog();
@@ -1972,30 +1895,22 @@ namespace CodeAchi_Library_Management_System
 
         private void databaseSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormDatabaseSetting databaseSetting = new FormDatabaseSetting();
             databaseSetting.ShowDialog();
@@ -2009,30 +1924,22 @@ namespace CodeAchi_Library_Management_System
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormChnagePassword changePassword = new FormChnagePassword();
             changePassword.ShowDialog();
@@ -2049,30 +1956,22 @@ namespace CodeAchi_Library_Management_System
 
         private void borrowerRenewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormRenewMember renewForm = new FormRenewMember();
             renewForm.ShowDialog();
@@ -2089,7 +1988,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (DashboardToolStripMenuItem.Enabled == false && ucItemSettings1.Visible == true)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -2193,30 +2092,22 @@ namespace CodeAchi_Library_Management_System
 
         private void reportLostDamageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormLostDamage lostDamageForm = new FormLostDamage();
             lostDamageForm.ShowDialog();
@@ -2224,30 +2115,22 @@ namespace CodeAchi_Library_Management_System
 
         private void bulkEditToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormItemEdit itemEdit = new FormItemEdit();
             itemEdit.ShowDialog();
@@ -2255,30 +2138,22 @@ namespace CodeAchi_Library_Management_System
 
         private void editBorrowerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormBorrowerEdit borrowerEdit = new FormBorrowerEdit();
             borrowerEdit.ShowDialog();
@@ -2368,30 +2243,22 @@ namespace CodeAchi_Library_Management_System
         {
             buttonBackColorChange();
             btnReport.BackColor = Color.FromArgb(54, 69, 79);
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormReport reportForm = new FormReport();
             reportForm.StartPosition = FormStartPosition.Manual;
@@ -2411,30 +2278,22 @@ namespace CodeAchi_Library_Management_System
 
         private void paymentToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormPayment paymentForm = new FormPayment();
             paymentForm.ShowDialog();
@@ -2442,7 +2301,7 @@ namespace CodeAchi_Library_Management_System
 
         private void fineStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed)
             {
                 MessageBox.Show("Please purchase any license to unlock this feature.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Refresh();
@@ -2452,7 +2311,7 @@ namespace CodeAchi_Library_Management_System
 
         private void delaytoolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed)
             {
                 MessageBox.Show("Please purchase any license to unlock this feature.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Refresh();
@@ -2461,33 +2320,25 @@ namespace CodeAchi_Library_Management_System
 
         private void memberDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             bool settingExist = false;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -2554,34 +2405,26 @@ namespace CodeAchi_Library_Management_System
 
         private void itemDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
 
             int ttlBooks = 0;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -2616,9 +2459,9 @@ namespace CodeAchi_Library_Management_System
                 ttlBooks = Convert.ToInt32(mysqlCmd.ExecuteScalar().ToString());
                 mysqlConn.Close();
             }
-            if (ttlBooks >= globalVarLms.itemLimits)
+            if (ttlBooks >= globalVarLms.itemLimit)
             {
-                MessageBox.Show("You can't add more than " + globalVarLms.itemLimits.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You can't add more than " + globalVarLms.itemLimit.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -2635,7 +2478,7 @@ namespace CodeAchi_Library_Management_System
 
         private void reportAProblemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (globalVarLms.licenseType == "Demo")
+            //if (globalVarLms.licenseName == "Demo")
             //{
             //    if (globalVarLms.currentDate > globalVarLms.expiryDate)
             //    {
@@ -2667,30 +2510,22 @@ namespace CodeAchi_Library_Management_System
 
         private void issueDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             Type officeType = Type.GetTypeFromProgID("Excel.Application");
             if (officeType == null)
@@ -2706,30 +2541,22 @@ namespace CodeAchi_Library_Management_System
 
         private void reIssueDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             Type officeType = Type.GetTypeFromProgID("Excel.Application");
             if (officeType == null)
@@ -2745,30 +2572,22 @@ namespace CodeAchi_Library_Management_System
 
         private void returnDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             Type officeType = Type.GetTypeFromProgID("Excel.Application");
             if (officeType == null)
@@ -2784,30 +2603,22 @@ namespace CodeAchi_Library_Management_System
 
         private void sendMailToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
 
             FormMail mailSend = new FormMail();
@@ -2822,491 +2633,116 @@ namespace CodeAchi_Library_Management_System
             wishList.ShowDialog();
         }
 
-        private string GetMACAddress()
+        private async void bWorkerGetDetails_DoWork(object sender, DoWorkEventArgs e)
         {
-            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
-            String sMacAddress = string.Empty;
-            foreach (NetworkInterface adapter in nics)
+            var requestData = new
             {
-                if (sMacAddress == String.Empty)// only return MAC Address from first card
-                {
-                    IPInterfaceProperties properties = adapter.GetIPProperties();
-                    sMacAddress = adapter.GetPhysicalAddress().ToString();
-                }
-            }
-            sMacAddress = Regex.Replace(sMacAddress, ".{2}", "$0:");
-            sMacAddress = sMacAddress.Remove(sMacAddress.Length - 1, 1);
-            return sMacAddress;
-        }
-
-        private void bWorkerGetDetails_DoWork(object sender, DoWorkEventArgs e)
-        {
-            DateTime currentDate = DateTime.Now;
-            if (Properties.Settings.Default.currentDate != "" && Properties.Settings.Default.currentDate != "installatioDate")
+                hardwareId = apiRequest.GetHardwareId(),
+                machineId = globalVarLms.machineId
+            };
+            var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
+            string responseBody = await apiRequest.GetStatus(jsonString);
+            if (responseBody != "")
             {
-                DateTime tempDate = DateTime.ParseExact(Properties.Settings.Default.currentDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                if (tempDate < DateTime.Now.Date)
+                var responseObject = JsonConvert.DeserializeObject<dynamic>(responseBody);
+                jsonString = passwordHasher.Decrypt(File.ReadAllText(configFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                jsonObject["KeyFeatures"] = responseObject.features;
+                // If key doesn't exist, add key-value pair
+                if (jsonObject["LastCheckedOn"] == null)
                 {
-                    Properties.Settings.Default.currentDate = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000");
-                    Properties.Settings.Default.Save();
-                }
-            }
-            reserveSystemLimit = 0.ToString();
-            string installedDate = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
-            string macAddress = GetMACAddress();
-
-            SQLiteConnection sqltConn;
-
-            if (Properties.Settings.Default.sqliteDatabase)
-            {
-                sqltConn = ConnectionClass.sqliteConnection();
-                if (sqltConn.State == ConnectionState.Closed)
-                {
-                    sqltConn.Open();
-                }
-                SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                sqltCommnd.CommandText = "select reserveSystemLimit from generalSettings";
-                SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        if (dataReader["reserveSystemLimit"].ToString() != "")
-                        {
-                            reserveSystemLimit = dataReader["reserveSystemLimit"].ToString();
-                        }
-                    }
-                    dataReader.Close();
-                }
-                sqltConn.Close();
-            }
-            else
-            {
-                try
-                {
-                    mysqlConn = ConnectionClass.mysqlConnection();
-                    if (mysqlConn.State == ConnectionState.Closed)
-                    {
-                        mysqlConn.Open();
-                    }
-                    MySqlCommand mysqlCmd;
-                    string queryString = "select reserveSystemLimit from general_settings";
-                    mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                    MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
-                    if (dataReader.HasRows)
-                    {
-                        while (dataReader.Read())
-                        {
-                            if (dataReader["reserveSystemLimit"].ToString() != "")
-                            {
-                                reserveSystemLimit = dataReader["reserveSystemLimit"].ToString();
-                            }
-                        }
-                    }
-                    dataReader.Close();
-                    mysqlConn.Close();
-                }
-                catch
-                {
-
-                }
-            }
-            if (IsConnectedToInternet() == true)
-            {
-                try
-                {
-                    WebRequest webRequest = WebRequest.Create(globalVarLms.dateApi);
-                    webRequest.Timeout = 8000;
-                    WebResponse webResponse = webRequest.GetResponse();
-                    Stream dataStream = webResponse.GetResponseStream();
-                    StreamReader strmReader = new StreamReader(dataStream);
-                    string requestResult = strmReader.ReadLine();
-                    if (requestResult != "")
-                    {
-                        currentDate = DateTime.ParseExact(requestResult, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                    }
-                    Properties.Settings.Default.currentDate = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000");
-                    Properties.Settings.Default.Save();
-
-                    string queryToCheck = "SELECT isBlocked,licenseKey,installDate,blocked_reason FROM installationDetails WHERE mac = '" + globalVarLms.machineId + "' and productName='" + Application.ProductName + "'";
-                    //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                    webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
-                    webRequest.Timeout = 8000;
-                    webResponse = webRequest.GetResponse();
-                    dataStream = webResponse.GetResponseStream();
-                    strmReader = new StreamReader(dataStream);
-                    requestResult = strmReader.ReadLine();
-                    if (requestResult == null)
-                    {
-                        string instName = "", instAddress = "", instMail = "", countryName = "";
-                        if (Properties.Settings.Default.sqliteDatabase)
-                        {
-                            sqltConn = ConnectionClass.sqliteConnection();
-                            if (sqltConn.State == ConnectionState.Closed)
-                            {
-                                sqltConn.Open();
-                            }
-                            SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                            string queryString = "select instName,instAddress,instMail,countryName from generalSettings";
-                            sqltCommnd.CommandText = queryString;
-                            SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                            if (dataReader.HasRows)
-                            {
-                                while (dataReader.Read())
-                                {
-                                    instName = dataReader["instName"].ToString();
-                                    instAddress = dataReader["instAddress"].ToString();
-                                    instMail = dataReader["instMail"].ToString();
-                                    countryName = dataReader["countryName"].ToString();
-                                }
-                            }
-                            dataReader.Close();
-                            sqltConn.Close();
-                        }
-                        else
-                        {
-                            try
-                            {
-                                mysqlConn = ConnectionClass.mysqlConnection();
-                                if (mysqlConn.State == ConnectionState.Closed)
-                                {
-                                    mysqlConn.Open();
-                                }
-                                MySqlCommand mysqlCmd;
-                                string queryString = "select instName,instAddress,instMail,countryName from general_settings";
-                                mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                                MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
-                                if (dataReader.HasRows)
-                                {
-                                    while (dataReader.Read())
-                                    {
-                                        instName = dataReader["instName"].ToString();
-                                        instAddress = dataReader["instAddress"].ToString();
-                                        instMail = dataReader["instMail"].ToString();
-                                        countryName = dataReader["countryName"].ToString();
-                                    }
-                                }
-                                dataReader.Close();
-                                mysqlConn.Close();
-                            }
-                            catch
-                            {
-
-                            }
-                        }
-                        string queryToInsert = "INSERT INTO installationDetails (mac,productName,isBlocked,licenseKey,installDate,ip,productUninstalled,org_name,email,country,address) VALUES('" + globalVarLms.machineId + "', '" + Application.ProductName + "','" + false + "','" + "Demo" + "','" + installedDate + "','" + GetGlobalIP() + "','" + false + "','" + instName + "','" + instMail + "','" + countryName + "','" + instAddress + "')";
-                        //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                        webRequest = WebRequest.Create(globalVarLms.insertApi + queryToInsert);
-                        webRequest.Timeout = 8000;
-                        webResponse = webRequest.GetResponse();
-                        Properties.Settings.Default.licenseType = "Demo";
-                        DateTime expiryDate = currentDate.AddDays(30);
-                        Properties.Settings.Default.expiryDate = expiryDate.Day.ToString("00") + "/" + expiryDate.Month.ToString("00") + "/" + expiryDate.Year.ToString("0000");
-                        Properties.Settings.Default.lastChecked = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000");
-                        Properties.Settings.Default.itemLimits = 1000;
-                        Properties.Settings.Default.machineLimits = 1.ToString();
-                        Properties.Settings.Default.Save();
-                    }
-
-                    queryToCheck = "SELECT isBlocked,licenseKey,installDate,blocked_reason FROM installationDetails WHERE mac = '" + globalVarLms.machineId + "' and productName='" + Application.ProductName + "'";
-                    webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
-                    webRequest.Timeout = 8000;
-                    webResponse = webRequest.GetResponse();
-                    dataStream = webResponse.GetResponseStream();
-                    strmReader = new StreamReader(dataStream);
-                    requestResult = strmReader.ReadLine();
-                    if (requestResult != null)
-                    {
-                        string[] dataList = requestResult.Split('$');
-                        if (dataList[1] == "Demo")
-                        {
-                            Properties.Settings.Default.licenseType = "Demo";
-                            DateTime expiryDate = DateTime.ParseExact(dataList[2], "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                            expiryDate = expiryDate.AddDays(30);
-                            Properties.Settings.Default.expiryDate = expiryDate.Day.ToString("00") + "/" + expiryDate.Month.ToString("00") + "/" + expiryDate.Year.ToString("0000");
-                            if (dataList[0] == "True")
-                            {
-                                Properties.Settings.Default.productBlocked = true;
-                            }
-                            else
-                            {
-                                Properties.Settings.Default.productBlocked = false;
-                            }
-                            blockReason = dataList[3];
-                            Properties.Settings.Default.lastChecked = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000");
-                            Properties.Settings.Default.itemLimits = 1000;
-                            Properties.Settings.Default.machineLimits = 1.ToString();
-                            Properties.Settings.Default.Save();
-                        }
-                        else
-                        {
-                            Properties.Settings.Default.serialKey = dataList[1];
-                            Properties.Settings.Default.Save();
-                            string serialKey = Properties.Settings.Default.serialKey;
-                            if (IsConnectedToInternet() == true)
-                            {
-                                try
-                                {
-                                    queryToCheck = "SELECT reg_date, valid_month,licence_type,isBlocked,mac,machine_limits,itemLimits,reserveSystemLimits,status_reson,opacAvailable FROM new_license WHERE serial_key = '" + serialKey + "'";
-                                    webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);    //"https://www.codeachi.com/Product/SelectData.php?Q="
-                                    webRequest.Timeout = 8000;
-                                    webResponse = webRequest.GetResponse();
-                                    dataStream = webResponse.GetResponseStream();
-                                    strmReader = new StreamReader(dataStream);
-                                    requestResult = strmReader.ReadLine();
-                                    if (requestResult == null)
-                                    {
-                                    }
-                                    else
-                                    {
-                                        if (requestResult.Contains(globalVarLms.machineId))
-                                        {
-                                            string[] splitResult = requestResult.Split('$');
-                                            int validMonth = Convert.ToInt16(splitResult[1]);
-                                            string licenseType = splitResult[2];
-                                            bool licenseBlocked = true;
-                                            if (splitResult[3] == "True")
-                                            {
-                                                licenseBlocked = true;
-                                            }
-                                            else
-                                            {
-                                                licenseBlocked = false;
-                                            }
-                                            DateTime regDate = DateTime.ParseExact(splitResult[0], "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                                            DateTime expiryDate = regDate.AddMonths(validMonth);
-                                            Properties.Settings.Default.productBlocked = licenseBlocked;
-                                            Properties.Settings.Default.expiryDate = expiryDate.Day.ToString("00") + "/" + expiryDate.Month.ToString("00") + "/" + expiryDate.Year.ToString("0000");
-                                            Properties.Settings.Default.licenseType = licenseType;
-                                            Properties.Settings.Default.lastChecked = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000");
-                                            Properties.Settings.Default.machineLimits = splitResult[5];
-                                            Properties.Settings.Default.itemLimits = Convert.ToInt32(splitResult[6]);
-                                            reserveSystemLimit = splitResult[7];
-                                            blockReason = splitResult[8];
-                                            Properties.Settings.Default.Save();
-                                            globalVarLms.opacAvailable = Convert.ToBoolean(splitResult[9]);
-                                        }
-                                        else
-                                        {
-                                            Properties.Settings.Default.licenseType = "Demo";
-                                            Properties.Settings.Default.itemLimits = 1000;
-                                            Properties.Settings.Default.machineLimits = 1.ToString();
-                                            Properties.Settings.Default.lastChecked = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000");
-                                            Properties.Settings.Default.Save();
-                                        }
-                                    }
-                                }
-                                catch
-                                {
-                                    //////Server Not Responds
-                                }
-                            }
-                            else
-                            {
-                                //////No Internet Connection
-                            }
-                        }
-                        string ttlItems = 0.ToString();
-                        if (Properties.Settings.Default.sqliteDatabase)
-                        {
-                            sqltConn = ConnectionClass.sqliteConnection();
-                            if (sqltConn.State == ConnectionState.Closed)
-                            {
-                                sqltConn.Open();
-                            }
-                            SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                            sqltCommnd.CommandText = "select count(id) from itemDetails;";
-                            sqltCommnd.CommandType = CommandType.Text;
-                            ttlItems = sqltCommnd.ExecuteScalar().ToString();
-                            sqltConn.Close();
-                        }
-                        else
-                        {
-                            try
-                            {
-                                mysqlConn = ConnectionClass.mysqlConnection();
-                                if (mysqlConn.State == ConnectionState.Closed)
-                                {
-                                    mysqlConn.Open();
-                                }
-                                MySqlCommand mysqlCmd;
-                                string queryString = "select count(id) from item_details";
-                                mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                                ttlItems = mysqlCmd.ExecuteScalar().ToString();
-                                mysqlConn.Close();
-                            }
-                            catch
-                            {
-
-                            }
-                        }
-
-                        string lastUsed = currentDate.Day.ToString("00") + "/" + currentDate.Month.ToString("00") + "/" + currentDate.Year.ToString("0000") + " " + DateTime.Now.ToString("hh:mm:ss tt");
-                        string queryToUpdate = "UPDATE installationDetails set last_used='" + lastUsed + "',totalItems='" + ttlItems + "',ip='" + GetGlobalIP() + "',productUninstalled='" + false + "' WHERE mac = '" + globalVarLms.machineId + "' and productName='" + Application.ProductName + "'";
-                        webRequest = WebRequest.Create(globalVarLms.updateApi + queryToUpdate);
-                        webRequest.Timeout = 8000;
-                        webResponse = webRequest.GetResponse();
-                        dataStream = webResponse.GetResponseStream();
-                        strmReader = new StreamReader(dataStream);
-                        requestResult = strmReader.ReadLine();
-                    }
-                    //updateSettingData();
-                }
-                catch
-                {
-
-                }
-            }
-            globalVarLms.productBlocked = Properties.Settings.Default.productBlocked;
-            globalVarLms.expiryDate = DateTime.ParseExact(Properties.Settings.Default.expiryDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            globalVarLms.currentDate = DateTime.ParseExact(Properties.Settings.Default.currentDate, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            globalVarLms.licenseType = Properties.Settings.Default.licenseType;
-            globalVarLms.licenseKey = Properties.Settings.Default.serialKey;
-            globalVarLms.itemLimits = Properties.Settings.Default.itemLimits;
-        }
-
-        private string GetGlobalIP()
-        {
-            string IPAddress = string.Empty;
-            try
-            {
-                WebRequest webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/global_IP.php");
-                webRequest.Timeout = 8000;
-                WebResponse webResponse = webRequest.GetResponse();
-                Stream dataStream = webResponse.GetResponseStream();
-                StreamReader strmReader = new StreamReader(dataStream);
-                IPAddress = strmReader.ReadLine();
-            }
-            catch
-            {
-
-            }
-            return IPAddress;
-        }
-
-        private void bWorkerUpdateDetails_DoWork(object sender, DoWorkEventArgs e)
-        {
-            if (IsConnectedToInternet() == true)
-            {
-                string txtbUserName = "", txtbUserMail = "", txtbContact = "", txtbUserCountry = "", txtbFullName = "", txtbOrgMail = "", txtbOrgAddress = "",
-                      TxtbWebsite = "", txtbOrgContact = "";
-                string currentDateTime = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000") + " " + DateTime.Now.ToString("hh:mm:ss tt");
-                string ttlItems = "";
-                if (Properties.Settings.Default.sqliteDatabase)
-                {
-                    SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
-                    if (sqltConn.State == ConnectionState.Closed)
-                    {
-                        sqltConn.Open();
-                    }
-                    SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                    sqltCommnd.CommandText = "select count(id) from itemDetails;";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    ttlItems = sqltCommnd.ExecuteScalar().ToString();
-                   
-                    sqltCommnd.CommandText = "select * from userDetails where userMail!=@userMail and isAdmin='" + true + "' limit 1";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    sqltCommnd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
-                    SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                    if (dataReader.HasRows)
-                    {
-                        while (dataReader.Read())
-                        {
-                            txtbUserName = dataReader["userName"].ToString();
-                            txtbUserMail = dataReader["userMail"].ToString();
-                            txtbContact = dataReader["userContact"].ToString();
-                        }
-                    }
-                    dataReader.Close();
-                    sqltCommnd.CommandText = "select * from generalSettings";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    dataReader = sqltCommnd.ExecuteReader();
-                    if (dataReader.HasRows)
-                    {
-                        while (dataReader.Read())
-                        {
-                            txtbUserCountry = dataReader["countryName"].ToString();
-                            txtbFullName = dataReader["instName"].ToString();
-                            txtbOrgMail = dataReader["instMail"].ToString();
-                            txtbOrgAddress = dataReader["instAddress"].ToString();
-                            TxtbWebsite = dataReader["instWebsite"].ToString();
-                            txtbOrgContact = dataReader["instContact"].ToString();
-                        }
-                    }
-                    dataReader.Close();
-                    sqltConn.Close();
+                    jsonObject.Add("LastCheckedOn", responseObject.date);
                 }
                 else
                 {
-                    try
-                    {
-                        mysqlConn = ConnectionClass.mysqlConnection();
-                        if (mysqlConn.State == ConnectionState.Closed)
-                        {
-                            mysqlConn.Open();
-                        }
-                        MySqlCommand mysqlCmd;
-                        string queryString = "select count(id) from item_details;";
-                        mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                        ttlItems = mysqlCmd.ExecuteScalar().ToString();
-
-                        queryString = "select * from user_details where userMail!=@userMail and isAdmin='" + true + "' limit 1";
-                        mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                        mysqlCmd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
-                        MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
-                        if (dataReader.HasRows)
-                        {
-                            while (dataReader.Read())
-                            {
-                                txtbUserName = dataReader["userName"].ToString();
-                                txtbUserMail = dataReader["userMail"].ToString();
-                                txtbContact = dataReader["userContact"].ToString();
-                            }
-                        }
-                        dataReader.Close();
-
-                        queryString = "select * from general_settings";
-                        mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                        dataReader = mysqlCmd.ExecuteReader();
-                        if (dataReader.HasRows)
-                        {
-                            while (dataReader.Read())
-                            {
-                                txtbUserCountry = dataReader["countryName"].ToString();
-                                txtbFullName = dataReader["instName"].ToString();
-                                txtbOrgMail = dataReader["instMail"].ToString();
-                                txtbOrgAddress = dataReader["instAddress"].ToString();
-                                TxtbWebsite = dataReader["instWebsite"].ToString();
-                                txtbOrgContact = dataReader["instContact"].ToString();
-                            }
-                        }
-                        dataReader.Close();
-                        mysqlConn.Close();
-                    }
-                    catch
-                    {
-
-                    }
+                    jsonObject["LastCheckedOn"] = responseObject.date;
                 }
-
-                try
+                if (jsonObject["isLicensed"] == null)
                 {
-                    string queryToUpdate = "UPDATE installationDetails set org_name='" + txtbFullName + "'" +
-                            ",email='" + txtbOrgMail + "',country='" + txtbUserCountry + "',address='" + txtbOrgAddress + "'," +
-                            "website='" + TxtbWebsite + "',orgContact='" + txtbOrgContact + "'," +
-                            "cust_name='" + txtbUserName + "',contact='" + txtbContact + "',userMail='" + txtbUserMail + "'," +
-                            "last_used='" + currentDateTime + "',totalItems='" + ttlItems + "' WHERE mac = '" + globalVarLms.machineId + "' and productName='" + Application.ProductName + "'";
-                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                    WebRequest webRequest = WebRequest.Create(globalVarLms.updateApi + queryToUpdate);
-                    webRequest.Timeout = 8000;
-                    WebResponse webResponse = webRequest.GetResponse();
-                    Stream dataStream = webResponse.GetResponseStream();
+                    jsonObject.Add("isLicensed", responseObject.isLicensed);
                 }
-                catch
+                else
                 {
-
+                    jsonObject["isLicensed"] = responseObject.isLicensed;
                 }
+                if (jsonObject["isExpired"] == null)
+                {
+                    jsonObject.Add("isExpired", responseObject.isExpired);
+                }
+                else
+                {
+                    jsonObject["isExpired"] = responseObject.isExpired;
+                }
+                if (jsonObject["expiryDate"] == null)
+                {
+                    jsonObject.Add("expiryDate", responseObject.expiryDate);
+                }
+                else
+                {
+                    jsonObject["expiryDate"] = responseObject.expiryDate;
+                }
+                if (jsonObject["isBlocked"] == null)
+                {
+                    jsonObject.Add("isBlocked", responseObject.isBlocked);
+                }
+                else
+                {
+                    jsonObject["isBlocked"] = responseObject.isBlocked;
+                }
+                if (jsonObject["blockedReason"] == null)
+                {
+                    jsonObject.Add("blockedReason", responseObject.blockedReason);
+                }
+                else
+                {
+                    jsonObject["blockedReason"] = responseObject.blockedReason;
+                }
+                string jsonData = JsonConvert.SerializeObject(jsonObject);
+                jsonData = passwordHasher.Encrypt(jsonData);
+                File.WriteAllText(configFilePath, jsonData);
             }
+            jsonString = passwordHasher.Decrypt(File.ReadAllText(configFilePath));
+            dynamic jsonObjct = JsonConvert.DeserializeObject<dynamic>(jsonString);
+            globalVarLms.itemLimit = jsonObjct.KeyFeatures["total-items"];
+            globalVarLms.memberLimit = jsonObjct.KeyFeatures["total-member"];
+            globalVarLms.librarianLimit = jsonObjct.KeyFeatures["total-librarian"];
+            if (jsonObjct.KeyFeatures["report-generation"] == "yes")
+            {
+                globalVarLms.reportGeneration = true;
+            }
+            if (jsonObjct.KeyFeatures["excel-import"] == "yes")
+            {
+                globalVarLms.excelImport = true;
+            }
+            if (jsonObjct.KeyFeatures["opac"] == "yes")
+            {
+                globalVarLms.opacAvailable = true;
+            }
+            globalVarLms.isLicensed = jsonObjct.isLicensed;
+            globalVarLms.productExpire = jsonObjct.isExpired;
+            globalVarLms.expiryDate = jsonObjct.expiryDate;
+            globalVarLms.productBlocked = jsonObjct.isBlocked;
+            globalVarLms.blockedReason = jsonObjct.blockedReason;
+            globalVarLms.lastChecked = jsonObjct.LastCheckedOn;
+            if (jsonObjct["LicenseName"] != null)
+            {
+                globalVarLms.licenseName = jsonObjct["LicenseName"];
+            }
+        }
+
+        private async void bWorkerUpdateDetails_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string usageFilePath = Application.StartupPath + "/usage.json";
+            string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+
+            var requestData = new
+            {
+                hardwareId = apiRequest.GetHardwareId(),
+                machineId = globalVarLms.machineId,
+                usage = jsonString
+            };
+            jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
+            string responseBody = await apiRequest.UpdateUsage(jsonString);
         }
 
         private void dgvDueBooks_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -3335,7 +2771,7 @@ namespace CodeAchi_Library_Management_System
 
         private void cancelReservation_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -3405,7 +2841,7 @@ namespace CodeAchi_Library_Management_System
 
         private void oPACSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(globalVarLms.licenseType=="Demo")
+            if(!globalVarLms.isLicensed)
             {
                 MessageBox.Show("You can,t use this feature in trial version.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -3438,43 +2874,13 @@ namespace CodeAchi_Library_Management_System
         {
             this.Text = Application.ProductName + " (v" + Application.ProductVersion + ")";
             lblLoginTime.Text = "Login Time " + DateTime.Now.ToString("hh:mm:ss tt");
-            if (Properties.Settings.Default.sqliteDatabase)
+            FormLogin loginForm = new FormLogin();
+            loginForm.ShowDialog();
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
-                if (sqltConn.State == ConnectionState.Closed)
-                {
-                    try
-                    {
-                        sqltConn.Open();
-                    }
-                    catch
-                    {
-                        string connectionString = "Data Source=" + Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
-                        sqltConn = new SQLiteConnection(connectionString);
-                        sqltConn.Open();
-                    }
-                }
                 SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                sqltCommnd.CommandText = "select * from generalSettings where stepComplete='" + 5 + "'";
-                sqltCommnd.CommandType = CommandType.Text;
-                SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    dataReader.Close();
-                    FormLogin loginForm = new FormLogin();
-                    loginForm.ShowDialog();
-                }
-                else
-                {
-                    dataReader.Close();
-                    timer1.Stop();
-                    FormWizard wizardForm = new FormWizard();
-                    wizardForm.ShowDialog();
-                    timer1.Start();
-                }
-                sqltConn.Close();
-
-                sqltConn = ConnectionClass.sqliteConnection();
+                SQLiteDataReader dataReader;
                 if (sqltConn.State == ConnectionState.Closed)
                 {
                     sqltConn.Open();
@@ -3572,39 +2978,9 @@ namespace CodeAchi_Library_Management_System
             else
             {
                 mysqlConn = ConnectionClass.mysqlConnection();
-                if (mysqlConn.State == ConnectionState.Closed)
-                {
-                    try
-                    {
-                        mysqlConn.Open();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                }
                 MySqlCommand mysqlCmd;
-                string queryString = "select * from general_settings where stepComplete='" + 5 + "'";
-                mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    dataReader.Close();
-                    mysqlConn.Close();
-                    FormLogin loginForm = new FormLogin();
-                    loginForm.ShowDialog();
-                }
-                else
-                {
-                    dataReader.Close();
-                    mysqlConn.Close();
-                    timer1.Stop();
-                    FormWizard wizardForm = new FormWizard();
-                    wizardForm.ShowDialog();
-                    timer1.Start();
-                }
-
+                string queryString = "";
+                MySqlDataReader dataReader;
 
                 if (mysqlConn.State == ConnectionState.Closed)
                 {
@@ -3732,7 +3108,7 @@ namespace CodeAchi_Library_Management_System
         private void licenseChecking()
         {
             SQLiteConnection sqltConn;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -3766,44 +3142,44 @@ namespace CodeAchi_Library_Management_System
                 mysqlCmd.ExecuteNonQuery();
                 mysqlConn.Close();
             }
-           
-            if (Properties.Settings.Default.lastChecked != "" || Properties.Settings.Default.lastChecked != null)
-            {
-                try
-                {
-                    globalVarLms.lastChecked = DateTime.ParseExact(Properties.Settings.Default.lastChecked, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                    if (Convert.ToInt32((globalVarLms.currentDate - globalVarLms.lastChecked).TotalDays) > 60)
-                    {
-                        FormNotification notificationForm = new FormNotification();
-                        notificationForm.lblMessage.Text = "Seems you are not connected to the internet since last 60 days." + Environment.NewLine + "Connect to the internet to receive uninterrupted services.";
-                        notificationForm.lnklblQuotation.Visible = false;
-                        notificationForm.lnklblBuy.Visible = false;
-                        notificationForm.lnklblRenew.Visible = false;
-                        notificationForm.lnkLblActivate.Visible = false;
-                        notificationForm.ShowDialog();
-                    }
-                }
-                catch
-                {
 
-                }
-            }
-            else
-            {
-                FormNotification notificationForm = new FormNotification();
-                notificationForm.lblMessage.Text = "Seems you are not connected to the internet since last 60 days." + Environment.NewLine + "Connect to the internet to receive uninterrupted services.";
-                notificationForm.lnklblQuotation.Visible = false;
-                notificationForm.lnklblBuy.Visible = false;
-                notificationForm.lnklblRenew.Visible = false;
-                notificationForm.lnkLblActivate.Visible = false;
-                notificationForm.ShowDialog();
-            }
-           
-            if (globalVarLms.licenseType == "Demo")
+            //if (globalVarLms.lastChecked!=null)
+            //{
+            //    try
+            //    {
+            //        globalVarLms.lastChecked = DateTime.ParseExact(Properties.Settings.Default.lastChecked, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            //        if (Convert.ToInt32((globalVarLms.currentDate - globalVarLms.lastChecked).TotalDays) > 60)
+            //        {
+            //            FormNotification notificationForm = new FormNotification();
+            //            notificationForm.lblMessage.Text = "Seems you are not connected to the internet since last 60 days." + Environment.NewLine + "Connect to the internet to receive uninterrupted services.";
+            //            notificationForm.lnklblQuotation.Visible = false;
+            //            notificationForm.lnklblBuy.Visible = false;
+            //            notificationForm.lnklblRenew.Visible = false;
+            //            notificationForm.lnkLblActivate.Visible = false;
+            //            notificationForm.ShowDialog();
+            //        }
+            //    }
+            //    catch
+            //    {
+
+            //    }
+            //}
+            //else
+            //{
+            //    FormNotification notificationForm = new FormNotification();
+            //    notificationForm.lblMessage.Text = "Seems you are not connected to the internet since last 60 days." + Environment.NewLine + "Connect to the internet to receive uninterrupted services.";
+            //    notificationForm.lnklblQuotation.Visible = false;
+            //    notificationForm.lnklblBuy.Visible = false;
+            //    notificationForm.lnklblRenew.Visible = false;
+            //    notificationForm.lnkLblActivate.Visible = false;
+            //    notificationForm.ShowDialog();
+            //}
+
+            if (!globalVarLms.isLicensed)
             {
                 pcbPremium.Visible = false;
                 upgradeLicenseToolStripMenuItem.Visible = false;
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -3811,7 +3187,7 @@ namespace CodeAchi_Library_Management_System
                         sqltConn.Open();
                     }
                     SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                    sqltCommnd.CommandText = "update generalSettings set licenseType='" + globalVarLms.licenseType + "',licenseKey=''";
+                    sqltCommnd.CommandText = "update generalSettings set licenseType='Trial',licenseKey=''";
                     sqltCommnd.ExecuteNonQuery();
                     sqltConn.Close();
                 }
@@ -3831,14 +3207,13 @@ namespace CodeAchi_Library_Management_System
                         }
                     }
                     MySqlCommand mysqlCmd;
-                    string queryString = "update general_settings set licenseType='" + globalVarLms.licenseType + "',licenseKey='';";
+                    string queryString = "update general_settings set licenseType='Trial',licenseKey='';";
                     mysqlCmd = new MySqlCommand(queryString, mysqlConn);
                     mysqlCmd.ExecuteNonQuery();
                     mysqlConn.Close();
                 }
                 this.Text = Application.ProductName + " (v" + Application.ProductVersion + " - Trial)";
                 btnActivate.Text = "Activate";
-                globalVarLms.itemLimits = 1000;
                 if (globalVarLms.productBlocked)
                 {
                     globalVarLms.productExpire = true;
@@ -3850,7 +3225,7 @@ namespace CodeAchi_Library_Management_System
                     notificationForm.lnkLblActivate.Visible = false;
                     notificationForm.ShowDialog();
                 }
-                else if (globalVarLms.currentDate > globalVarLms.expiryDate)
+                else if (globalVarLms.productExpire)
                 {
                     globalVarLms.productExpire = true;
                     FormNotification notificationForm = new FormNotification();
@@ -3865,7 +3240,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                this.Text = Application.ProductName + " (v" + Application.ProductVersion + " - " + globalVarLms.licenseType + ")";
+                this.Text = Application.ProductName + " (v" + Application.ProductVersion + " - " + globalVarLms.licenseName + ")";
                 pcbPremium.Visible = true;
                 upgradeLicenseToolStripMenuItem.Visible = true;
                 Application.DoEvents();
@@ -3879,7 +3254,7 @@ namespace CodeAchi_Library_Management_System
                     notificationForm.lnkLblActivate.Visible = false;
                     notificationForm.ShowDialog();
                 }
-                else if (globalVarLms.currentDate > globalVarLms.expiryDate)
+                else if (globalVarLms.productExpire)
                 {
                     globalVarLms.productExpire = true;
                     renewLicenseToolStripMenuItem.Visible = true;
@@ -3895,7 +3270,7 @@ namespace CodeAchi_Library_Management_System
                 {
                     globalVarLms.productExpire = false;
                 }
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -3903,9 +3278,9 @@ namespace CodeAchi_Library_Management_System
                         sqltConn.Open();
                     }
                     SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                    sqltCommnd.CommandText = "update generalSettings set licenseType='" + globalVarLms.licenseType + "'," +
+                    sqltCommnd.CommandText = "update generalSettings set licenseType='" + globalVarLms.licenseName + "'," +
                     "productExpired='" + globalVarLms.productExpire + "', productBlocked='" + globalVarLms.productBlocked + "'" +
-                    ",reserveSystemLimit='" + reserveSystemLimit + "',licenseKey='" + Properties.Settings.Default.serialKey + "'";
+                    ",reserveSystemLimit='" + reserveSystemLimit + "'";
                     sqltCommnd.ExecuteNonQuery();
                     sqltConn.Close();
                 }
@@ -3925,9 +3300,9 @@ namespace CodeAchi_Library_Management_System
                         }
                     }
                     MySqlCommand mysqlCmd;
-                    string queryString = "update general_settings set licenseType = '" + globalVarLms.licenseType + "'," +
+                    string queryString = "update general_settings set licenseType = '" + globalVarLms.licenseName + "'," +
                     "productExpired='" + globalVarLms.productExpire + "', productBlocked='" + globalVarLms.productBlocked + "'" +
-                    ",reserveSystemLimit='" + reserveSystemLimit + "',licenseKey='" + Properties.Settings.Default.serialKey + "'";
+                    ",reserveSystemLimit='" + reserveSystemLimit + "'";
                     mysqlCmd = new MySqlCommand(queryString, mysqlConn);
                     mysqlCmd.ExecuteNonQuery();
                     mysqlConn.Close();
@@ -3935,100 +3310,100 @@ namespace CodeAchi_Library_Management_System
             }
 
             //==================Check for update==========================
-            if (IsConnectedToInternet() == true)
-            {
-                try
-                {
-                    string queryToCheck = "SELECT promotional_url,img_height,img_width FROM installUninstallUrl WHERE productName='" + Application.ProductName + "'";
-                    ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                    WebRequest webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
-                    webRequest.Timeout = 8000;
-                    WebResponse webResponse = webRequest.GetResponse();
-                    Stream dataStream = webResponse.GetResponseStream();
-                    StreamReader strmReader = new StreamReader(dataStream);
-                    string requestResult = strmReader.ReadLine();
-                    if (requestResult != "")
-                    {
-                        string[] splitResult = requestResult.Split('$');
-                        if (splitResult.Length == 4)
-                        {
-                            if (splitResult[0] != "")
-                            {
-                                FormEvent showEvent = new FormEvent();
-                                showEvent.Height = Convert.ToInt32(splitResult[1]);
-                                showEvent.Width = Convert.ToInt32(splitResult[2]);
-                                showEvent.webBrowser1.Navigate(splitResult[0]);
-                                showEvent.pcbClose.Location = new Point(showEvent.Width - 40, showEvent.pcbClose.Location.Y);
-                                showEvent.ShowDialog();
-                            }
-                        }
-                    }
-                }
-                catch
-                {
+            //if (IsConnectedToInternet() == true)
+            //{
+            //    try
+            //    {
+            //        string queryToCheck = "SELECT promotional_url,img_height,img_width FROM installUninstallUrl WHERE productName='" + Application.ProductName + "'";
+            //        ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            //        WebRequest webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
+            //        webRequest.Timeout = 8000;
+            //        WebResponse webResponse = webRequest.GetResponse();
+            //        Stream dataStream = webResponse.GetResponseStream();
+            //        StreamReader strmReader = new StreamReader(dataStream);
+            //        string requestResult = strmReader.ReadLine();
+            //        if (requestResult != "")
+            //        {
+            //            string[] splitResult = requestResult.Split('$');
+            //            if (splitResult.Length == 4)
+            //            {
+            //                if (splitResult[0] != "")
+            //                {
+            //                    FormEvent showEvent = new FormEvent();
+            //                    showEvent.Height = Convert.ToInt32(splitResult[1]);
+            //                    showEvent.Width = Convert.ToInt32(splitResult[2]);
+            //                    showEvent.webBrowser1.Navigate(splitResult[0]);
+            //                    showEvent.pcbClose.Location = new Point(showEvent.Width - 40, showEvent.pcbClose.Location.Y);
+            //                    showEvent.ShowDialog();
+            //                }
+            //            }
+            //        }
+            //    }
+            //    catch
+            //    {
 
-                }
-                try
-                {
-                    string queryToCheck = "SELECT productVersion,downloadUrl,fileName FROM productExeVersion WHERE isLastUpdate = '" + true + "' and productName='" + Application.ProductName + "' and databaseType='sqlite'";
-                    ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                    WebRequest webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
-                    webRequest.Timeout = 8000;
-                    WebResponse webResponse = webRequest.GetResponse();
-                    Stream dataStream = webResponse.GetResponseStream();
-                    StreamReader strmReader = new StreamReader(dataStream);
-                    string requestResult = strmReader.ReadLine();
-                    if (requestResult != "")
-                    {
-                        string[] spliData = requestResult.Split('$');
-                        Version latestVersion = new Version(spliData[0]);
-                        string downloadUrl = spliData[1];
-                        string fileName = spliData[2];
-                        Version installedVersion = new Version(Application.ProductVersion);
-                        if (latestVersion > installedVersion)
-                        {
-                            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\" + fileName))
-                            {
-                                if (MessageBox.Show("New version of " + Application.ProductName + " downloaded." + Environment.NewLine + "Do you want to install the new version ?", "Update " + Application.ProductName + "?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                                {
-                                    if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                                    {
-                                        MessageBox.Show("To get full update please renew your license...", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    }
-                                    else
-                                    {
-                                        Process.Start(Application.StartupPath + @"\Updater.exe");
-                                        Application.Exit();
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                //if (MessageBox.Show(String.Format("You've got version {0} installed of " + Application.ProductName + ". Would you like to update to the latest version {1}?", installedVersion, latestVersion), "Update " + Application.ProductName + "?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                                //{
-                                    if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                                    {
-                                        MessageBox.Show("To get full update please renew your license...", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    }
-                                    else
-                                    {
-                                        globalVarLms.tempValue = downloadUrl + "$" + fileName;
-                                        FormUpgrade upgradeProduct = new FormUpgrade();
-                                        upgradeProduct.lblProdVersion.Text = Application.ProductVersion;
-                                        upgradeProduct.lblLatestVersion.Text = spliData[0];
-                                        upgradeProduct.ShowDialog();
-                                        globalVarLms.tempValue = "";
-                                    }
-                                //}
-                            }
-                        }
-                    }
-                }
-                catch
-                {
+            //    }
+            //    try
+            //    {
+            //        string queryToCheck = "SELECT productVersion,downloadUrl,fileName FROM productExeVersion WHERE isLastUpdate = '" + true + "' and productName='" + Application.ProductName + "' and databaseType='sqlite'";
+            //        ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            //        WebRequest webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
+            //        webRequest.Timeout = 8000;
+            //        WebResponse webResponse = webRequest.GetResponse();
+            //        Stream dataStream = webResponse.GetResponseStream();
+            //        StreamReader strmReader = new StreamReader(dataStream);
+            //        string requestResult = strmReader.ReadLine();
+            //        if (requestResult != "")
+            //        {
+            //            string[] spliData = requestResult.Split('$');
+            //            Version latestVersion = new Version(spliData[0]);
+            //            string downloadUrl = spliData[1];
+            //            string fileName = spliData[2];
+            //            Version installedVersion = new Version(Application.ProductVersion);
+            //            if (latestVersion > installedVersion)
+            //            {
+            //                if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\" + fileName))
+            //                {
+            //                    if (MessageBox.Show("New version of " + Application.ProductName + " downloaded." + Environment.NewLine + "Do you want to install the new version ?", "Update " + Application.ProductName + "?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //                    {
+            //                        if (globalVarLms.currentDate > globalVarLms.expiryDate)
+            //                        {
+            //                            MessageBox.Show("To get full update please renew your license...", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //                        }
+            //                        else
+            //                        {
+            //                            Process.Start(Application.StartupPath + @"\Updater.exe");
+            //                            Application.Exit();
+            //                        }
+            //                    }
+            //                }
+            //                else
+            //                {
+            //                    //if (MessageBox.Show(String.Format("You've got version {0} installed of " + Application.ProductName + ". Would you like to update to the latest version {1}?", installedVersion, latestVersion), "Update " + Application.ProductName + "?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //                    //{
+            //                        if (globalVarLms.currentDate > globalVarLms.expiryDate)
+            //                        {
+            //                            MessageBox.Show("To get full update please renew your license...", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //                        }
+            //                        else
+            //                        {
+            //                            globalVarLms.tempValue = downloadUrl + "$" + fileName;
+            //                            FormUpgrade upgradeProduct = new FormUpgrade();
+            //                            upgradeProduct.lblProdVersion.Text = Application.ProductVersion;
+            //                            upgradeProduct.lblLatestVersion.Text = spliData[0];
+            //                            upgradeProduct.ShowDialog();
+            //                            globalVarLms.tempValue = "";
+            //                        }
+            //                    //}
+            //                }
+            //            }
+            //        }
+            //    }
+            //    catch
+            //    {
 
-                }
-            }
+            //    }
+            //}
         }
 
         private void loadSettings(JObject jsonObj)
@@ -4213,30 +3588,22 @@ namespace CodeAchi_Library_Management_System
 
         private void spineLabelPrintToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed && globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
-                    notificationForm.lnklblRenew.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your trial has expired!" + Environment.NewLine + "Hope you have enjoyed the trial." + Environment.NewLine + "Purchase now to avail the life time serial key!";
+                notificationForm.lnklblRenew.Visible = false;
+                notificationForm.ShowDialog();
             }
-            else
+            else if (globalVarLms.productExpire)
             {
-                if (globalVarLms.currentDate > globalVarLms.expiryDate)
-                {
-                    globalVarLms.productExpire = true;
-                    btnBuyNow.Text = "Renew Now";
-                    Application.DoEvents();
-                    FormNotification notificationForm = new FormNotification();
-                    notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
-                    notificationForm.lnklblQuotation.Visible = false;
-                    notificationForm.lnklblBuy.Visible = false;
-                    notificationForm.ShowDialog();
-                }
+                btnBuyNow.Text = "Renew Now";
+                Application.DoEvents();
+                FormNotification notificationForm = new FormNotification();
+                notificationForm.lblMessage.Text = "Your License has expired!" + Environment.NewLine + "Please renew to continue enjoying the services.";
+                notificationForm.lnklblQuotation.Visible = false;
+                notificationForm.lnklblBuy.Visible = false;
+                notificationForm.ShowDialog();
             }
             FormSplineLabel splinePrinting = new FormSplineLabel();
             splinePrinting.ShowDialog();
@@ -4308,7 +3675,7 @@ namespace CodeAchi_Library_Management_System
                     string backupName = "Backup " + DateTime.Now.Day.ToString("00") + "_" +
                            DateTime.Now.Month.ToString("00") + "_" + DateTime.Now.Year.ToString("0000") +
                           " " + DateTime.Now.Hour.ToString("00") + "_" + DateTime.Now.Minute.ToString("00") + ".sl3";
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -4374,7 +3741,7 @@ namespace CodeAchi_Library_Management_System
                                    "\"reserveDay\" : \"" + Properties.Settings.Default.reserveDay + "\"," +
                                    "\"hostName\" : \"" + Properties.Settings.Default.hostName + "\"," +
                                    "\"databaseSeries\" : \"" + Properties.Settings.Default.databaseSeries + "\"" + "}";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -4446,7 +3813,7 @@ namespace CodeAchi_Library_Management_System
             MySqlCommand mysqlCmd;
             string queryString = "";
             MySqlDataReader dataReader;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -4563,7 +3930,7 @@ namespace CodeAchi_Library_Management_System
             {
                 reciverId1 = "";
                 issuedBorrower = dgvRow.Cells[1].Value.ToString().Substring(dgvRow.Cells[1].Value.ToString().LastIndexOf("(") + 1).Replace(")", "");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     sqltCommnd.CommandText = "select brrName,brrAddress,brrMailId,brrContact,addnlMail from borrowerDetails where brrId=@brrId";
                     sqltCommnd.Parameters.AddWithValue("@brrId", issuedBorrower);
@@ -4667,7 +4034,7 @@ namespace CodeAchi_Library_Management_System
                     }
                 }
             }
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 sqltConn.Clone();
             }

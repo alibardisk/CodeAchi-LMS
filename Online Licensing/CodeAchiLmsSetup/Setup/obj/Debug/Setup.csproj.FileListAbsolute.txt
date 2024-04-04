@@ -435,3 +435,16 @@ E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAch
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.exe
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.pdb
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.Up2Date
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe.config
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\bin\Debug\codeachi-library-setup.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.AssemblyReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Interop.IWshRuntimeLibrary.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.ResolveComReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.FormInstall.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.Properties.Resources.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.GenerateResource.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.CoreCompileInputs.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\Setup.csproj.Up2Date
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\Setup\obj\Debug\codeachi-library-setup.pdb

@@ -40,7 +40,7 @@ namespace CodeAchi_Library_Management_System
             cmbMailTemplate.Items.Add("Please select a template...");
             cmbSmsTemplate.Items.Add("Please select a template...");
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -181,7 +181,7 @@ namespace CodeAchi_Library_Management_System
                     MessageBox.Show("Template already exist.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -231,7 +231,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -290,7 +290,7 @@ namespace CodeAchi_Library_Management_System
             panelStatus.Visible = false;
             if (cmbMailTemplate.SelectedIndex>0)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -399,7 +399,7 @@ namespace CodeAchi_Library_Management_System
                     MessageBox.Show("Template already exist.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -447,7 +447,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -502,7 +502,7 @@ namespace CodeAchi_Library_Management_System
             panelStatus.Visible = false;
             if (cmbSmsTemplate.SelectedIndex > 0)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -696,7 +696,7 @@ namespace CodeAchi_Library_Management_System
                                    "\"reserveDay\" : \"" + Properties.Settings.Default.reserveDay + "\"," +
                                    "\"hostName\" : \"" + Properties.Settings.Default.hostName + "\"," +
                                    "\"databaseSeries\" : \"" + Properties.Settings.Default.databaseSeries + "\"" + "}";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

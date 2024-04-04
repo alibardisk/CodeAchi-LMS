@@ -30,7 +30,7 @@ namespace CodeAchi_Library_Management_System
             dgvBrrDetails.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
             cmbBrrCategory.Items.Clear();
             cmbBrrCategory.Items.Add("---------select----------");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -172,7 +172,7 @@ namespace CodeAchi_Library_Management_System
                 cmbSearch.Items.Add("Contact");
                 cmbSearch.Items.Add("Membership Duration");
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -319,7 +319,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 if (queryString != "")
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -494,7 +494,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 if (conditionString != "")
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)

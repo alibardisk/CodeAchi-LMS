@@ -301,84 +301,84 @@ namespace Setup
                     {
                         GrantAccess(databasePath);
                     }
-                    string installTime = DateTime.Now.ToString("hh:mm:ss");
-                    string installedDate = DateTime.Now.Day.ToString("00") + ":" + DateTime.Now.Month.ToString("00") + ":"+installTime+":" + DateTime.Now.Year.ToString("0000");
-                    macAddress = GetMACAddress()+":"+installedDate;
+                    //////string installTime = DateTime.Now.ToString("hh:mm:ss");
+                    //////string installedDate = DateTime.Now.Day.ToString("00") + ":" + DateTime.Now.Month.ToString("00") + ":"+installTime+":" + DateTime.Now.Year.ToString("0000");
+                    //////macAddress = GetMACAddress()+":"+installedDate;
 
-                    byte[] compName = Encoding.UTF8.GetBytes("CodeAchi");
-                    byte[] byteData = Encoding.UTF8.GetBytes(Application.ProductName);
+                    //////byte[] compName = Encoding.UTF8.GetBytes("CodeAchi");
+                    //////byte[] byteData = Encoding.UTF8.GetBytes(Application.ProductName);
 
-                    RegistryKey oldregKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-                    RegistryKey regKey = null;
-                    if(Environment.Is64BitProcess)
-                    {
-                        regKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-                        if (regKey == null)
-                        {
-                            regKey = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\Wow6432Node\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
-                            if (oldregKey != null)
-                            {
-                                foreach (var name in oldregKey.GetValueNames())
-                                {
-                                    regKey.SetValue(name, oldregKey.GetValue(name), oldregKey.GetValueKind(name));
-                                }
-                                Registry.CurrentUser.DeleteSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
-                            }
-                            else
-                            {
-                                byteData = Encoding.UTF8.GetBytes(macAddress);
-                                regKey.SetValue("Data1", Convert.ToBase64String(byteData));
-                                byteData = Encoding.UTF8.GetBytes(databasePath);
-                                regKey.SetValue("Data2", Convert.ToBase64String(byteData));
-                            }
-                        }
-                        else
-                        {
-                            if (databasePath != "")
-                            {
-                                byteData = Encoding.UTF8.GetBytes(databasePath);
-                                regKey.SetValue("Data2", Convert.ToBase64String(byteData));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        regKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-                        if (regKey == null)
-                        {
-                            regKey = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
-                            if (oldregKey != null)
-                            {
-                                foreach (var name in oldregKey.GetValueNames())
-                                {
-                                    regKey.SetValue(name, oldregKey.GetValue(name), oldregKey.GetValueKind(name));
-                                }
-                                Registry.CurrentUser.DeleteSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
-                            }
-                            else
-                            {
-                                byteData = Encoding.UTF8.GetBytes(macAddress);
-                                regKey.SetValue("Data1", Convert.ToBase64String(byteData));
-                                byteData = Encoding.UTF8.GetBytes(databasePath);
-                                regKey.SetValue("Data2", Convert.ToBase64String(byteData));
-                            }
-                        }
-                        else
-                        {
-                            if (databasePath != "")
-                            {
-                                byteData = Encoding.UTF8.GetBytes(databasePath);
-                                regKey.SetValue("Data2", Convert.ToBase64String(byteData));
-                            }
-                        }
-                    }
+                    //////RegistryKey oldregKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
+                    //////RegistryKey regKey = null;
+                    //////if(Environment.Is64BitProcess)
+                    //////{
+                    //////    regKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
+                    //////    if (regKey == null)
+                    //////    {
+                    //////        regKey = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\Wow6432Node\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
+                    //////        if (oldregKey != null)
+                    //////        {
+                    //////            foreach (var name in oldregKey.GetValueNames())
+                    //////            {
+                    //////                regKey.SetValue(name, oldregKey.GetValue(name), oldregKey.GetValueKind(name));
+                    //////            }
+                    //////            Registry.CurrentUser.DeleteSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
+                    //////        }
+                    //////        else
+                    //////        {
+                    //////            byteData = Encoding.UTF8.GetBytes(macAddress);
+                    //////            regKey.SetValue("Data1", Convert.ToBase64String(byteData));
+                    //////            byteData = Encoding.UTF8.GetBytes(databasePath);
+                    //////            regKey.SetValue("Data2", Convert.ToBase64String(byteData));
+                    //////        }
+                    //////    }
+                    //////    else
+                    //////    {
+                    //////        if (databasePath != "")
+                    //////        {
+                    //////            byteData = Encoding.UTF8.GetBytes(databasePath);
+                    //////            regKey.SetValue("Data2", Convert.ToBase64String(byteData));
+                    //////        }
+                    //////    }
+                    //////}
+                    //////else
+                    //////{
+                    //////    regKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
+                    //////    if (regKey == null)
+                    //////    {
+                    //////        regKey = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
+                    //////        if (oldregKey != null)
+                    //////        {
+                    //////            foreach (var name in oldregKey.GetValueNames())
+                    //////            {
+                    //////                regKey.SetValue(name, oldregKey.GetValue(name), oldregKey.GetValueKind(name));
+                    //////            }
+                    //////            Registry.CurrentUser.DeleteSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
+                    //////        }
+                    //////        else
+                    //////        {
+                    //////            byteData = Encoding.UTF8.GetBytes(macAddress);
+                    //////            regKey.SetValue("Data1", Convert.ToBase64String(byteData));
+                    //////            byteData = Encoding.UTF8.GetBytes(databasePath);
+                    //////            regKey.SetValue("Data2", Convert.ToBase64String(byteData));
+                    //////        }
+                    //////    }
+                    //////    else
+                    //////    {
+                    //////        if (databasePath != "")
+                    //////        {
+                    //////            byteData = Encoding.UTF8.GetBytes(databasePath);
+                    //////            regKey.SetValue("Data2", Convert.ToBase64String(byteData));
+                    //////        }
+                    //////    }
+                    //////}
 
-                    if (regKey != null)
-                    {
-                        object o1 = regKey.GetValue("Data1");
-                        byteData = Convert.FromBase64String(o1.ToString());
-                        macAddress = Encoding.UTF8.GetString(byteData);
-                    }
+                    //////if (regKey != null)
+                    //////{
+                    //////    object o1 = regKey.GetValue("Data1");
+                    //////    byteData = Convert.FromBase64String(o1.ToString());
+                    //////    macAddress = Encoding.UTF8.GetString(byteData);
+                    //////}
                     
                     string installReglocation = @"Software\Microsoft\Windows\CurrentVersion\Uninstall";
 
@@ -427,27 +427,27 @@ namespace Setup
             return true;
         }
 
-        public static string StringToBinary(string data)
-        {
-            StringBuilder sb = new StringBuilder();
+        //public static string StringToBinary(string data)
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            foreach (char c in data.ToCharArray())
-            {
-                sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
-            }
-            return sb.ToString();
-        }
+        //    foreach (char c in data.ToCharArray())
+        //    {
+        //        sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
+        //    }
+        //    return sb.ToString();
+        //}
 
-        public static string BinaryToString(string data)
-        {
-            List<Byte> byteList = new List<Byte>();
+        //public static string BinaryToString(string data)
+        //{
+        //    List<Byte> byteList = new List<Byte>();
 
-            for (int i = 0; i < data.Length; i += 8)
-            {
-                byteList.Add(Convert.ToByte(data.Substring(i, 8), 2));
-            }
-            return Encoding.ASCII.GetString(byteList.ToArray());
-        }
+        //    for (int i = 0; i < data.Length; i += 8)
+        //    {
+        //        byteList.Add(Convert.ToByte(data.Substring(i, 8), 2));
+        //    }
+        //    return Encoding.ASCII.GetString(byteList.ToArray());
+        //}
 
         private void rdbAccept_CheckedChanged(object sender, EventArgs e)
         {
@@ -535,95 +535,100 @@ namespace Setup
             if (btnFinish.Text == "Finish")
             {
                 btnFinish.Enabled = false;
-                string installedDate = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
-                if (checkNetConnection() == true)
+                if(System.IO.File.Exists(installPath + @"\sourcefile.txt"))
                 {
-                    try
-                    {
-                        string queryToCheck = "SELECT productName FROM installationDetails WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
-                        //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
-                        WebRequest webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/SelectData.php?Q=" + queryToCheck);
-                        webRequest.Timeout = 8000;
-                        WebResponse webResponse = webRequest.GetResponse();
-                        Stream dataStream = webResponse.GetResponseStream();
-                        StreamReader strmReader = new StreamReader(dataStream);
-                        string requestResult = strmReader.ReadLine();
-                        if (requestResult == null)
-                        {
-                            queryToCheck = "SELECT productName FROM installationDetails WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
-                            //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
-                            webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/SelectData.php?Q=" + queryToCheck);
-                            webRequest.Timeout = 8000;
-                            webResponse = webRequest.GetResponse();
-                            dataStream = webResponse.GetResponseStream();
-                            strmReader = new StreamReader(dataStream);
-                            requestResult = strmReader.ReadLine();
-                            if (requestResult == null)
-                            {
-                                string installTime = DateTime.Now.ToString("hh:mm:ss tt");
-                                string queryToInsert = "INSERT INTO installationDetails (mac,productName,isBlocked,licenseKey,installDate,installTime) VALUES('" + macAddress + "', '" + Application.ProductName + "','" + false + "','" + "Demo" + "','" + installedDate + "','" + installTime + "')";
-                                //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
-                                webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/InsertData.php?Q=" + queryToInsert);
-                                webRequest.Timeout = 8000;
-                                webResponse = webRequest.GetResponse();
-                            }
-                        }
-                        else
-                        {
-                           //string queryToUpdate = "update installationDetails set mac='"+macAddress+"' WHERE mac = '" + GetMACAddress() + "' and productName='" + Application.ProductName + "'";
-                           // //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
-                           // webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/UpdateData.php?Q=" + queryToUpdate);
-                           // webRequest.Timeout = 8000;
-                           // webResponse = webRequest.GetResponse();
-                           // dataStream = webResponse.GetResponseStream();
-                           // strmReader = new StreamReader(dataStream);
-                           // requestResult = strmReader.ReadLine();
-                        }
-                    }
-                    catch
-                    {
-
-                    }
+                    System.IO.File.Delete(installPath + @"\sourcefile.txt");
                 }
+                System.IO.File.WriteAllText(installPath + @"\sourcefile.txt", typeof(Program).Assembly.GetName().Name);
+                //string installedDate = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
+                //if (checkNetConnection() == true)
+                //{
+                //    try
+                //    {
+                //        string queryToCheck = "SELECT productName FROM installationDetails WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
+                //        //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                //        WebRequest webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/SelectData.php?Q=" + queryToCheck);
+                //        webRequest.Timeout = 8000;
+                //        WebResponse webResponse = webRequest.GetResponse();
+                //        Stream dataStream = webResponse.GetResponseStream();
+                //        StreamReader strmReader = new StreamReader(dataStream);
+                //        string requestResult = strmReader.ReadLine();
+                //        if (requestResult == null)
+                //        {
+                //            queryToCheck = "SELECT productName FROM installationDetails WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
+                //            //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                //            webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/SelectData.php?Q=" + queryToCheck);
+                //            webRequest.Timeout = 8000;
+                //            webResponse = webRequest.GetResponse();
+                //            dataStream = webResponse.GetResponseStream();
+                //            strmReader = new StreamReader(dataStream);
+                //            requestResult = strmReader.ReadLine();
+                //            if (requestResult == null)
+                //            {
+                //                string installTime = DateTime.Now.ToString("hh:mm:ss tt");
+                //                string queryToInsert = "INSERT INTO installationDetails (mac,productName,isBlocked,licenseKey,installDate,installTime) VALUES('" + macAddress + "', '" + Application.ProductName + "','" + false + "','" + "Demo" + "','" + installedDate + "','" + installTime + "')";
+                //                //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                //                webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/InsertData.php?Q=" + queryToInsert);
+                //                webRequest.Timeout = 8000;
+                //                webResponse = webRequest.GetResponse();
+                //            }
+                //        }
+                //        else
+                //        {
+                //           //string queryToUpdate = "update installationDetails set mac='"+macAddress+"' WHERE mac = '" + GetMACAddress() + "' and productName='" + Application.ProductName + "'";
+                //           // //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                //           // webRequest = WebRequest.Create("http://codeachi.com/Product/LMS/UpdateData.php?Q=" + queryToUpdate);
+                //           // webRequest.Timeout = 8000;
+                //           // webResponse = webRequest.GetResponse();
+                //           // dataStream = webResponse.GetResponseStream();
+                //           // strmReader = new StreamReader(dataStream);
+                //           // requestResult = strmReader.ReadLine();
+                //        }
+                //    }
+                //    catch
+                //    {
+
+                //    }
+                //}
 
                 if (chkbLaunch.Checked == true)
                 {
                     Process.Start(installPath + @"\" + Application.ProductName + ".exe");
                 }
-                try
-                {
-                    string queryToSelect = "SELECT installUrl1,installUrl2 FROM installUninstallUrl WHERE productName='" + Application.ProductName + "'";
-                    //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
-                    WebRequest webRequest1 = WebRequest.Create("http://codeachi.com/Product/LMS/SelectData.php?Q=" + queryToSelect);
-                    webRequest1.Timeout = 8000;
-                    WebResponse webResponse1 = webRequest1.GetResponse();
-                    Stream dataStream1 = webResponse1.GetResponseStream();
-                    StreamReader strmReader1 = new StreamReader(dataStream1);
-                    string requestResult1 = strmReader1.ReadLine();
-                    if (requestResult1 != null && requestResult1 != "")
-                    {
-                        string[] splitData = requestResult1.Split('$');
-                        try
-                        {
-                            Process.Start(splitData[0]);
-                        }
-                        catch
-                        {
+                //try
+                //{
+                //    string queryToSelect = "SELECT installUrl1,installUrl2 FROM installUninstallUrl WHERE productName='" + Application.ProductName + "'";
+                //    //ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                //    WebRequest webRequest1 = WebRequest.Create("http://codeachi.com/Product/LMS/SelectData.php?Q=" + queryToSelect);
+                //    webRequest1.Timeout = 8000;
+                //    WebResponse webResponse1 = webRequest1.GetResponse();
+                //    Stream dataStream1 = webResponse1.GetResponseStream();
+                //    StreamReader strmReader1 = new StreamReader(dataStream1);
+                //    string requestResult1 = strmReader1.ReadLine();
+                //    if (requestResult1 != null && requestResult1 != "")
+                //    {
+                //        string[] splitData = requestResult1.Split('$');
+                //        try
+                //        {
+                //            Process.Start(splitData[0]);
+                //        }
+                //        catch
+                //        {
 
-                        }
-                        try
-                        {
-                            Process.Start(splitData[1]);
-                        }
-                        catch
-                        {
+                //        }
+                //        try
+                //        {
+                //            Process.Start(splitData[1]);
+                //        }
+                //        catch
+                //        {
 
-                        }
-                    }
-                }
-                catch
-                {
-                }
+                //        }
+                //    }
+                //}
+                //catch
+                //{
+                //}
                 Application.Exit();
             }
             else
@@ -635,22 +640,22 @@ namespace Setup
             }
         }
 
-        public string GetMACAddress()
-        {
-            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
-            String sMacAddress = string.Empty;
-            foreach (NetworkInterface adapter in nics)
-            {
-                if (sMacAddress == String.Empty)// only return MAC Address from first card  
-                {
-                    IPInterfaceProperties properties = adapter.GetIPProperties();
-                    sMacAddress = adapter.GetPhysicalAddress().ToString();
-                }
-            }
-            sMacAddress = Regex.Replace(sMacAddress, ".{2}", "$0:");
-            sMacAddress = sMacAddress.Remove(sMacAddress.Length - 1, 1);
-            return sMacAddress;
-        }
+        //public string GetMACAddress()
+        //{
+        //    NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+        //    String sMacAddress = string.Empty;
+        //    foreach (NetworkInterface adapter in nics)
+        //    {
+        //        if (sMacAddress == String.Empty)// only return MAC Address from first card  
+        //        {
+        //            IPInterfaceProperties properties = adapter.GetIPProperties();
+        //            sMacAddress = adapter.GetPhysicalAddress().ToString();
+        //        }
+        //    }
+        //    sMacAddress = Regex.Replace(sMacAddress, ".{2}", "$0:");
+        //    sMacAddress = sMacAddress.Remove(sMacAddress.Length - 1, 1);
+        //    return sMacAddress;
+        //}
 
         public static bool checkNetConnection()
         {

@@ -89,7 +89,7 @@ namespace CodeAchi_Library_Management_System
             }
             if (btnSave.Text == "Sa&ve")// =======================Borrower Category Add=================
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -175,7 +175,7 @@ namespace CodeAchi_Library_Management_System
             }
             else//============================Category update========================
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -747,7 +747,7 @@ namespace CodeAchi_Library_Management_System
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1077,7 +1077,7 @@ namespace CodeAchi_Library_Management_System
 
                 List<string> brrIdList = new List<string> { };
                 string currentDateTime = DateTime.Now.Day.ToString("00") + DateTime.Now.Month.ToString("00") + DateTime.Now.Year.ToString("0000") + DateTime.Now.ToString("hhmmss");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     string sourceFile = Properties.Settings.Default.databasePath + @"\LMS.sl3";
                     string destFile = globalVarLms.backupPath + @"\Backup_before_delete_" + dgvBrrCategory.SelectedCells[0].Value.ToString().Replace("/", "_").Replace(@"\", "_") + "_Borrower_category_" + currentDateTime + ".sl3";

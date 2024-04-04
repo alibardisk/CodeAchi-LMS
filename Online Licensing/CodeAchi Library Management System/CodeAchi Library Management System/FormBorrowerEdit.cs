@@ -30,7 +30,7 @@ namespace CodeAchi_Library_Management_System
             dgvBorrower.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
             cmbCategory.Items.Clear();
             cmbCategory.Items.Add("-------select--------");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -165,7 +165,7 @@ namespace CodeAchi_Library_Management_System
                 cmbSearch.Items.Clear();
                 cmbSearch.Items.Add("Please select a search option...");
                 cmbSearch.Items.Add("All Borrower");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -299,7 +299,7 @@ namespace CodeAchi_Library_Management_System
                 string taskDesc = "borrower delete";
                 string currentDateTime = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000") + " " + DateTime.Now.ToString("hh:mm:ss tt");
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -420,7 +420,7 @@ namespace CodeAchi_Library_Management_System
                 cmbValue.Visible = true;
                 cmbValue.Items.Add("--Select--");
                 string queryString = "select membrshpName from mbershipSetting";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -616,7 +616,7 @@ namespace CodeAchi_Library_Management_System
             string queryString = "";
             string taskDesc = lstbFieldList.SelectedItem.ToString() + " update of borrower";
             string currentDateTime = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000") + " " + DateTime.Now.ToString("hh:mm:ss tt");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -795,7 +795,7 @@ namespace CodeAchi_Library_Management_System
                 validDays = 0;
                 if (cmbValue.SelectedIndex != 0)
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -863,7 +863,7 @@ namespace CodeAchi_Library_Management_System
                 {
                     txtbAccn.Clear();
                     txtbAccn.Enabled = false;
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -946,7 +946,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     List<string> columnData = new List<string> { };
                     autoCollData.Clear();
-                    if(Properties.Settings.Default.sqliteDatabase)
+                    if(globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -1043,7 +1043,7 @@ namespace CodeAchi_Library_Management_System
                     columnName = "addInfo5";
                 }
                
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

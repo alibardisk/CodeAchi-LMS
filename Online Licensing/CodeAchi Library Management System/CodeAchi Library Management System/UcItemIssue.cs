@@ -179,7 +179,7 @@ namespace CodeAchi_Library_Management_System
             }
             if (txtbAccn.Text != "")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -532,7 +532,7 @@ namespace CodeAchi_Library_Management_System
             {
                 issueLimit = 0;
                 string membrshpName = "";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -909,7 +909,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1085,7 +1085,7 @@ namespace CodeAchi_Library_Management_System
         private void timer3_Tick(object sender, EventArgs e)
         {
             timerIssueDetails.Stop();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1210,7 +1210,7 @@ namespace CodeAchi_Library_Management_System
         private void timerBorrowerId_Tick(object sender, EventArgs e)
         {
             timerBorrowerId.Stop();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1407,7 +1407,7 @@ namespace CodeAchi_Library_Management_System
             fileName = folderPath + @"\" + fileName + ".pdf";
             System.Drawing.Image instLogo = null;
             string instName = "", instAddress = "", instContact = "", instWebsite = "", instMail = "", cuurShort = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -2064,7 +2064,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (txtbBrrName.Text != "")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     //============================Issued Items==========================
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
@@ -2244,7 +2244,7 @@ namespace CodeAchi_Library_Management_System
                 htmlBody = false;
                 if (Convert.ToBoolean(jsonObj["IssueMail"].ToString()))
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -2414,7 +2414,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 if (Convert.ToBoolean(jsonObj["IssueSms"].ToString()))
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -2527,7 +2527,7 @@ namespace CodeAchi_Library_Management_System
             if (txtbAccn.Text != "")
             {
                 btnAdd.Enabled = true;
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -2679,7 +2679,7 @@ namespace CodeAchi_Library_Management_System
             if (dgvBook.Rows.Count > 0)
             {
                 btnIssueBook.Enabled = false;
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -2848,7 +2848,7 @@ namespace CodeAchi_Library_Management_System
             fileName = folderPath + @"\" + fileName + ".pdf";
             System.Drawing.Image instLogo = null;
             string instName = "", instAddress = "", instContact = "", instWebsite = "", instMail = "", cuurShort = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -3590,7 +3590,7 @@ namespace CodeAchi_Library_Management_System
             accessibleItem.Clear();
             autoCollIsbn.Clear();
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

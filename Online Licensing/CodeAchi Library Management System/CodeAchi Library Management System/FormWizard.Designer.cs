@@ -53,7 +53,6 @@
             this.pnlStp5 = new System.Windows.Forms.Panel();
             this.pnlStep4 = new System.Windows.Forms.Panel();
             this.pnlStep3 = new System.Windows.Forms.Panel();
-            this.pnlStep2 = new System.Windows.Forms.Panel();
             this.lblTutorial = new System.Windows.Forms.LinkLabel();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -81,6 +80,33 @@
             this.TxtbWebsite = new System.Windows.Forms.TextBox();
             this.txtbShortName = new System.Windows.Forms.TextBox();
             this.txtbFullName = new System.Windows.Forms.TextBox();
+            this.cmbCurrShort = new System.Windows.Forms.ComboBox();
+            this.cmbCurrName = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtbCountry = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.cmbCurrSymbol = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtbDesignation = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtbName = new System.Windows.Forms.TextBox();
+            this.txtbPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtbMailId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtbPass1 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.pnlStep2 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label19 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -109,34 +135,7 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.cmbCurrSymbol = new System.Windows.Forms.ComboBox();
-            this.cmbCurrShort = new System.Windows.Forms.ComboBox();
-            this.cmbCurrName = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtbCountry = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtbDesignation = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtbName = new System.Windows.Forms.TextBox();
-            this.txtbPassword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtbMailId = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtbPass1 = new System.Windows.Forms.TextBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -145,8 +144,8 @@
             this.pnlStp5.SuspendLayout();
             this.pnlStep4.SuspendLayout();
             this.pnlStep3.SuspendLayout();
-            this.pnlStep2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
+            this.pnlStep2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,9 +290,9 @@
             this.pnlStp1.Controls.Add(this.rdbPersonal);
             this.pnlStp1.Controls.Add(this.rdbOfficial);
             this.pnlStp1.Controls.Add(this.label2);
-            this.pnlStp1.Location = new System.Drawing.Point(12, 82);
+            this.pnlStp1.Location = new System.Drawing.Point(0, 0);
             this.pnlStp1.Name = "pnlStp1";
-            this.pnlStp1.Size = new System.Drawing.Size(655, 274);
+            this.pnlStp1.Size = new System.Drawing.Size(655, 276);
             this.pnlStp1.TabIndex = 6073;
             // 
             // label55
@@ -418,7 +417,6 @@
             // pnlStep4
             // 
             this.pnlStep4.Controls.Add(this.pnlStep3);
-            this.pnlStep4.Controls.Add(this.cmbCurrSymbol);
             this.pnlStep4.Controls.Add(this.cmbCurrShort);
             this.pnlStep4.Controls.Add(this.cmbCurrName);
             this.pnlStep4.Controls.Add(this.label8);
@@ -430,6 +428,7 @@
             this.pnlStep4.Controls.Add(this.label45);
             this.pnlStep4.Controls.Add(this.label46);
             this.pnlStep4.Controls.Add(this.linkLabel2);
+            this.pnlStep4.Controls.Add(this.cmbCurrSymbol);
             this.pnlStep4.Location = new System.Drawing.Point(0, 0);
             this.pnlStep4.Name = "pnlStep4";
             this.pnlStep4.Size = new System.Drawing.Size(655, 274);
@@ -437,75 +436,37 @@
             // 
             // pnlStep3
             // 
-            this.pnlStep3.Controls.Add(this.pnlStep2);
-            this.pnlStep3.Controls.Add(this.linkLabel1);
-            this.pnlStep3.Controls.Add(this.label19);
-            this.pnlStep3.Controls.Add(this.label24);
-            this.pnlStep3.Controls.Add(this.label16);
-            this.pnlStep3.Controls.Add(this.label23);
-            this.pnlStep3.Controls.Add(this.label15);
-            this.pnlStep3.Controls.Add(this.label22);
-            this.pnlStep3.Controls.Add(this.label10);
-            this.pnlStep3.Controls.Add(this.label21);
-            this.pnlStep3.Controls.Add(this.label14);
-            this.pnlStep3.Controls.Add(this.label20);
-            this.pnlStep3.Controls.Add(this.txtbUserCountry);
-            this.pnlStep3.Controls.Add(this.lblNotification);
-            this.pnlStep3.Controls.Add(this.lblMessage);
-            this.pnlStep3.Controls.Add(this.btnImage);
-            this.pnlStep3.Controls.Add(this.pcbUser);
-            this.pnlStep3.Controls.Add(this.label18);
-            this.pnlStep3.Controls.Add(this.txtbAddress);
-            this.pnlStep3.Controls.Add(this.txtbUserDesignation);
-            this.pnlStep3.Controls.Add(this.txtbUserName);
-            this.pnlStep3.Controls.Add(this.txtbContact);
-            this.pnlStep3.Controls.Add(this.label17);
-            this.pnlStep3.Controls.Add(this.txtbUserMail);
-            this.pnlStep3.Controls.Add(this.label40);
-            this.pnlStep3.Controls.Add(this.label42);
-            this.pnlStep3.Controls.Add(this.label44);
-            this.pnlStep3.Controls.Add(this.label43);
-            this.pnlStep3.Controls.Add(this.label41);
-            this.pnlStep3.Controls.Add(this.label54);
-            this.pnlStep3.Controls.Add(this.label53);
+            this.pnlStep3.Controls.Add(this.lblTutorial);
+            this.pnlStep3.Controls.Add(this.label50);
+            this.pnlStep3.Controls.Add(this.label51);
+            this.pnlStep3.Controls.Add(this.label26);
+            this.pnlStep3.Controls.Add(this.label33);
+            this.pnlStep3.Controls.Add(this.label32);
+            this.pnlStep3.Controls.Add(this.label39);
+            this.pnlStep3.Controls.Add(this.label30);
+            this.pnlStep3.Controls.Add(this.label38);
+            this.pnlStep3.Controls.Add(this.label25);
+            this.pnlStep3.Controls.Add(this.label37);
+            this.pnlStep3.Controls.Add(this.label27);
+            this.pnlStep3.Controls.Add(this.label36);
+            this.pnlStep3.Controls.Add(this.lblMessage1);
+            this.pnlStep3.Controls.Add(this.lblNotification1);
+            this.pnlStep3.Controls.Add(this.btnUpload);
+            this.pnlStep3.Controls.Add(this.pcbLogo);
+            this.pnlStep3.Controls.Add(this.txtbOrgCountry);
+            this.pnlStep3.Controls.Add(this.label31);
+            this.pnlStep3.Controls.Add(this.txtbOrgAddress);
+            this.pnlStep3.Controls.Add(this.txtbOrgMail);
+            this.pnlStep3.Controls.Add(this.label28);
+            this.pnlStep3.Controls.Add(this.txtbOrgContact);
+            this.pnlStep3.Controls.Add(this.label29);
+            this.pnlStep3.Controls.Add(this.TxtbWebsite);
+            this.pnlStep3.Controls.Add(this.txtbShortName);
+            this.pnlStep3.Controls.Add(this.txtbFullName);
             this.pnlStep3.Location = new System.Drawing.Point(0, 0);
             this.pnlStep3.Name = "pnlStep3";
             this.pnlStep3.Size = new System.Drawing.Size(655, 274);
-            this.pnlStep3.TabIndex = 6124;
-            // 
-            // pnlStep2
-            // 
-            this.pnlStep2.Controls.Add(this.lblTutorial);
-            this.pnlStep2.Controls.Add(this.label50);
-            this.pnlStep2.Controls.Add(this.label51);
-            this.pnlStep2.Controls.Add(this.label26);
-            this.pnlStep2.Controls.Add(this.label33);
-            this.pnlStep2.Controls.Add(this.label32);
-            this.pnlStep2.Controls.Add(this.label39);
-            this.pnlStep2.Controls.Add(this.label30);
-            this.pnlStep2.Controls.Add(this.label38);
-            this.pnlStep2.Controls.Add(this.label25);
-            this.pnlStep2.Controls.Add(this.label37);
-            this.pnlStep2.Controls.Add(this.label27);
-            this.pnlStep2.Controls.Add(this.label36);
-            this.pnlStep2.Controls.Add(this.lblMessage1);
-            this.pnlStep2.Controls.Add(this.lblNotification1);
-            this.pnlStep2.Controls.Add(this.btnUpload);
-            this.pnlStep2.Controls.Add(this.pcbLogo);
-            this.pnlStep2.Controls.Add(this.txtbOrgCountry);
-            this.pnlStep2.Controls.Add(this.label31);
-            this.pnlStep2.Controls.Add(this.txtbOrgAddress);
-            this.pnlStep2.Controls.Add(this.txtbOrgMail);
-            this.pnlStep2.Controls.Add(this.label28);
-            this.pnlStep2.Controls.Add(this.txtbOrgContact);
-            this.pnlStep2.Controls.Add(this.label29);
-            this.pnlStep2.Controls.Add(this.TxtbWebsite);
-            this.pnlStep2.Controls.Add(this.txtbShortName);
-            this.pnlStep2.Controls.Add(this.txtbFullName);
-            this.pnlStep2.Location = new System.Drawing.Point(0, 1);
-            this.pnlStep2.Name = "pnlStep2";
-            this.pnlStep2.Size = new System.Drawing.Size(655, 272);
-            this.pnlStep2.TabIndex = 6125;
+            this.pnlStep3.TabIndex = 6125;
             // 
             // lblTutorial
             // 
@@ -656,7 +617,7 @@
             this.lblMessage1.ForeColor = System.Drawing.Color.Black;
             this.lblMessage1.Location = new System.Drawing.Point(500, 150);
             this.lblMessage1.Name = "lblMessage1";
-            this.lblMessage1.Size = new System.Drawing.Size(132, 15);
+            this.lblMessage1.Size = new System.Drawing.Size(133, 15);
             this.lblMessage1.TabIndex = 6112;
             this.lblMessage1.Text = "Maximum file size 1 MB";
             // 
@@ -812,6 +773,331 @@
             this.txtbFullName.Size = new System.Drawing.Size(262, 25);
             this.txtbFullName.TabIndex = 6072;
             // 
+            // cmbCurrShort
+            // 
+            this.cmbCurrShort.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCurrShort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCurrShort.FormattingEnabled = true;
+            this.cmbCurrShort.Location = new System.Drawing.Point(318, 146);
+            this.cmbCurrShort.Name = "cmbCurrShort";
+            this.cmbCurrShort.Size = new System.Drawing.Size(165, 25);
+            this.cmbCurrShort.TabIndex = 6121;
+            // 
+            // cmbCurrName
+            // 
+            this.cmbCurrName.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCurrName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCurrName.FormattingEnabled = true;
+            this.cmbCurrName.Location = new System.Drawing.Point(318, 109);
+            this.cmbCurrName.Name = "cmbCurrName";
+            this.cmbCurrName.Size = new System.Drawing.Size(165, 25);
+            this.cmbCurrName.TabIndex = 6122;
+            this.cmbCurrName.SelectedIndexChanged += new System.EventHandler(this.cmbCurrName_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(172, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 17);
+            this.label8.TabIndex = 6115;
+            this.label8.Text = "Country Name :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(172, 192);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 17);
+            this.label13.TabIndex = 6120;
+            this.label13.Text = "Currency Symbol :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(172, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(140, 17);
+            this.label9.TabIndex = 6119;
+            this.label9.Text = "Currency Short Name :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(172, 112);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 17);
+            this.label11.TabIndex = 6118;
+            this.label11.Text = "Currency Name :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(154, 20);
+            this.label12.TabIndex = 6071;
+            this.label12.Text = "Set Currency Details: ";
+            // 
+            // txtbCountry
+            // 
+            this.txtbCountry.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtbCountry.Enabled = false;
+            this.txtbCountry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbCountry.ForeColor = System.Drawing.Color.Black;
+            this.txtbCountry.Location = new System.Drawing.Point(318, 60);
+            this.txtbCountry.MaxLength = 500;
+            this.txtbCountry.Name = "txtbCountry";
+            this.txtbCountry.Size = new System.Drawing.Size(165, 25);
+            this.txtbCountry.TabIndex = 6114;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.ForeColor = System.Drawing.Color.DimGray;
+            this.label45.Location = new System.Drawing.Point(314, 85);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(234, 17);
+            this.label45.TabIndex = 6138;
+            this.label45.Text = "Select country from the list during type";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Red;
+            this.label46.Location = new System.Drawing.Point(303, 80);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(16, 20);
+            this.label46.TabIndex = 6137;
+            this.label46.Text = "*";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(516, 7);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(126, 17);
+            this.linkLabel2.TabIndex = 6173;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Why this required ?";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // cmbCurrSymbol
+            // 
+            this.cmbCurrSymbol.BackColor = System.Drawing.Color.Gainsboro;
+            this.cmbCurrSymbol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCurrSymbol.FormattingEnabled = true;
+            this.cmbCurrSymbol.Location = new System.Drawing.Point(318, 184);
+            this.cmbCurrSymbol.Name = "cmbCurrSymbol";
+            this.cmbCurrSymbol.Size = new System.Drawing.Size(165, 25);
+            this.cmbCurrSymbol.TabIndex = 6123;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(148, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 17);
+            this.label4.TabIndex = 6076;
+            this.label4.Text = "Designation :";
+            // 
+            // txtbDesignation
+            // 
+            this.txtbDesignation.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtbDesignation.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbDesignation.ForeColor = System.Drawing.Color.Black;
+            this.txtbDesignation.Location = new System.Drawing.Point(271, 97);
+            this.txtbDesignation.MaxLength = 500;
+            this.txtbDesignation.Name = "txtbDesignation";
+            this.txtbDesignation.ReadOnly = true;
+            this.txtbDesignation.Size = new System.Drawing.Size(235, 25);
+            this.txtbDesignation.TabIndex = 6073;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(148, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 17);
+            this.label6.TabIndex = 6079;
+            this.label6.Text = "Password :";
+            // 
+            // txtbName
+            // 
+            this.txtbName.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbName.ForeColor = System.Drawing.Color.Black;
+            this.txtbName.Location = new System.Drawing.Point(271, 55);
+            this.txtbName.MaxLength = 500;
+            this.txtbName.Name = "txtbName";
+            this.txtbName.ReadOnly = true;
+            this.txtbName.Size = new System.Drawing.Size(235, 25);
+            this.txtbName.TabIndex = 6072;
+            this.txtbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbName_KeyPress);
+            // 
+            // txtbPassword
+            // 
+            this.txtbPassword.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtbPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtbPassword.Location = new System.Drawing.Point(271, 180);
+            this.txtbPassword.MaxLength = 500;
+            this.txtbPassword.Name = "txtbPassword";
+            this.txtbPassword.Size = new System.Drawing.Size(235, 25);
+            this.txtbPassword.TabIndex = 6075;
+            this.txtbPassword.TextChanged += new System.EventHandler(this.txtbPassword_TextChanged);
+            this.txtbPassword.Leave += new System.EventHandler(this.txtbPassword_Leave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(148, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 17);
+            this.label5.TabIndex = 6077;
+            this.label5.Text = "Name :";
+            // 
+            // txtbMailId
+            // 
+            this.txtbMailId.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtbMailId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbMailId.ForeColor = System.Drawing.Color.Black;
+            this.txtbMailId.Location = new System.Drawing.Point(271, 138);
+            this.txtbMailId.MaxLength = 500;
+            this.txtbMailId.Name = "txtbMailId";
+            this.txtbMailId.ReadOnly = true;
+            this.txtbMailId.Size = new System.Drawing.Size(235, 25);
+            this.txtbMailId.TabIndex = 6074;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(148, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 17);
+            this.label7.TabIndex = 6078;
+            this.label7.Text = "E-mail Id :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.TabIndex = 6071;
+            this.label3.Text = "Create Admin: ";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(148, 223);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(121, 17);
+            this.label34.TabIndex = 6082;
+            this.label34.Text = "Confirm Password :";
+            // 
+            // txtbPass1
+            // 
+            this.txtbPass1.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtbPass1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbPass1.ForeColor = System.Drawing.Color.Black;
+            this.txtbPass1.Location = new System.Drawing.Point(271, 220);
+            this.txtbPass1.MaxLength = 500;
+            this.txtbPass1.Name = "txtbPass1";
+            this.txtbPass1.Size = new System.Drawing.Size(235, 25);
+            this.txtbPass1.TabIndex = 6081;
+            this.txtbPass1.TextChanged += new System.EventHandler(this.txtbPass1_TextChanged);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.ForeColor = System.Drawing.Color.DimGray;
+            this.label48.Location = new System.Drawing.Point(272, 251);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(331, 17);
+            this.label48.TabIndex = 6140;
+            this.label48.Text = "Remeber the password, You will need it from next login";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Red;
+            this.label49.Location = new System.Drawing.Point(261, 246);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(16, 20);
+            this.label49.TabIndex = 6139;
+            this.label49.Text = "*";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.Color.DimGray;
+            this.label47.Location = new System.Drawing.Point(12, 22);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(127, 17);
+            this.label47.TabIndex = 6138;
+            this.label47.Text = "Set Admin Password";
+            // 
+            // pnlStep2
+            // 
+            this.pnlStep2.Controls.Add(this.linkLabel1);
+            this.pnlStep2.Controls.Add(this.label19);
+            this.pnlStep2.Controls.Add(this.pnlStp1);
+            this.pnlStep2.Controls.Add(this.label24);
+            this.pnlStep2.Controls.Add(this.label16);
+            this.pnlStep2.Controls.Add(this.label23);
+            this.pnlStep2.Controls.Add(this.label15);
+            this.pnlStep2.Controls.Add(this.label22);
+            this.pnlStep2.Controls.Add(this.label10);
+            this.pnlStep2.Controls.Add(this.label21);
+            this.pnlStep2.Controls.Add(this.label14);
+            this.pnlStep2.Controls.Add(this.label20);
+            this.pnlStep2.Controls.Add(this.txtbUserCountry);
+            this.pnlStep2.Controls.Add(this.lblNotification);
+            this.pnlStep2.Controls.Add(this.lblMessage);
+            this.pnlStep2.Controls.Add(this.btnImage);
+            this.pnlStep2.Controls.Add(this.pcbUser);
+            this.pnlStep2.Controls.Add(this.label18);
+            this.pnlStep2.Controls.Add(this.txtbAddress);
+            this.pnlStep2.Controls.Add(this.txtbUserDesignation);
+            this.pnlStep2.Controls.Add(this.txtbUserName);
+            this.pnlStep2.Controls.Add(this.txtbContact);
+            this.pnlStep2.Controls.Add(this.label17);
+            this.pnlStep2.Controls.Add(this.txtbUserMail);
+            this.pnlStep2.Controls.Add(this.label40);
+            this.pnlStep2.Controls.Add(this.label42);
+            this.pnlStep2.Controls.Add(this.label44);
+            this.pnlStep2.Controls.Add(this.label43);
+            this.pnlStep2.Controls.Add(this.label41);
+            this.pnlStep2.Controls.Add(this.label53);
+            this.pnlStep2.Location = new System.Drawing.Point(12, 82);
+            this.pnlStep2.Name = "pnlStep2";
+            this.pnlStep2.Size = new System.Drawing.Size(655, 274);
+            this.pnlStep2.TabIndex = 6124;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -964,7 +1250,7 @@
             this.lblMessage.ForeColor = System.Drawing.Color.Black;
             this.lblMessage.Location = new System.Drawing.Point(507, 189);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(140, 15);
+            this.lblMessage.Size = new System.Drawing.Size(141, 15);
             this.lblMessage.TabIndex = 6117;
             this.lblMessage.Text = "Maximum file size 500 KB";
             // 
@@ -1129,17 +1415,6 @@
             this.label41.TabIndex = 6133;
             this.label41.Text = "(Library Admin)";
             // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.DimGray;
-            this.label54.Location = new System.Drawing.Point(353, 57);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(180, 15);
-            this.label54.TabIndex = 6138;
-            this.label54.Text = "(OTP will be sent to this number)";
-            // 
             // label53
             // 
             this.label53.AutoSize = true;
@@ -1147,297 +1422,9 @@
             this.label53.ForeColor = System.Drawing.Color.DimGray;
             this.label53.Location = new System.Drawing.Point(83, 187);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(167, 15);
+            this.label53.Size = new System.Drawing.Size(166, 15);
             this.label53.TabIndex = 6137;
             this.label53.Text = "(OTP will be sent to this email)";
-            // 
-            // cmbCurrSymbol
-            // 
-            this.cmbCurrSymbol.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbCurrSymbol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCurrSymbol.FormattingEnabled = true;
-            this.cmbCurrSymbol.Location = new System.Drawing.Point(318, 184);
-            this.cmbCurrSymbol.Name = "cmbCurrSymbol";
-            this.cmbCurrSymbol.Size = new System.Drawing.Size(165, 25);
-            this.cmbCurrSymbol.TabIndex = 6123;
-            // 
-            // cmbCurrShort
-            // 
-            this.cmbCurrShort.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbCurrShort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCurrShort.FormattingEnabled = true;
-            this.cmbCurrShort.Location = new System.Drawing.Point(318, 146);
-            this.cmbCurrShort.Name = "cmbCurrShort";
-            this.cmbCurrShort.Size = new System.Drawing.Size(165, 25);
-            this.cmbCurrShort.TabIndex = 6121;
-            // 
-            // cmbCurrName
-            // 
-            this.cmbCurrName.BackColor = System.Drawing.Color.Gainsboro;
-            this.cmbCurrName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCurrName.FormattingEnabled = true;
-            this.cmbCurrName.Location = new System.Drawing.Point(318, 109);
-            this.cmbCurrName.Name = "cmbCurrName";
-            this.cmbCurrName.Size = new System.Drawing.Size(165, 25);
-            this.cmbCurrName.TabIndex = 6122;
-            this.cmbCurrName.SelectedIndexChanged += new System.EventHandler(this.cmbCurrName_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(172, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 17);
-            this.label8.TabIndex = 6115;
-            this.label8.Text = "Country Name :";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(172, 192);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 17);
-            this.label13.TabIndex = 6120;
-            this.label13.Text = "Currency Symbol :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(172, 149);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 17);
-            this.label9.TabIndex = 6119;
-            this.label9.Text = "Currency Short Name :";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(172, 112);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 17);
-            this.label11.TabIndex = 6118;
-            this.label11.Text = "Currency Name :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 20);
-            this.label12.TabIndex = 6071;
-            this.label12.Text = "Set Currency Details: ";
-            // 
-            // txtbCountry
-            // 
-            this.txtbCountry.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtbCountry.Enabled = false;
-            this.txtbCountry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbCountry.ForeColor = System.Drawing.Color.Black;
-            this.txtbCountry.Location = new System.Drawing.Point(318, 60);
-            this.txtbCountry.MaxLength = 500;
-            this.txtbCountry.Name = "txtbCountry";
-            this.txtbCountry.Size = new System.Drawing.Size(165, 25);
-            this.txtbCountry.TabIndex = 6114;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.ForeColor = System.Drawing.Color.DimGray;
-            this.label45.Location = new System.Drawing.Point(314, 85);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(234, 17);
-            this.label45.TabIndex = 6138;
-            this.label45.Text = "Select country from the list during type";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Red;
-            this.label46.Location = new System.Drawing.Point(303, 80);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(16, 20);
-            this.label46.TabIndex = 6137;
-            this.label46.Text = "*";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(516, 7);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(126, 17);
-            this.linkLabel2.TabIndex = 6173;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Why this required ?";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(148, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
-            this.label4.TabIndex = 6076;
-            this.label4.Text = "Designation :";
-            // 
-            // txtbDesignation
-            // 
-            this.txtbDesignation.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtbDesignation.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbDesignation.ForeColor = System.Drawing.Color.Black;
-            this.txtbDesignation.Location = new System.Drawing.Point(271, 97);
-            this.txtbDesignation.MaxLength = 500;
-            this.txtbDesignation.Name = "txtbDesignation";
-            this.txtbDesignation.ReadOnly = true;
-            this.txtbDesignation.Size = new System.Drawing.Size(235, 25);
-            this.txtbDesignation.TabIndex = 6073;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(148, 183);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 17);
-            this.label6.TabIndex = 6079;
-            this.label6.Text = "Password :";
-            // 
-            // txtbName
-            // 
-            this.txtbName.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbName.ForeColor = System.Drawing.Color.Black;
-            this.txtbName.Location = new System.Drawing.Point(271, 55);
-            this.txtbName.MaxLength = 500;
-            this.txtbName.Name = "txtbName";
-            this.txtbName.ReadOnly = true;
-            this.txtbName.Size = new System.Drawing.Size(235, 25);
-            this.txtbName.TabIndex = 6072;
-            this.txtbName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbName_KeyPress);
-            // 
-            // txtbPassword
-            // 
-            this.txtbPassword.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtbPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtbPassword.Location = new System.Drawing.Point(271, 180);
-            this.txtbPassword.MaxLength = 500;
-            this.txtbPassword.Name = "txtbPassword";
-            this.txtbPassword.Size = new System.Drawing.Size(235, 25);
-            this.txtbPassword.TabIndex = 6075;
-            this.txtbPassword.TextChanged += new System.EventHandler(this.txtbPassword_TextChanged);
-            this.txtbPassword.Leave += new System.EventHandler(this.txtbPassword_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(148, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 17);
-            this.label5.TabIndex = 6077;
-            this.label5.Text = "Name :";
-            // 
-            // txtbMailId
-            // 
-            this.txtbMailId.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtbMailId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbMailId.ForeColor = System.Drawing.Color.Black;
-            this.txtbMailId.Location = new System.Drawing.Point(271, 138);
-            this.txtbMailId.MaxLength = 500;
-            this.txtbMailId.Name = "txtbMailId";
-            this.txtbMailId.ReadOnly = true;
-            this.txtbMailId.Size = new System.Drawing.Size(235, 25);
-            this.txtbMailId.TabIndex = 6074;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(148, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 17);
-            this.label7.TabIndex = 6078;
-            this.label7.Text = "E-mail Id :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 20);
-            this.label3.TabIndex = 6071;
-            this.label3.Text = "Create Admin: ";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(148, 223);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(121, 17);
-            this.label34.TabIndex = 6082;
-            this.label34.Text = "Confirm Password :";
-            // 
-            // txtbPass1
-            // 
-            this.txtbPass1.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtbPass1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbPass1.ForeColor = System.Drawing.Color.Black;
-            this.txtbPass1.Location = new System.Drawing.Point(271, 220);
-            this.txtbPass1.MaxLength = 500;
-            this.txtbPass1.Name = "txtbPass1";
-            this.txtbPass1.Size = new System.Drawing.Size(235, 25);
-            this.txtbPass1.TabIndex = 6081;
-            this.txtbPass1.TextChanged += new System.EventHandler(this.txtbPass1_TextChanged);
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.ForeColor = System.Drawing.Color.DimGray;
-            this.label48.Location = new System.Drawing.Point(272, 251);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(331, 17);
-            this.label48.TabIndex = 6140;
-            this.label48.Text = "Remeber the password, You will need it from next login";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.Red;
-            this.label49.Location = new System.Drawing.Point(261, 246);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(16, 20);
-            this.label49.TabIndex = 6139;
-            this.label49.Text = "*";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.ForeColor = System.Drawing.Color.DimGray;
-            this.label47.Location = new System.Drawing.Point(12, 22);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(127, 17);
-            this.label47.TabIndex = 6138;
-            this.label47.Text = "Set Admin Password";
             // 
             // timer1
             // 
@@ -1464,8 +1451,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 439);
+            this.Controls.Add(this.pnlStep2);
             this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.pnlStp1);
             this.Controls.Add(this.lblStepCount);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
@@ -1495,9 +1482,9 @@
             this.pnlStep4.PerformLayout();
             this.pnlStep3.ResumeLayout(false);
             this.pnlStep3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.pnlStep2.ResumeLayout(false);
             this.pnlStep2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1540,7 +1527,7 @@
         internal System.Windows.Forms.TextBox txtbCountry;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel pnlStep3;
+        private System.Windows.Forms.Panel pnlStep2;
         private System.Windows.Forms.Label label17;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.TextBox txtbUserDesignation;
@@ -1557,7 +1544,7 @@
         internal System.Windows.Forms.TextBox txtbAddress;
         private System.Windows.Forms.Label lblNotification;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel pnlStep2;
+        private System.Windows.Forms.Panel pnlStep3;
         private System.Windows.Forms.Label label26;
         internal System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label24;
@@ -1606,7 +1593,6 @@
         private System.Windows.Forms.Label label47;
         internal System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
         internal System.Windows.Forms.LinkLabel lblTutorial;
         internal System.Windows.Forms.LinkLabel linkLabel1;
         internal System.Windows.Forms.LinkLabel linkLabel2;

@@ -37,7 +37,7 @@ namespace CodeAchi_Library_Management_System
             dgvPaymentDetails.RowsDefaultCellStyle.BackColor = Color.AntiqueWhite;
             dgvPaymentDetails.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -152,7 +152,7 @@ namespace CodeAchi_Library_Management_System
         {
             if(txtbBrrId.Text!="")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -463,7 +463,7 @@ namespace CodeAchi_Library_Management_System
             string invId = "";
             bool isRemit = false;
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -668,7 +668,7 @@ namespace CodeAchi_Library_Management_System
             System.Drawing.Image instLogo = null;
             string instName = "", instAddress = "", instContact = "", instWebsite = "", instMail = "", cuurShort = "";
             string brrContact = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1142,7 +1142,7 @@ namespace CodeAchi_Library_Management_System
                     outputStream.Close();
                 }
 
-                if (globalVarLms.licenseType == "Demo")
+                if (!globalVarLms.isLicensed)
                 {
                     string tempName = Path.GetFileName(fileName);
                     string tempFile = fileName.Replace(tempName, "tempPdf.pdf");
@@ -1907,7 +1907,7 @@ namespace CodeAchi_Library_Management_System
 
         private void btnSkip_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

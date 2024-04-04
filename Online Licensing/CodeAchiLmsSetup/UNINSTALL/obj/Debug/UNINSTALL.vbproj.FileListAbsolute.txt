@@ -350,3 +350,17 @@ E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAch
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
 E:\CurrentProjects\GitHub\CodeAchiProject\CodeAchil LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\bin\Debug\UNINSTALL.exe.config
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\bin\Debug\UNINSTALL.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\bin\Debug\UNINSTALL.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\bin\Debug\UNINSTALL.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.AssemblyReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\Interop.Scripting.dll
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.ResolveComReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.FormUninstall.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.Resources.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.GenerateResource.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.vbproj.CoreCompileInputs.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.xml
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\CodeAchiLmsSetup\UNINSTALL\obj\Debug\UNINSTALL.pdb

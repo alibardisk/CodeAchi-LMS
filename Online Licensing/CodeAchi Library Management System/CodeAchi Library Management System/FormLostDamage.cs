@@ -97,7 +97,7 @@ namespace CodeAchi_Library_Management_System
             }
             if(queryString!="")
             {
-                if(Properties.Settings.Default.sqliteDatabase)
+                if(globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -171,7 +171,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     else if (cmbSearchBy.SelectedIndex == 1)
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -250,7 +250,7 @@ namespace CodeAchi_Library_Management_System
                     else if (cmbSearchBy.SelectedIndex == 2)
                     {
                         List<string> accnList = new List<string> { };
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -361,7 +361,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     else if (cmbSearchBy.SelectedIndex == 3)
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -508,7 +508,7 @@ namespace CodeAchi_Library_Management_System
             {
                 lostBy = txtbSearch.Text;
             }
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 string queryString = "";
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();

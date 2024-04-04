@@ -74,7 +74,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (txtbMailId.Text != "")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -193,7 +193,7 @@ namespace CodeAchi_Library_Management_System
 
             string userName = "", userPassword = "", userPriviledge = "";
             bool isActive = false, isAdmin = false;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

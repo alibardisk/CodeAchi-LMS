@@ -2,29 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CodeAchi_Library_Management_System.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="licenseType" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Demo</Value>
-    </Setting>
-    <Setting Name="serialKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="currentUserId" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="productBlocked" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="expiryDate" Type="System.String" Scope="User">
-      <Value Profile="(Default)">expiryDate</Value>
-    </Setting>
     <Setting Name="lastChecked" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="machineLimits" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
-    <Setting Name="itemLimits" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">5000</Value>
     </Setting>
     <Setting Name="mailType" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -93,9 +75,6 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="callSettingsUpgrade" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="sqliteDatabase" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="sqliteConnection" Type="System.String" Scope="User">

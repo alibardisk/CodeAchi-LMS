@@ -1,4 +1,7 @@
-﻿using Microsoft.Win32;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using Microsoft.Win32;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,11 +10,13 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Net;
 using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
+using Ubiety.Dns.Core.Common;
 
 namespace CodeAchi_Library_Management_System
 {
@@ -27,26 +32,63 @@ namespace CodeAchi_Library_Management_System
         [System.Runtime.InteropServices.DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
         AutoCompleteStringCollection autoCollData = new AutoCompleteStringCollection();
+        APIRequest apiRequest = new APIRequest();
+        PasswordHasher passwordHasher= new PasswordHasher();
+        string configFilePath = Application.StartupPath + "/clms.json";
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
-        private void FormWizard_Load(object sender, EventArgs e)
+        private async void FormWizard_Load(object sender, EventArgs e)
         {
+            btnNext.Enabled = false;
             lblCompany1.Text = "© 2012-" + DateTime.Now.Year.ToString() + " | Developed by CodeAchi Technologies Pvt. Ltd.";
             string databasePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName;
-            if (File.Exists(databasePath + @"\LMS.config"))
-            {
-                txtbDatabasePath.Text = File.ReadAllText(databasePath + @"\LMS.config");
-            }
-            else
-            {
-                txtbDatabasePath.Text = Properties.Settings.Default.databasePath;
-            }
+            txtbDatabasePath.Text = databasePath;
             btnPrev.Visible = false;
             this.Text = Application.ProductName + " Setup Wizard";
             lblStep.Text = "Library Setup Wizard (Step 1)";
             lblStepCount.Text = 1.ToString();
-            if (Properties.Settings.Default.sqliteDatabase)
+            var requestData = new
             {
-                SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
+                hardwareId = apiRequest.GetHardwareId(),
+                productName = Application.ProductName.Replace("CodeAchi ", ""),
+                softwareVersion = "offline/" + Application.ProductVersion.ToString(),
+                source = File.ReadAllText(Application.StartupPath + "/sourcefile.txt")
+            };
+            var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
+            string responseBody = await apiRequest.GenerateUniqueId(jsonString);
+            if (responseBody != "")
+            {
+                btnNext.Enabled = true;
+                // Deserialize the JSON response
+                var responseObject = JsonConvert.DeserializeObject<dynamic>(responseBody);
+                // Sample data to serialize
+                string connectionString = "Data Source=" + txtbDatabasePath.Text + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
+                var dataToSerialize = new
+                {
+                    InstallationId = responseObject.machineId,
+                    KeyFeatures = responseObject.features,
+                    ConnectionString=connectionString,
+                    SQLiteData = true
+                };
+                string jsonData = JsonConvert.SerializeObject(dataToSerialize);
+                jsonData = passwordHasher.Encrypt(jsonData);
+                File.WriteAllText(configFilePath, jsonData);
+                globalVarLms.machineId = responseObject.machineId;
+                globalVarLms.sqliteData = true;
+
+                var Usage = new
+                {
+                    Usage = responseObject.features,
+                };
+                jsonData = JsonConvert.SerializeObject(Usage);
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonData);
+                jsonObject.Usage["total-items"] = 0;
+                jsonObject.Usage["total-member"] = 0;
+                jsonData = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                File.WriteAllText(usageFilePath, jsonData);
+                btnNext.Enabled = true;
+
+                SQLiteConnection sqltConn = new SQLiteConnection(connectionString);
                 if (sqltConn.State == ConnectionState.Closed)
                 {
                     try
@@ -55,9 +97,6 @@ namespace CodeAchi_Library_Management_System
                     }
                     catch
                     {
-                        string connectionString = "Data Source=" + Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
-                        sqltConn = new SQLiteConnection(connectionString);
-                        sqltConn.Open();
                     }
                 }
                 SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
@@ -70,15 +109,20 @@ namespace CodeAchi_Library_Management_System
                     autoCollData.AddRange(countryList.ToArray());
                 }
                 dataReader.Close();
+
+                txtbOrgCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
+                txtbOrgCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtbOrgCountry.AutoCompleteCustomSource = autoCollData;
+
+                txtbUserCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
+                txtbUserCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtbUserCountry.AutoCompleteCustomSource = autoCollData;
+                globalVarLms.connectionString = connectionString;
             }
-
-            txtbOrgCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
-            txtbOrgCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtbOrgCountry.AutoCompleteCustomSource = autoCollData;
-
-            txtbUserCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
-            txtbUserCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtbUserCountry.AutoCompleteCustomSource = autoCollData;
+            else
+            {
+                MessageBox.Show("Connection failure. Contact our support at www.codeachi.com.", Application.ProductName,MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         public static bool CheckForInternetConnection()
@@ -103,7 +147,7 @@ namespace CodeAchi_Library_Management_System
             }
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private async void btnNext_Click(object sender, EventArgs e)
         {
             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
             if (sqltConn.State == ConnectionState.Closed)
@@ -111,9 +155,9 @@ namespace CodeAchi_Library_Management_System
                 sqltConn.Open();
             }
             SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-            string queryString = "";
-
-            string macAddress = globalVarLms.machineId;
+            string queryString = "select [countryName] from countryDetails";
+            sqltCommnd.CommandText = queryString;
+            SQLiteDataReader dataReader;
             if (lblStepCount.Text == 1.ToString())
             {
                 if (rdbPersonal.Checked)
@@ -127,7 +171,7 @@ namespace CodeAchi_Library_Management_System
                     btnUpload.TabIndex = 6;
                     btnNext.TabIndex = 7;
 
-                    pnlStep2.Visible = false;
+                    pnlStep3.Visible = false;
                     txtbUserName.Select();
                     userType = "Personal";
                 }
@@ -143,259 +187,103 @@ namespace CodeAchi_Library_Management_System
                     btnUpload.TabIndex = 7;
                     btnNext.TabIndex = 8;
 
-                    pnlStep2.Visible = true;
+                    pnlStep3.Visible = true;
                     txtbFullName.Select();
                     userType = "Official";
                 }
-                sqltCommnd.CommandText = "select stepComplete from generalSettings";
+                sqltCommnd.CommandText = "select * from userDetails where userMail!=@userMail and isAdmin='" + true + "' limit 1";
                 sqltCommnd.CommandType = CommandType.Text;
-                SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                int stepComplete = 0;
+                sqltCommnd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
+                dataReader = sqltCommnd.ExecuteReader();
                 if (dataReader.HasRows)
                 {
                     while (dataReader.Read())
                     {
-                        stepComplete = Convert.ToInt32(dataReader["stepComplete"].ToString());
+                        txtbUserName.Text = dataReader["userName"].ToString();
+                        txtbUserDesignation.Text = dataReader["userDesig"].ToString();
+                        txtbUserMail.Text = dataReader["userMail"].ToString();
+                        txtbContact.Text = dataReader["userContact"].ToString();
+                        txtbAddress.Text = dataReader["userAddress"].ToString();
+                        txtbPassword.Text = dataReader["userPassword"].ToString();
+                        txtbPass1.Text = dataReader["userPassword"].ToString();
+                        try
+                        {
+                            byte[] imageBytes = Convert.FromBase64String(dataReader["userImage"].ToString());
+                            MemoryStream memoryStream = new MemoryStream(imageBytes, 0, imageBytes.Length);
+                            memoryStream.Write(imageBytes, 0, imageBytes.Length);
+                            pcbUser.Image = Image.FromStream(memoryStream, true);
+                        }
+                        catch
+                        {
+                            pcbUser.Image = Properties.Resources.blankBrrImage;
+                        }
                     }
                 }
                 dataReader.Close();
-                if (stepComplete == 5 || stepComplete == 4 || stepComplete == 3)
+                sqltCommnd.CommandText = "select countryName from generalSettings";
+                sqltCommnd.CommandType = CommandType.Text;
+                dataReader = sqltCommnd.ExecuteReader();
+                if (dataReader.HasRows)
                 {
-                    sqltCommnd.CommandText = "select * from userDetails where userMail!=@userMail and isAdmin='" + true + "' limit 1";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    sqltCommnd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
-                    dataReader = sqltCommnd.ExecuteReader();
-                    if (dataReader.HasRows)
+                    while (dataReader.Read())
                     {
-                        while (dataReader.Read())
-                        {
-                            txtbUserName.Text = dataReader["userName"].ToString();
-                            txtbUserDesignation.Text = dataReader["userDesig"].ToString();
-                            txtbUserMail.Text = dataReader["userMail"].ToString();
-                            txtbContact.Text = dataReader["userContact"].ToString();
-                            txtbAddress.Text = dataReader["userAddress"].ToString();
-                            txtbPassword.Text = dataReader["userPassword"].ToString();
-                            txtbPass1.Text = dataReader["userPassword"].ToString();
-                            try
-                            {
-                                byte[] imageBytes = Convert.FromBase64String(dataReader["userImage"].ToString());
-                                MemoryStream memoryStream = new MemoryStream(imageBytes, 0, imageBytes.Length);
-                                memoryStream.Write(imageBytes, 0, imageBytes.Length);
-                                pcbUser.Image = Image.FromStream(memoryStream, true);
-                            }
-                            catch
-                            {
-                                pcbUser.Image = Properties.Resources.blankBrrImage;
-                            }
-                        }
+                        txtbUserCountry.Text = dataReader["countryName"].ToString();
                     }
-                    dataReader.Close();
-                    sqltCommnd.CommandText = "select countryName from generalSettings";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    dataReader = sqltCommnd.ExecuteReader();
-                    if (dataReader.HasRows)
-                    {
-                        while (dataReader.Read())
-                        {
-                            txtbUserCountry.Text = dataReader["countryName"].ToString();
-                        }
-                    }
-                    dataReader.Close();
-                    while (pnlStep2.Location.X > -642)
-                    {
-                        pnlStep2.Location = new Point(pnlStep2.Location.X - 5, pnlStep2.Location.Y);
-                    }
-                    while (pnlStp1.Location.X > -642)
-                    {
-                        pnlStp1.Location = new Point(pnlStp1.Location.X - 5, pnlStp1.Location.Y);
-                    }
-                    txtbUserName.TabIndex = 0;
-                    txtbUserDesignation.TabIndex = 1;
-                    txtbUserMail.TabIndex = 2;
-                    txtbContact.TabIndex = 3;
-                    txtbAddress.TabIndex = 5;
-                    txtbUserCountry.TabIndex = 4;
-                    btnUpload.TabIndex = 6;
-                    btnNext.TabIndex = 7;
+                }
+                dataReader.Close();
+                while (pnlStp1.Location.X > -642)
+                {
+                    pnlStp1.Location = new Point(pnlStp1.Location.X - 5, pnlStp1.Location.Y);
+                }
+                txtbUserName.TabIndex = 0;
+                txtbUserDesignation.TabIndex = 1;
+                txtbUserMail.TabIndex = 2;
+                txtbContact.TabIndex = 3;
+                txtbAddress.TabIndex = 5;
+                txtbUserCountry.TabIndex = 4;
+                btnUpload.TabIndex = 6;
+                btnNext.TabIndex = 7;
+                btnPrev.Visible = true;
+                lblStep.Text = "Library Setup Wizard (Step 2)";
+                lblStepCount.Text = 2.ToString();
 
-                    btnPrev.Visible = true;
-                    lblStep.Text = "Library Setup Wizard (Step 3)";
-                    lblStepCount.Text = 3.ToString();
-                    //txtbUserCountry.Select();
-                }
-                else if (stepComplete == 2)
-                {
-                    while (pnlStep2.Location.X > -642)
-                    {
-                        pnlStep2.Location = new Point(pnlStep2.Location.X - 5, pnlStep2.Location.Y);
-                    }
-                    while (pnlStp1.Location.X > -642)
-                    {
-                        pnlStp1.Location = new Point(pnlStp1.Location.X - 5, pnlStp1.Location.Y);
-                    }
-                    txtbUserName.TabIndex = 0;
-                    txtbUserDesignation.TabIndex = 1;
-                    txtbUserMail.TabIndex = 2;
-                    txtbContact.TabIndex = 3;
-                    txtbAddress.TabIndex = 4;
-                    txtbUserCountry.TabIndex = 5;
-                    btnUpload.TabIndex = 6;
-                    btnNext.TabIndex = 7;
+                string jsonString = passwordHasher.Decrypt(File.ReadAllText(configFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                string connectionString = "Data Source=" + txtbDatabasePath.Text + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
+                jsonObject["ConnectionString"] = connectionString;
+                globalVarLms.connectionString = connectionString;
+                string jsonData = JsonConvert.SerializeObject(jsonObject);
+                jsonData = passwordHasher.Encrypt(jsonData);
+                File.WriteAllText(configFilePath, jsonData);
 
-                    btnPrev.Visible = true;
-                    lblStep.Text = "Library Setup Wizard (Step 3)";
-                    lblStepCount.Text = 3.ToString();
-                    txtbUserName.Select();
-                }
-                else
+                if (sqltConn.State == ConnectionState.Closed)
                 {
-                    sqltCommnd.CommandText = "insert into generalSettings (stepComplete) values('" + 1 + "')";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    sqltCommnd.ExecuteNonQuery();
-                    while (pnlStp1.Location.X > -642)
-                    {
-                        pnlStp1.Location = new Point(pnlStp1.Location.X - 5, pnlStp1.Location.Y);
-                    }
-                    btnPrev.Visible = true;
-                    lblStep.Text = "Library Setup Wizard (Step 2)";
-                    lblStepCount.Text = 2.ToString();
+                    sqltConn.Open();
                 }
+                sqltCommnd = sqltConn.CreateCommand();
+                sqltCommnd.CommandText = "select count(id) from itemDetails;";
+                sqltCommnd.CommandType = CommandType.Text;
+                string ttlItems = sqltCommnd.ExecuteScalar().ToString();
+
+                sqltCommnd = sqltConn.CreateCommand();
+                sqltCommnd.CommandText = "select count(id) from userDetails;";
+                sqltCommnd.CommandType = CommandType.Text;
+                string ttlUser = sqltCommnd.ExecuteScalar().ToString();
+
+                sqltCommnd = sqltConn.CreateCommand();
+                sqltCommnd.CommandText = "select count(id) from borrowerDetails;";
+                sqltCommnd.CommandType = CommandType.Text;
+                string ttlMember = sqltCommnd.ExecuteScalar().ToString();
+
+                jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                jsonObject["total-items"] = ttlItems;
+                jsonObject["total-member"] = ttlMember;
+                jsonObject["total-librarian"] = ttlUser;
+                jsonData = passwordHasher.Encrypt(jsonObject.ToString());
+                File.WriteAllText(usageFilePath, jsonData);
             }
             else if (lblStepCount.Text == 2.ToString())
-            {
-                if (txtbFullName.Text == "")
-                {
-                    MessageBox.Show("Please enter your organization name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtbFullName.Select();
-                    return;
-                }
-                if (txtbShortName.Text == "")
-                {
-                    MessageBox.Show("Please enter your organization short name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtbShortName.Select();
-                    return;
-                }
-                if (txtbOrgMail.Text == "")
-                {
-                    MessageBox.Show("Please enter organization email id.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtbOrgMail.Select();
-                    return;
-                }
-                if (txtbOrgCountry.Text == "")
-                {
-                    MessageBox.Show("Please enter organization country name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtbOrgCountry.Select();
-                    return;
-                }
-
-                if (IsConnectedToInternet())
-                {
-                    try
-                    {
-                        string installedDate = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
-                        WebRequest webRequest = WebRequest.Create(globalVarLms.dateApi);
-                        webRequest.Timeout = 8000;
-                        WebResponse webResponse = webRequest.GetResponse();
-                        Stream dataStream = webResponse.GetResponseStream();
-                        StreamReader strmReader = new StreamReader(dataStream);
-                        string requestResult = strmReader.ReadLine();
-                        if (requestResult != "")
-                        {
-                            installedDate = requestResult;
-                        }
-                        string installTime = DateTime.Now.ToString("hh:mm:ss tt");
-                        string queryToCheck = "SELECT isBlocked,licenseKey,installDate FROM installationDetails WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
-                        //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                        webRequest = WebRequest.Create(globalVarLms.selectApi + queryToCheck);
-                        webRequest.Timeout = 8000;
-                        webResponse = webRequest.GetResponse();
-                        dataStream = webResponse.GetResponseStream();
-                        strmReader = new StreamReader(dataStream);
-                        requestResult = strmReader.ReadLine();
-                        if (requestResult == null)
-                        {
-                            string queryToInsert = "INSERT INTO installationDetails (mac,productName,isBlocked,licenseKey,installDate,installTime,useFor,org_name,email,country,address,website,orgContact)" +
-                                " VALUES('" + macAddress + "', '" + Application.ProductName + "','" + false + "','" + "Demo" + "','" + installedDate + "','" + installTime + "','" + userType + "'," +
-                                "'" + txtbFullName.Text + "','" + txtbOrgMail.Text + "','" + txtbOrgCountry.Text + "','" + txtbOrgAddress.Text + "','" + TxtbWebsite.Text + "','" + txtbOrgContact.Text + "')";
-
-                            //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                            webRequest = WebRequest.Create(globalVarLms.insertApi + queryToInsert);
-                            webRequest.Timeout = 8000;
-                            webResponse = webRequest.GetResponse();
-                        }
-                        else
-                        {
-
-                            string queryToUpdate = "UPDATE installationDetails set useFor='" + userType + "',org_name='" + txtbFullName.Text + "'" +
-                            ",email='" + txtbOrgMail.Text + "',country='" + txtbOrgCountry.Text + "',address='" + txtbOrgAddress.Text + "'," +
-                            "installTime='" + installTime + "',website='" + TxtbWebsite.Text + "',orgContact='" + txtbOrgContact.Text + "' WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
-                            //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                            webRequest = WebRequest.Create(globalVarLms.updateApi + queryToUpdate);    //"https://www.codeachi.com/Product/SelectData.php?Q="
-                            webRequest.Timeout = 8000;
-                            webResponse = webRequest.GetResponse();
-                            dataStream = webResponse.GetResponseStream();
-                            strmReader = new StreamReader(dataStream);
-                            requestResult = strmReader.ReadLine();
-                        }
-                        if (requestResult == "Updated" || requestResult == "Inserted")
-                        {
-                            String base64String = "base64String";
-                            if (pcbLogo.Image != Properties.Resources.NoImageAvailable || pcbLogo.Image != Properties.Resources.uploadingFail ||
-                                pcbLogo.Image != Properties.Resources.your_logo)
-                            {
-                                using (MemoryStream memoryStream = new MemoryStream())
-                                {
-                                    pcbLogo.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
-                                    byte[] imageBytes = memoryStream.ToArray();
-                                    base64String = Convert.ToBase64String(imageBytes);
-                                }
-                            }
-                            queryString = "update generalSettings set instName=:instName,instShortName=:instShortName,instAddress=:instAddress" +
-                                    ",instLogo='" + base64String + "',instContact='" + txtbOrgContact.Text + "',instWebsite" +
-                                    "=:instWebsite,instMail=:instMail,countryName=:countryName,stepComplete='" + lblStepCount.Text + "'" +
-                                    ",backupPath=:backupPath,backupHour='" + 60 + "',notificationData=:notificationData,settingsData=:settingsData";
-
-                            sqltCommnd.CommandText = queryString;
-                            sqltCommnd.Parameters.AddWithValue("instName", txtbFullName.Text);
-                            sqltCommnd.Parameters.AddWithValue("instShortName", txtbShortName.Text);
-                            sqltCommnd.Parameters.AddWithValue("instAddress", txtbOrgAddress.Text.Replace(Environment.NewLine, ""));
-                            sqltCommnd.Parameters.AddWithValue("instWebsite", TxtbWebsite.Text);
-                            sqltCommnd.Parameters.AddWithValue("instMail", txtbOrgMail.Text);
-                            sqltCommnd.Parameters.AddWithValue("countryName", txtbOrgCountry.Text);
-                            sqltCommnd.Parameters.AddWithValue("backupPath", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName);
-                            sqltCommnd.Parameters.AddWithValue("notificationData", getNotificationData());
-                            sqltCommnd.Parameters.AddWithValue("settingsData", getSettingsData());
-                            sqltCommnd.ExecuteNonQuery();
-                        }
-                        while (pnlStep2.Location.X > -642)
-                        {
-                            pnlStep2.Location = new Point(pnlStep2.Location.X - 5, pnlStep2.Location.Y);
-                        }
-                        txtbUserName.TabIndex = 0;
-                        txtbUserDesignation.TabIndex = 1;
-                        txtbUserMail.TabIndex = 2;
-                        txtbContact.TabIndex = 3;
-                        txtbAddress.TabIndex = 4;
-                        txtbUserCountry.TabIndex = 5;
-                        btnUpload.TabIndex = 6;
-                        btnNext.TabIndex = 7;
-
-                        btnPrev.Visible = true;
-                        lblStep.Text = "Library Setup Wizard (Step 3)";
-                        lblStepCount.Text = 3.ToString();
-                        //    //    txtbUserName.Select();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Unable to connect please try again.", Application.ProductName, MessageBoxButtons.OK);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Unable to connect.", Application.ProductName, MessageBoxButtons.OK);
-                }
-            }
-            else if (lblStepCount.Text == 3.ToString())
             {
                 if (txtbUserName.Text == "")
                 {
@@ -433,19 +321,38 @@ namespace CodeAchi_Library_Management_System
                     txtbAddress.Select();
                     return;
                 }
-                if (IsConnectedToInternet())
+                var requestData = new
                 {
-                    try
+                    email = txtbUserMail.Text,
+                    product = Application.ProductName.Replace("CodeAchi ", ""),
+
+                };
+                var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
+                string result = await apiRequest.SendOTP(jsonString);
+                if (result == "OTP sent successfully!")
+                {
+                    FormOtp formOtp = new FormOtp();
+                    formOtp.jsonString = jsonString;
+                    formOtp.ShowDialog();
+                    if (formOtp.otpVerified)
                     {
-                        string queryToUpdate = "UPDATE installationDetails set cust_name='" + txtbUserName.Text + "',contact='" + txtbContact.Text + "',userMail='" + txtbUserMail.Text + "' WHERE mac = '" + macAddress + "' and productName='" + Application.ProductName + "'";
-                        //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                        WebRequest webRequest = WebRequest.Create(globalVarLms.updateApi + queryToUpdate);    //"https://www.codeachi.com/Product/SelectData.php?Q="
-                        webRequest.Timeout = 8000;
-                        WebResponse webResponse = webRequest.GetResponse();
-                        Stream dataStream = webResponse.GetResponseStream();
-                        StreamReader strmReader = new StreamReader(dataStream);
-                        string requestResult = strmReader.ReadLine();
-                        if (requestResult == "Updated")
+                        btnNext.Enabled = false;
+                        var clientData = new
+                        {
+                            name = txtbUserName.Text,
+                            designation = txtbUserDesignation.Text,
+                            email = txtbUserMail.Text,
+                            phone = txtbContact.Text
+                        };
+                        var requestData1 = new
+                        {
+                            hardwareId = apiRequest.GetHardwareId(),
+                            machineId = globalVarLms.machineId,
+                            client = clientData
+                        };
+                        jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(requestData1);
+                        var clientResult= await apiRequest.UpdateClient(jsonString);
+                        if(clientResult == "Client data updated successfully")
                         {
                             if (pcbUser.Image != Properties.Resources.blankBrrImage && pcbUser.Image != Properties.Resources.uploadingFail)
                             {
@@ -457,21 +364,26 @@ namespace CodeAchi_Library_Management_System
                                 }
                             }
                             globalVarLms.userContact = txtbContact.Text;
-                            queryString = "select userMail from userDetails where userMail=@userMail";
+                            queryString = "select id,userMail from userDetails where userMail=@userMail";
                             sqltCommnd.CommandText = queryString;
                             sqltCommnd.Parameters.AddWithValue("@userMail", txtbUserMail.Text);
-                            SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
+                            dataReader = sqltCommnd.ExecuteReader();
                             if (dataReader.HasRows)
                             {
+                                string id = "";
+                                while (dataReader.Read())
+                                {
+                                    id = dataReader["id"].ToString();
+                                }
                                 dataReader.Close();
                                 sqltCommnd = sqltConn.CreateCommand();
-                                queryString = "update userDetails set userName=:userName,userDesig=:userDesig," +
+                                queryString = "update userDetails set userName=:userName,userDesig=:userDesig,userMail=:userMail," +
                                     "userContact='" + txtbContact.Text + "',userAddress=:userAddress,userPriviledge" +
-                                    "='" + "EI$EM$IR$RP" + "',isActive='" + true + "',isAdmin='" + true + "',userImage='" + userImage + "'";
+                                    "='" + "EI$EM$IR$RP" + "',isActive='" + true + "',isAdmin='" + true + "',userImage='" + userImage + "' where id='"+id+"'";
                                 sqltCommnd.CommandText = queryString;
                                 sqltCommnd.Parameters.AddWithValue("userName", txtbUserName.Text);
                                 sqltCommnd.Parameters.AddWithValue("userDesig", txtbUserDesignation.Text);
-                                sqltCommnd.Parameters.AddWithValue("@userMail", txtbUserMail.Text);
+                                sqltCommnd.Parameters.AddWithValue("userMail", txtbUserMail.Text);
                                 sqltCommnd.Parameters.AddWithValue("userAddress", txtbAddress.Text);
                                 sqltCommnd.ExecuteNonQuery();
                             }
@@ -488,87 +400,213 @@ namespace CodeAchi_Library_Management_System
                                 sqltCommnd.Parameters.AddWithValue("@userAddress", txtbAddress.Text);
                                 sqltCommnd.ExecuteNonQuery();
                             }
-
-                            queryString = "update generalSettings set stepComplete='" + lblStepCount.Text + "'";
-                            sqltCommnd.CommandText = queryString;
-                            sqltCommnd.ExecuteNonQuery();
-
-                            txtbName.Text = txtbUserName.Text;
-                            txtbDesignation.Text = txtbUserDesignation.Text;
-                            txtbMailId.Text = txtbUserMail.Text;
                             txtbCountry.Text = txtbUserCountry.Text;
-                            while (pnlStep3.Location.X > -642)
+                            txtbDesignation.Text=txtbUserDesignation.Text;
+                            txtbName.Text = txtbUserName.Text;
+                            txtbMailId.Text = txtbUserMail.Text;
+                            while (pnlStep2.Location.X > -642)
                             {
-                                pnlStep3.Location = new Point(pnlStep3.Location.X - 5, pnlStep3.Location.Y);
+                                pnlStep2.Location = new Point(pnlStep2.Location.X - 5, pnlStep2.Location.Y);
                             }
-                            btnPrev.Visible = true;
-                            lblStep.Text = "Library Setup Wizard (Step 4)";
-                            lblStepCount.Text = 4.ToString();
-
-                            queryString = "select currencyName,cuurShort,currSymbol from countryDetails where countryName=@countryName";
-                            sqltCommnd.CommandText = queryString;
-                            sqltCommnd.Parameters.AddWithValue("@countryName", txtbCountry.Text);
+                            sqltCommnd.CommandText = "select * from generalSettings";
+                            sqltCommnd.CommandType = CommandType.Text;
                             dataReader = sqltCommnd.ExecuteReader();
                             if (dataReader.HasRows)
                             {
-                                cmbCurrName.Items.Clear();
-                                cmbCurrShort.Items.Clear();
-                                cmbCurrSymbol.Items.Clear();
                                 while (dataReader.Read())
                                 {
-                                    string[] currnList = dataReader["currencyName"].ToString().Split(',');
-                                    foreach (string curName in currnList)
-                                    {
-                                        cmbCurrName.Items.Add(curName);
-                                    }
-                                    cmbCurrName.SelectedIndex = 0;
-                                    currnList = dataReader["cuurShort"].ToString().Split(',');
-                                    foreach (string curName in currnList)
-                                    {
-                                        cmbCurrShort.Items.Add(curName);
-                                    }
-                                    cmbCurrShort.SelectedIndex = 0;
-                                    currnList = dataReader["currSymbol"].ToString().Split(',');
-                                    foreach (string curName in currnList)
-                                    {
-                                        cmbCurrSymbol.Items.Add(curName);
-                                    }
-                                    cmbCurrSymbol.SelectedIndex = 0;
-                                }
-                                dataReader.Close();
-                            }
-                            else
-                            {
-                                dataReader.Close();
-                                queryString = "select currencyName,cuurShort,currSymbol from countryDetails";
-                                sqltCommnd.CommandText = queryString;
-                                dataReader = sqltCommnd.ExecuteReader();
-                                if (dataReader.HasRows)
-                                {
-                                    cmbCurrName.Items.Clear();
-                                    cmbCurrShort.Items.Clear();
-                                    cmbCurrSymbol.Items.Clear();
-                                    while (dataReader.Read())
-                                    {
-                                        string[] currnList = dataReader["currencyName"].ToString().Split(',');
-                                        foreach (string curName in currnList)
-                                        {
-                                            cmbCurrName.Items.Add(curName.TrimStart());
-                                        }
-                                    }
-                                    dataReader.Close();
+                                    txtbFullName.Text = dataReader["instName"].ToString();
+                                    txtbShortName.Text = dataReader["instShortName"].ToString();
+                                    txtbOrgAddress.Text = dataReader["instAddress"].ToString();
+                                    txtbOrgContact.Text = dataReader["instContact"].ToString();
+                                    txtbOrgMail.Text = dataReader["instMail"].ToString();
+                                    txtbOrgCountry.Text = dataReader["countryName"].ToString();
+                                    TxtbWebsite.Text = dataReader["instWebsite"].ToString();
                                 }
                             }
+                            dataReader.Close();
+                            txtbFullName.TabIndex = 0;
+                            txtbShortName.TabIndex = 1;
+                            txtbOrgAddress.TabIndex = 2;
+                            txtbOrgMail.TabIndex = 3;
+                            TxtbWebsite.TabIndex = 4;
+                            txtbOrgContact.TabIndex = 5;
+                            txtbOrgCountry.TabIndex = 6;
+                            btnUpload.TabIndex = 7;
+                            btnNext.TabIndex = 8;
+                            btnPrev.Visible = true;
+                            lblStep.Text = "Library Setup Wizard (Step 3)";
+                            lblStepCount.Text = 3.ToString();
+                            btnNext.Enabled = true;
                         }
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Unable to connect please try again.", Application.ProductName, MessageBoxButtons.OK);
+
                     }
                 }
-                else
+            }
+            else if (lblStepCount.Text == 3.ToString())
+            {
+                if (txtbFullName.Text == "")
                 {
-                    MessageBox.Show("Unable to connect.", Application.ProductName, MessageBoxButtons.OK);
+                    MessageBox.Show("Please enter your organization name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtbFullName.Select();
+                    return;
+                }
+                if (txtbShortName.Text == "")
+                {
+                    MessageBox.Show("Please enter your organization short name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtbShortName.Select();
+                    return;
+                }
+                if (txtbOrgMail.Text == "")
+                {
+                    MessageBox.Show("Please enter organization email id.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtbOrgMail.Select();
+                    return;
+                }
+                if (txtbOrgCountry.Text == "")
+                {
+                    MessageBox.Show("Please enter organization country name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtbOrgCountry.Select();
+                    return;
+                }
+                btnNext.Enabled = false;
+                var org = new
+                {
+                    name = txtbFullName.Text,
+                    website = TxtbWebsite.Text,
+                    email = txtbOrgMail.Text,
+                    phone = txtbOrgContact.Text
+                };
+                var requestData1 = new
+                {
+                    hardwareId = apiRequest.GetHardwareId(),
+                    machineId = globalVarLms.machineId,
+                    org = org
+                };
+                var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(requestData1);
+                var clientResult = await apiRequest.UpdateOrganization(jsonString);
+                if (clientResult == "Organization data updated successfully")
+                {
+                    String base64String = "base64String";
+                    if (pcbLogo.Image != Properties.Resources.NoImageAvailable || pcbLogo.Image != Properties.Resources.uploadingFail ||
+                        pcbLogo.Image != Properties.Resources.your_logo)
+                    {
+                        using (MemoryStream memoryStream = new MemoryStream())
+                        {
+                            pcbLogo.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+                            byte[] imageBytes = memoryStream.ToArray();
+                            base64String = Convert.ToBase64String(imageBytes);
+                        }
+                    }
+
+                    sqltCommnd.CommandText = "select * from generalSettings";
+                    dataReader = sqltCommnd.ExecuteReader();
+                    if (dataReader.HasRows)
+                    {
+                        dataReader.Close();
+                        sqltCommnd = sqltConn.CreateCommand();
+                        queryString = "update generalSettings set instName=:instName,instShortName=:instShortName,instAddress=:instAddress" +
+                            ",instLogo='" + base64String + "',instContact='" + txtbOrgContact.Text + "',instWebsite" +
+                            "=:instWebsite,instMail=:instMail,countryName=:countryName,stepComplete='" + lblStepCount.Text + "'" +
+                            ",backupPath=:backupPath,backupHour='" + 60 + "',notificationData=:notificationData,settingsData=:settingsData";
+
+                        sqltCommnd.CommandText = queryString;
+                        sqltCommnd.Parameters.AddWithValue("instName", txtbFullName.Text);
+                        sqltCommnd.Parameters.AddWithValue("instShortName", txtbShortName.Text);
+                        sqltCommnd.Parameters.AddWithValue("instAddress", txtbOrgAddress.Text.Replace(Environment.NewLine, ""));
+                        sqltCommnd.Parameters.AddWithValue("instWebsite", TxtbWebsite.Text);
+                        sqltCommnd.Parameters.AddWithValue("instMail", txtbOrgMail.Text);
+                        sqltCommnd.Parameters.AddWithValue("countryName", txtbOrgCountry.Text);
+                        sqltCommnd.Parameters.AddWithValue("backupPath", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName);
+                        sqltCommnd.Parameters.AddWithValue("notificationData", getNotificationData());
+                        sqltCommnd.Parameters.AddWithValue("settingsData", getSettingsData());
+                        sqltCommnd.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        dataReader.Close();
+                        sqltCommnd = sqltConn.CreateCommand();
+                        queryString = "Insert into generalSettings (instName,instShortName,instAddress,instWebsite,instMail,countryName,backupPath,notificationData,settingsData,backupHour,instLogo,instContact)" +
+                        " values (@instName,@instShortName,@instAddress,@instWebsite,@instMail,@countryName,@backupPath,@notificationData,@settingsData,'" + 60 + "',@instLogo,'"+ txtbOrgContact .Text+ "');";
+                        sqltCommnd.CommandText = queryString;
+                        sqltCommnd.Parameters.AddWithValue("instName", txtbFullName.Text);
+                        sqltCommnd.Parameters.AddWithValue("instShortName", txtbShortName.Text);
+                        sqltCommnd.Parameters.AddWithValue("instAddress", txtbOrgAddress.Text.Replace(Environment.NewLine, ""));
+                        sqltCommnd.Parameters.AddWithValue("instWebsite", TxtbWebsite.Text);
+                        sqltCommnd.Parameters.AddWithValue("instMail", txtbOrgMail.Text);
+                        sqltCommnd.Parameters.AddWithValue("countryName", txtbOrgCountry.Text);
+                        sqltCommnd.Parameters.AddWithValue("backupPath", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName);
+                        sqltCommnd.Parameters.AddWithValue("notificationData", getNotificationData());
+                        sqltCommnd.Parameters.AddWithValue("settingsData", getSettingsData());
+                        sqltCommnd.Parameters.AddWithValue("instLogo", base64String);
+                        sqltCommnd.ExecuteNonQuery();
+                    }
+                   
+                    while (pnlStep3.Location.X > -642)
+                    {
+                        pnlStep3.Location = new Point(pnlStep3.Location.X - 5, pnlStep3.Location.Y);
+                    }
+                    lblStep.Text = "Library Setup Wizard (Step 4)";
+                    lblStepCount.Text = 4.ToString();
+                    btnNext.Enabled = true; btnPrev.Enabled=true;
+
+                    queryString = "select currencyName,cuurShort,currSymbol from countryDetails where countryName=@countryName";
+                    sqltCommnd.CommandText = queryString;
+                    sqltCommnd.Parameters.AddWithValue("@countryName", txtbCountry.Text);
+                    dataReader = sqltCommnd.ExecuteReader();
+                    if (dataReader.HasRows)
+                    {
+                        cmbCurrName.Items.Clear();
+                        cmbCurrShort.Items.Clear();
+                        cmbCurrSymbol.Items.Clear();
+                        while (dataReader.Read())
+                        {
+                            string[] currnList = dataReader["currencyName"].ToString().Split(',');
+                            foreach (string curName in currnList)
+                            {
+                                cmbCurrName.Items.Add(curName);
+                            }
+                            cmbCurrName.SelectedIndex = 0;
+                            currnList = dataReader["cuurShort"].ToString().Split(',');
+                            foreach (string curName in currnList)
+                            {
+                                cmbCurrShort.Items.Add(curName);
+                            }
+                            cmbCurrShort.SelectedIndex = 0;
+                            currnList = dataReader["currSymbol"].ToString().Split(',');
+                            foreach (string curName in currnList)
+                            {
+                                cmbCurrSymbol.Items.Add(curName);
+                            }
+                            cmbCurrSymbol.SelectedIndex = 0;
+                        }
+                        dataReader.Close();
+                    }
+                    else
+                    {
+                        dataReader.Close();
+                        queryString = "select currencyName,cuurShort,currSymbol from countryDetails";
+                        sqltCommnd.CommandText = queryString;
+                        dataReader = sqltCommnd.ExecuteReader();
+                        if (dataReader.HasRows)
+                        {
+                            cmbCurrName.Items.Clear();
+                            cmbCurrShort.Items.Clear();
+                            cmbCurrSymbol.Items.Clear();
+                            while (dataReader.Read())
+                            {
+                                string[] currnList = dataReader["currencyName"].ToString().Split(',');
+                                foreach (string curName in currnList)
+                                {
+                                    cmbCurrName.Items.Add(curName.TrimStart());
+                                }
+                            }
+                            dataReader.Close();
+                        }
+                    }
                 }
             }
             else if (lblStepCount.Text == 4.ToString())
@@ -682,14 +720,7 @@ namespace CodeAchi_Library_Management_System
 
         private string getSettingsData()
         {
-            string settingsData = "{\"licenseType\" : \"" + Properties.Settings.Default.licenseType + "\"," +
-                                   "\"serialKey\" : \"" + Properties.Settings.Default.serialKey + "\"," +
-                                   "\"productBlocked\" : \"" + Properties.Settings.Default.productBlocked + "\"," +
-                                   "\"expiryDate\" : \"" + Properties.Settings.Default.expiryDate + "\"," +
-                                   "\"lastChecked\" : \"" + Properties.Settings.Default.lastChecked + "\"," +
-                                   "\"machineLimits\" : \"" + Properties.Settings.Default.machineLimits + "\"," +
-                                   "\"itemLimits\" : \"" + Properties.Settings.Default.itemLimits + "\"," +
-                                   "\"mailType\" : \"" + Properties.Settings.Default.mailType + "\"," +
+            string settingsData = "{\"mailType\" : \"" + Properties.Settings.Default.mailType + "\"," +
                                    "\"mailId\" : \"" + Properties.Settings.Default.mailId + "\"," +
                                    "\"mailPassword\" : \"" + Properties.Settings.Default.mailPassword + "\"," +
                                    "\"mailHost\" : \"" + Properties.Settings.Default.mailHost + "\"," +
@@ -892,28 +923,28 @@ namespace CodeAchi_Library_Management_System
             }
             else if (lblStepCount.Text == 3.ToString())
             {
-                while (pnlStep2.Location.X <= 12)
+                while (pnlStep3.Location.X <= 12)
                 {
-                    pnlStep2.Location = new Point(pnlStep2.Location.X + 5, pnlStep2.Location.Y);
+                    pnlStep3.Location = new Point(pnlStep3.Location.X + 5, pnlStep3.Location.Y);
                     Application.DoEvents();
                 }
                 btnPrev.Visible = true;
                 lblStep.Text = "Library Setup Wizard (Step 2)";
                 lblStepCount.Text = 2.ToString();
-                pnlStep2.Location = new Point(10, pnlStep2.Location.Y);
+                pnlStep3.Location = new Point(10, pnlStep3.Location.Y);
             }
             else if (lblStepCount.Text == 4.ToString())
             {
-                while (pnlStep3.Location.X <= 12)
+                while (pnlStep2.Location.X <= 12)
                 {
-                    pnlStep3.Location = new Point(pnlStep3.Location.X + 5, pnlStep3.Location.Y);
+                    pnlStep2.Location = new Point(pnlStep2.Location.X + 5, pnlStep2.Location.Y);
                     Application.DoEvents();
                 }
 
                 btnPrev.Visible = true;
                 lblStep.Text = "Library Setup Wizard (Step 3)";
                 lblStepCount.Text = 3.ToString();
-                pnlStep3.Location = new Point(10, pnlStep2.Location.Y);
+                pnlStep2.Location = new Point(10, pnlStep3.Location.Y);
             }
             else if (lblStepCount.Text == 5.ToString())
             {
@@ -925,7 +956,7 @@ namespace CodeAchi_Library_Management_System
                 btnPrev.Visible = true;
                 lblStep.Text = "Library Setup Wizard (Step 4)";
                 lblStepCount.Text = 4.ToString();
-                pnlStep4.Location = new Point(10, pnlStep2.Location.Y);
+                pnlStep4.Location = new Point(10, pnlStep3.Location.Y);
             }
         }
 

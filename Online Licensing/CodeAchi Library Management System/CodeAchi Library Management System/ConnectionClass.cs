@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,9 +17,7 @@ namespace CodeAchi_Library_Management_System
     {
         public static SQLiteConnection sqliteConnection()
         {
-            
-            string connectionString = "Data Source=" + Properties.Settings.Default.databasePath + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";  //";Password=codeachi@lmssl;"
-            SQLiteConnection sqltConn = new SQLiteConnection(connectionString,true);
+            SQLiteConnection sqltConn = new SQLiteConnection(globalVarLms.connectionString,true);
             //sqltConn.Open();
             //sqltConn.ChangePassword("codeachi@lmssl");
             //sqltConn.Close();
@@ -28,7 +27,7 @@ namespace CodeAchi_Library_Management_System
         public static MySqlConnection mysqlConnection()
         {
             MySqlConnection mysqlConn;
-            mysqlConn = new MySqlConnection(Properties.Settings.Default.databasePath);
+            mysqlConn = new MySqlConnection(globalVarLms.connectionString);
             return mysqlConn;
             //set global max_allowed_packet=1024*1024*1024;
         }

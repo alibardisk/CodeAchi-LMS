@@ -41,7 +41,7 @@ namespace CodeAchi_Library_Management_System
                 string[] blockedList = Properties.Settings.Default.blockedContact.Split('$');
                 lstbBlockedList.Items.AddRange(blockedList);
             }
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

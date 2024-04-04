@@ -44,7 +44,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (rdbAuto.Checked)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -156,7 +156,7 @@ namespace CodeAchi_Library_Management_System
                 MySqlCommand mysqlCmd = null;
                 MySqlDataReader sqldataReader = null;
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -224,7 +224,7 @@ namespace CodeAchi_Library_Management_System
                 else
                 {
                     int ttlBooks = 0;
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         if (sqltConn.State == ConnectionState.Closed)
                         {
@@ -257,9 +257,9 @@ namespace CodeAchi_Library_Management_System
                         ttlBooks = ttlBooks + ttlData;
                         mysqlConn.Close();
                     }
-                    if (ttlBooks >= globalVarLms.itemLimits)
+                    if (ttlBooks >= globalVarLms.itemLimit)
                     {
-                        MessageBox.Show("You can't add more than " + globalVarLms.itemLimits.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You can't add more than " + globalVarLms.itemLimit.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
 
@@ -277,7 +277,7 @@ namespace CodeAchi_Library_Management_System
                     {
                         if (!isManualPrefix) //Manual prefix
                         {
-                            if (Properties.Settings.Default.sqliteDatabase)
+                            if (globalVarLms.sqliteData)
                             {
                                 queryString = "select shortName from itemSubCategory where catName=@catName and subCatName=@subCatName";
                                 sqltCommnd.CommandText = queryString;
@@ -349,7 +349,7 @@ namespace CodeAchi_Library_Management_System
                             if (noPrefix)
                             {
                                 itemAccession = "";
-                                if (Properties.Settings.Default.sqliteDatabase)
+                                if (globalVarLms.sqliteData)
                                 {
                                     sqltCommnd.CommandText = "select itemAccession from itemDetails order by [id] desc limit 1";    //  
                                     dataReader = sqltCommnd.ExecuteReader();
@@ -444,7 +444,7 @@ namespace CodeAchi_Library_Management_System
                             else
                             {
                                 itemAccession = "";
-                                if (Properties.Settings.Default.sqliteDatabase)
+                                if (globalVarLms.sqliteData)
                                 {
                                     sqltCommnd.CommandText = "select itemAccession from itemDetails where itemCat=@catName and itemSubCat=@subCatName and itemAccession like @itemAccession order by [id] desc limit 1";    //  
                                     sqltCommnd.Parameters.AddWithValue("@catName", cmbItemCategory.Text);
@@ -547,7 +547,7 @@ namespace CodeAchi_Library_Management_System
                             }
 
                             existCount = 0;
-                            if (Properties.Settings.Default.sqliteDatabase)
+                            if (globalVarLms.sqliteData)
                             {
                                 sqltCommnd.CommandText = "select count(itemAccession) from itemDetails where itemAccession=@itemAccession";
                                 sqltCommnd.CommandType = CommandType.Text;
@@ -668,7 +668,7 @@ namespace CodeAchi_Library_Management_System
                                     itemPrice = 0.00.ToString("00");
                                 }
                                 //====================Insert Borrower details======================
-                                if (Properties.Settings.Default.sqliteDatabase)
+                                if (globalVarLms.sqliteData)
                                 {
                                     Image itemImage = null;
                                     String imgName = "";
@@ -769,7 +769,7 @@ namespace CodeAchi_Library_Management_System
                         }
                         if (lastNumber > 0)
                         {
-                            if (Properties.Settings.Default.sqliteDatabase)
+                            if (globalVarLms.sqliteData)
                             {
                                 queryString = "update accnSetting  set lastNumber='" + lastNumber + "'";
                                 sqltCommnd = sqltConn.CreateCommand();
@@ -806,7 +806,7 @@ namespace CodeAchi_Library_Management_System
                             else
                             {
                                 existCount = 0;
-                                if (Properties.Settings.Default.sqliteDatabase)
+                                if (globalVarLms.sqliteData)
                                 {
                                     sqltCommnd.CommandText = "select count(itemAccession) from itemDetails where itemAccession=@itemAccession";
                                     sqltCommnd.CommandType = CommandType.Text;
@@ -916,7 +916,7 @@ namespace CodeAchi_Library_Management_System
                                     }
 
                                     //====================Insert Borrower details======================
-                                    if (Properties.Settings.Default.sqliteDatabase)
+                                    if (globalVarLms.sqliteData)
                                     {
                                         Image itemImage = null;
                                         String imgName = "";
@@ -1095,7 +1095,7 @@ namespace CodeAchi_Library_Management_System
             {
                 cmbSubCategory.Items.Clear();
                 cmbSubCategory.Items.Add("Please select subcategory...");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1202,7 +1202,7 @@ namespace CodeAchi_Library_Management_System
             {
                 string fileName = saveDialog.FileName;
                 string capInfo = "";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1374,7 +1374,7 @@ namespace CodeAchi_Library_Management_System
                 return;
             }
             string capInfo = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1653,7 +1653,7 @@ namespace CodeAchi_Library_Management_System
             cmbItemCategory.Items.Clear();
             cmbItemCategory.Items.Add("Please select a Category...");
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

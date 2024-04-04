@@ -46,7 +46,7 @@ namespace CodeAchi_Library_Management_System
             cmbBrrCategory.Items.Clear();
             cmbBrrCategory.Items.Add("-------Select-------");
             cmbPlan.Items.Add("--Select--");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -185,7 +185,7 @@ namespace CodeAchi_Library_Management_System
             {
                 string fileName = saveDialog.FileName;
                 string capInfo = "";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -326,7 +326,7 @@ namespace CodeAchi_Library_Management_System
                 return;
             }
             string capInfo = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -605,7 +605,7 @@ namespace CodeAchi_Library_Management_System
             memFees = 0.00;
             if (cmbPlan.SelectedIndex != 0)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -695,7 +695,7 @@ namespace CodeAchi_Library_Management_System
                 MySqlCommand mysqlCmd = null;
                 MySqlDataReader sqldataReader = null;
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -818,7 +818,7 @@ namespace CodeAchi_Library_Management_System
                         {
                             brrName = xlRange.Cells[i, "A"].Value2.ToString();
                             existCount = 0;
-                            if (Properties.Settings.Default.sqliteDatabase)
+                            if (globalVarLms.sqliteData)
                             {
                                 sqltCommnd.CommandText = "select brrId from borrowerDetails where brrCategory=@catName and brrId like @brrId order by [id] desc limit 1";    //  
                                 sqltCommnd.Parameters.AddWithValue("@catName", cmbBrrCategory.Text);
@@ -1006,7 +1006,7 @@ namespace CodeAchi_Library_Management_System
 
                                 membershipFees = totalFees.ToString();
                                 memDuration = txtbBrrRnwDate.Text;
-                                if (Properties.Settings.Default.sqliteDatabase)
+                                if (globalVarLms.sqliteData)
                                 {
                                     Image brrImage = null;
                                     String imgName = "";
@@ -1107,7 +1107,7 @@ namespace CodeAchi_Library_Management_System
 
                         if (lastNumber > 0)
                         {
-                            if (Properties.Settings.Default.sqliteDatabase)
+                            if (globalVarLms.sqliteData)
                             {
                                 queryString = "update brrIdSetting  set lastNumber='" + lastNumber + "'";
                                 sqltCommnd = sqltConn.CreateCommand();
@@ -1141,7 +1141,7 @@ namespace CodeAchi_Library_Management_System
                             if (brrId != "")
                             {
                                 brrName = xlRange.Cells[i, "B"].Value2 != null ? xlRange.Cells[i, "B"].Value2.ToString() : "";
-                                if (Properties.Settings.Default.sqliteDatabase)
+                                if (globalVarLms.sqliteData)
                                 {
                                     sqltCommnd.CommandText = "select count(brrId) from borrowerDetails where brrId=@brrId";
                                     sqltCommnd.CommandType = CommandType.Text;
@@ -1230,7 +1230,7 @@ namespace CodeAchi_Library_Management_System
 
                                     membershipFees = totalFees.ToString();
                                     memDuration = txtbBrrRnwDate.Text;
-                                    if (Properties.Settings.Default.sqliteDatabase)
+                                    if (globalVarLms.sqliteData)
                                     {
                                         Image brrImage = null;
                                         String imgName = "";
@@ -1366,7 +1366,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (rdbAuto.Checked)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

@@ -1,8 +1,10 @@
 ﻿using Microsoft.Win32;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
@@ -24,10 +26,13 @@ namespace CodeAchi_Library_Management_System
 
         public bool isUpdate = false, migrationComplete = false;
         FormBackup dataBackup = new FormBackup();
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string configFilePath = Application.StartupPath + "/clms.json";
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
         private void FormDatabaseSetting_Load(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Colossal" || globalVarLms.licenseType == "Grand" || globalVarLms.licenseType == "Jumbo")
+            if (globalVarLms.licenseName == "Colossal" || globalVarLms.licenseName == "Grand" || globalVarLms.licenseName == "Jumbo")
             {
                 rdbMysql.Enabled = true;
             }
@@ -38,10 +43,10 @@ namespace CodeAchi_Library_Management_System
             panelMigration.Visible = false;
             btnMigrate.Enabled = false;
             txtbPassword.UseSystemPasswordChar = true;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 rdbSqlite.Checked = true;
-                string databasePath = Properties.Settings.Default.databasePath;
+                string databasePath = globalVarLms.connectionString;
                 if (Properties.Settings.Default.hostName != "")
                 {
                     string hostName = databasePath.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
@@ -54,32 +59,14 @@ namespace CodeAchi_Library_Management_System
                 {
                     chkbIp.Checked = false;
                     txtbHostIp.Enabled = false;
-                    txtbDatabasePath.Text = databasePath;
+                    string[] dataList = globalVarLms.connectionString.Split(';');
+                    txtbDatabasePath.Text = dataList[0].Replace("Data Source=", "").Replace("\\LMS.sl3", "");
                 }
-
-                SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
-                if (sqltConn.State == ConnectionState.Closed)
-                {
-                    sqltConn.Open();
-                }
-                SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                string queryString = "select databasePath,backupPath,backupHour from generalSettings";
-                sqltCommnd.CommandText = queryString;
-                SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        txtbDatabasePath.Text = Properties.Settings.Default.databasePath;
-                    }
-                }
-                dataReader.Close();
-                sqltConn.Close();
             }
             else
             {
                 rdbMysql.Checked = true;
-                string[] dataList = Properties.Settings.Default.databasePath.Split(';');
+                string[] dataList = globalVarLms.connectionString.Split(';');
                 txtbHostIp.Text = dataList[0].Replace("server=", "");
                 txtbUserName.Text = dataList[2].Replace(" user id=", "");
                 txtbPassword.Text = dataList[3].Replace(" password=", "");
@@ -112,58 +99,59 @@ namespace CodeAchi_Library_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            byte[] compName = Encoding.UTF8.GetBytes("CodeAchi");
-            byte[] byteData = Encoding.UTF8.GetBytes(Application.ProductName);
-            RegistryKey regKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-            if (regKey == null)
-            {
-                if (Environment.Is64BitProcess)
-                {
-                    regKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-                }
-                else
-                {
-                    regKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-                }
-            }
-
+            string connectionString = "";
             if (rdbSqlite.Checked)
             {
                 try
                 {
                     string databasePath = txtbDatabasePath.Text.TrimEnd();
-                    //if (chkbIp.Checked)
-                    //{
-                    //    hostName = databasePath.Split(new[] { '\\' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
-                    //    databasePath = databasePath.Replace(hostName, txtbHostIp.Text.TrimEnd()).Replace("\\", "/");
-                    //}
+                    connectionString = "Data Source=" + txtbDatabasePath.Text + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
+                    globalVarLms.connectionString = connectionString;
+                    globalVarLms.sqliteData = true;
+                    string jsonString = passwordHasher.Decrypt(File.ReadAllText(configFilePath));
+                    dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                    jsonObject["ConnectionString"] = connectionString;
+                    jsonObject["SQLiteData"] = true;
+                    string jsonData = JsonConvert.SerializeObject(jsonObject);
+                    jsonData = passwordHasher.Encrypt(jsonData);
+                    File.WriteAllText(configFilePath, jsonData);
 
-                    byteData = Encoding.UTF8.GetBytes(databasePath);
-                    regKey.SetValue("Data2", Convert.ToBase64String(byteData)); //key
-                    regKey.Close();
-
-                    Properties.Settings.Default.databasePath = databasePath;
-                    Properties.Settings.Default.hostName = "";
-                    Properties.Settings.Default.sqliteDatabase = true;
-                    Properties.Settings.Default.sqliteConnection = "";
-                    Properties.Settings.Default.Save();
-
+                    DatabaseChecking.CreerBase();
+                    btnUpdate.Enabled = false;
+                    isUpdate = true;
+                    MessageBox.Show("Database setting updated successfully.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
                     {
                         sqltConn.Open();
                     }
                     SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                    string queryString = "update generalSettings set databasePath=:databasePath";
-                    sqltCommnd.CommandText = queryString;
-                    sqltCommnd.Parameters.AddWithValue("databasePath", databasePath);
-                    sqltCommnd.ExecuteNonQuery();
-                    sqltConn.Close();
+                    if (sqltConn.State == ConnectionState.Closed)
+                    {
+                        sqltConn.Open();
+                    }
+                    sqltCommnd = sqltConn.CreateCommand();
+                    sqltCommnd.CommandText = "select count(id) from itemDetails;";
+                    sqltCommnd.CommandType = CommandType.Text;
+                    string ttlItems = sqltCommnd.ExecuteScalar().ToString();
 
-                    DatabaseChecking.CreerBase();
-                    btnUpdate.Enabled = false;
-                    isUpdate = true;
-                    MessageBox.Show("Database setting updated successfully.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sqltCommnd = sqltConn.CreateCommand();
+                    sqltCommnd.CommandText = "select count(id) from userDetails;";
+                    sqltCommnd.CommandType = CommandType.Text;
+                    string ttlUser = sqltCommnd.ExecuteScalar().ToString();
+
+                    sqltCommnd = sqltConn.CreateCommand();
+                    sqltCommnd.CommandText = "select count(id) from borrowerDetails;";
+                    sqltCommnd.CommandType = CommandType.Text;
+                    string ttlMember = sqltCommnd.ExecuteScalar().ToString();
+
+                    jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                    jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                    jsonObject["total-items"] = ttlItems;
+                    jsonObject["total-member"] = ttlMember;
+                    jsonObject["total-librarian"] = ttlUser;
+                    jsonData = passwordHasher.Encrypt(jsonObject.ToString());
+                    File.WriteAllText(usageFilePath, jsonData);
                 }
                 catch
                 {
@@ -188,18 +176,21 @@ namespace CodeAchi_Library_Management_System
                         return;
                     }
                 }
-                byteData = Encoding.UTF8.GetBytes(connectionstring);
-                regKey.SetValue("Data2", Convert.ToBase64String(byteData)); //key
-                regKey.Close();
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
-                    Properties.Settings.Default.sqliteConnection = "Data Source=" + Properties.Settings.Default.databasePath + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
+                    Properties.Settings.Default.sqliteConnection = globalVarLms.connectionString;
+                    Properties.Settings.Default.Save();
                 }
-                Properties.Settings.Default.databasePath = connectionstring;
-                Properties.Settings.Default.sqliteDatabase = false;
-                Properties.Settings.Default.Save();
-
+                globalVarLms.connectionString = connectionstring;
+                globalVarLms.sqliteData = false;
+                string jsonString = passwordHasher.Decrypt(File.ReadAllText(configFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                jsonObject["ConnectionString"] = connectionString;
+                jsonObject["SQLiteData"] = false;
+                string jsonData = JsonConvert.SerializeObject(jsonObject);
+                jsonData = passwordHasher.Encrypt(jsonData);
+                File.WriteAllText(configFilePath, jsonData);
                 try
                 {
                     string queryString = "update general_settings set databasePath=@databasePath";
@@ -373,7 +364,7 @@ namespace CodeAchi_Library_Management_System
                    " " + DateTime.Now.Hour.ToString("00") + "_" + DateTime.Now.Minute.ToString("00") + ".sl3";
                     string fileName = Path.GetFileName(txtbBackupFile.Text);
                     string backupPath = txtbBackupFile.Text.Replace(fileName, "");
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         File.Copy(Properties.Settings.Default.databasePath + @"\LMS.sl3", backupPath + backupFileName);
@@ -418,7 +409,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (chkbIp.Checked)
             {
-                if (globalVarLms.licenseType == "Demo")
+                if (!globalVarLms.isLicensed)
                 {
                     MessageBox.Show("You can't use this feature in trial version.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -456,7 +447,7 @@ namespace CodeAchi_Library_Management_System
         {
             OpenFileDialog selectFile = new OpenFileDialog();
             selectFile.Title = Application.ProductName + " Select Backup File";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 selectFile.Filter = "Backup File|*.sl3";
             }
@@ -486,7 +477,7 @@ namespace CodeAchi_Library_Management_System
                 MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

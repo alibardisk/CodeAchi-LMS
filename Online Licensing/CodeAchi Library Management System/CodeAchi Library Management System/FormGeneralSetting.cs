@@ -24,7 +24,7 @@ namespace CodeAchi_Library_Management_System
 
         private void FormGeneralSetting_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -259,7 +259,7 @@ namespace CodeAchi_Library_Management_System
                 
             if (btnUpdate.Text == "Update")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -331,7 +331,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -414,7 +414,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (txtbCountry.Text != "")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

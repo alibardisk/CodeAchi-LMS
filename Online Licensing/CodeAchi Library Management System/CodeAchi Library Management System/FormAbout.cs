@@ -34,16 +34,16 @@ namespace CodeAchi_Library_Management_System
             this.Text ="About - "+ Application.ProductName;
             lblProdVersion.Text = Application.ProductVersion;
             lblDbSeries.Text = Properties.Settings.Default.databaseSeries;
-            lblLimits.Text = Properties.Settings.Default.machineLimits;
-            lblLicense.Text= Properties.Settings.Default.licenseType;
+            lblLimits.Text = globalVarLms.itemLimit.ToString();
+            lblLicense.Text= globalVarLms.licenseName;
             DateTime renewDate = globalVarLms.expiryDate.AddDays(1);
             lblExpire.Text = renewDate.Day.ToString("00") + "/" + renewDate.Month.ToString("00") + "/" + renewDate.Year.ToString("0000");
-            lblItemLimt.Text = globalVarLms.itemLimits.ToString();
+            lblItemLimt.Text = globalVarLms.itemLimit.ToString();
             lblMac.Text =globalVarLms.machineId;
             lblIp.Text = GetGlobalIP();
             label16.Text = "     "+DateTime.Now.Year.ToString()+" CodeAchi Technologies Pvt.. Ltd.";
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -314,108 +314,108 @@ namespace CodeAchi_Library_Management_System
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string txtbUserMail = "", settingsData = "", copyInfo = "", ttlItems="";
-            if (Properties.Settings.Default.sqliteDatabase)
-            {
-                SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
-                if (sqltConn.State == ConnectionState.Closed)
-                {
-                    sqltConn.Open();
-                }
-                SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                sqltCommnd.CommandText = "select count(id) from itemDetails;";
-                sqltCommnd.CommandType = CommandType.Text;
-                ttlItems = sqltCommnd.ExecuteScalar().ToString();
+            //string txtbUserMail = "", settingsData = "", copyInfo = "", ttlItems="";
+            //if (globalVarLms.sqliteData)
+            //{
+            //    SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
+            //    if (sqltConn.State == ConnectionState.Closed)
+            //    {
+            //        sqltConn.Open();
+            //    }
+            //    SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
+            //    sqltCommnd.CommandText = "select count(id) from itemDetails;";
+            //    sqltCommnd.CommandType = CommandType.Text;
+            //    ttlItems = sqltCommnd.ExecuteScalar().ToString();
 
-                sqltCommnd.CommandText = "select * from userDetails where userMail!=@userMail and isAdmin='" + true + "' limit 1";
-                sqltCommnd.CommandType = CommandType.Text;
-                sqltCommnd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
-                SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        txtbUserMail = dataReader["userMail"].ToString();
-                    }
-                }
-                dataReader.Close();
-                sqltCommnd.CommandText = "select settingsData from generalSettings";
-                sqltCommnd.CommandType = CommandType.Text;
-                dataReader = sqltCommnd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        settingsData = dataReader["settingsData"].ToString();
-                        if (settingsData != "")
-                        {
-                            JObject jsonObj = JObject.Parse(settingsData);
-                            copyInfo = "Machine Id : " + lblMac.Text + Environment.NewLine + "Serial Key : " + Properties.Settings.Default.serialKey +
-                                Environment.NewLine + "License Name : " + lblLicense.Text + Environment.NewLine +
-                                "Renew Date : " + lblExpire.Text + Environment.NewLine + "User Mail : " + txtbUserMail;
-                        }
-                    }
-                }
-                dataReader.Close();
-                sqltConn.Close();
-            }
-            else
-            {
-                MySqlConnection mysqlConn;
-                mysqlConn = ConnectionClass.mysqlConnection();
-                if (mysqlConn.State == ConnectionState.Closed)
-                {
-                    try
-                    {
-                        mysqlConn.Open();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                }
-                MySqlCommand mysqlCmd;
-                string queryString = "select count(id) from item_details;";
-                mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                ttlItems = mysqlCmd.ExecuteScalar().ToString();
+            //    sqltCommnd.CommandText = "select * from userDetails where userMail!=@userMail and isAdmin='" + true + "' limit 1";
+            //    sqltCommnd.CommandType = CommandType.Text;
+            //    sqltCommnd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
+            //    SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
+            //    if (dataReader.HasRows)
+            //    {
+            //        while (dataReader.Read())
+            //        {
+            //            txtbUserMail = dataReader["userMail"].ToString();
+            //        }
+            //    }
+            //    dataReader.Close();
+            //    sqltCommnd.CommandText = "select settingsData from generalSettings";
+            //    sqltCommnd.CommandType = CommandType.Text;
+            //    dataReader = sqltCommnd.ExecuteReader();
+            //    if (dataReader.HasRows)
+            //    {
+            //        while (dataReader.Read())
+            //        {
+            //            settingsData = dataReader["settingsData"].ToString();
+            //            if (settingsData != "")
+            //            {
+            //                JObject jsonObj = JObject.Parse(settingsData);
+            //                copyInfo = "Machine Id : " + lblMac.Text + Environment.NewLine + "Serial Key : " + Properties.Settings.Default.serialKey +
+            //                    Environment.NewLine + "License Name : " + lblLicense.Text + Environment.NewLine +
+            //                    "Renew Date : " + lblExpire.Text + Environment.NewLine + "User Mail : " + txtbUserMail;
+            //            }
+            //        }
+            //    }
+            //    dataReader.Close();
+            //    sqltConn.Close();
+            //}
+            //else
+            //{
+            //    MySqlConnection mysqlConn;
+            //    mysqlConn = ConnectionClass.mysqlConnection();
+            //    if (mysqlConn.State == ConnectionState.Closed)
+            //    {
+            //        try
+            //        {
+            //            mysqlConn.Open();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            return;
+            //        }
+            //    }
+            //    MySqlCommand mysqlCmd;
+            //    string queryString = "select count(id) from item_details;";
+            //    mysqlCmd = new MySqlCommand(queryString, mysqlConn);
+            //    ttlItems = mysqlCmd.ExecuteScalar().ToString();
 
-                queryString = "select * from user_details where userMail!=@userMail and isAdmin='" + true + "' limit 1";
-                mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                mysqlCmd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
-                mysqlCmd.CommandTimeout = 99999;
-                MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        txtbUserMail = dataReader["userMail"].ToString();
-                    }
-                }
-                dataReader.Close();
+            //    queryString = "select * from user_details where userMail!=@userMail and isAdmin='" + true + "' limit 1";
+            //    mysqlCmd = new MySqlCommand(queryString, mysqlConn);
+            //    mysqlCmd.Parameters.AddWithValue("@userMail", "lmssl@codeachi.com");
+            //    mysqlCmd.CommandTimeout = 99999;
+            //    MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
+            //    if (dataReader.HasRows)
+            //    {
+            //        while (dataReader.Read())
+            //        {
+            //            txtbUserMail = dataReader["userMail"].ToString();
+            //        }
+            //    }
+            //    dataReader.Close();
 
-                queryString = "select settingsData from general_settings";
-                mysqlCmd = new MySqlCommand(queryString, mysqlConn);
-                mysqlCmd.CommandTimeout = 99999;
-                dataReader = mysqlCmd.ExecuteReader();
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        settingsData = dataReader["settingsData"].ToString();
-                        if (settingsData != "")
-                        {
-                            JObject jsonObj = JObject.Parse(settingsData);
-                            copyInfo = "Machine Id : " + lblMac.Text + Environment.NewLine + "Serial Key : " + Properties.Settings.Default.serialKey +
-                                Environment.NewLine + "License Name : " + lblLicense.Text + Environment.NewLine +
-                                "Renew Date : " + lblExpire.Text + Environment.NewLine + "User Mail : " + txtbUserMail;
-                        }
-                    }
-                }
-                dataReader.Close();
-                mysqlConn.Close();
-            }
-            Clipboard.SetText(copyInfo);
+            //    queryString = "select settingsData from general_settings";
+            //    mysqlCmd = new MySqlCommand(queryString, mysqlConn);
+            //    mysqlCmd.CommandTimeout = 99999;
+            //    dataReader = mysqlCmd.ExecuteReader();
+            //    if (dataReader.HasRows)
+            //    {
+            //        while (dataReader.Read())
+            //        {
+            //            settingsData = dataReader["settingsData"].ToString();
+            //            if (settingsData != "")
+            //            {
+            //                JObject jsonObj = JObject.Parse(settingsData);
+            //                copyInfo = "Machine Id : " + lblMac.Text + Environment.NewLine + "Serial Key : " + Properties.Settings.Default.serialKey +
+            //                    Environment.NewLine + "License Name : " + lblLicense.Text + Environment.NewLine +
+            //                    "Renew Date : " + lblExpire.Text + Environment.NewLine + "User Mail : " + txtbUserMail;
+            //            }
+            //        }
+            //    }
+            //    dataReader.Close();
+            //    mysqlConn.Close();
+            //}
+            //Clipboard.SetText(copyInfo);
         }
     }
 }

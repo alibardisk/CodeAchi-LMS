@@ -38,7 +38,7 @@ namespace CodeAchi_Library_Management_System
             {
                 Application.Exit();
             }
-            if (globalVarLms.licenseType != "Demo" && globalVarLms.productExpire)
+            if (globalVarLms.isLicensed && globalVarLms.productExpire)
             {
                 this.Close();
             }
@@ -125,7 +125,7 @@ namespace CodeAchi_Library_Management_System
             {
                 Application.Exit();
             }
-            if (globalVarLms.licenseType != "Demo" && globalVarLms.productExpire)
+            if (globalVarLms.isLicensed && globalVarLms.productExpire)
             {
                 this.Hide();
             }

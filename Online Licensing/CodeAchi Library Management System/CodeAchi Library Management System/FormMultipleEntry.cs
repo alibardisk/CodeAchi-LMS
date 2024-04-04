@@ -32,7 +32,7 @@ namespace CodeAchi_Library_Management_System
         private void btnSave_Click(object sender, EventArgs e)
         {
             string currentDate = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -45,9 +45,9 @@ namespace CodeAchi_Library_Management_System
                 sqltCommnd.CommandText = "select count(id) from itemDetails;";
                 sqltCommnd.CommandType = CommandType.Text;
                 int ttlBooks = Convert.ToInt32(sqltCommnd.ExecuteScalar().ToString());
-                if ((ttlBooks + numCopy.Value) >= globalVarLms.itemLimits)
+                if ((ttlBooks + numCopy.Value) >= globalVarLms.itemLimit)
                 {
-                    MessageBox.Show("You can't add more than " + globalVarLms.itemLimits.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("You can't add more than " + globalVarLms.itemLimit.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (txtbRack.Text == "")
@@ -254,9 +254,9 @@ namespace CodeAchi_Library_Management_System
                 mysqlCmd = new MySqlCommand(queryString, mysqlConn);
                 mysqlCmd.CommandTimeout = 99999;
                 int ttlBooks = Convert.ToInt32(mysqlCmd.ExecuteScalar().ToString());
-                if ((ttlBooks + numCopy.Value) >= globalVarLms.itemLimits)
+                if ((ttlBooks + numCopy.Value) >= globalVarLms.itemLimit)
                 {
-                    MessageBox.Show("You can't add more than " + globalVarLms.itemLimits.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("You can't add more than " + globalVarLms.itemLimit.ToString() + " items in this license!" + Environment.NewLine + "Please update your license to add more items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (txtbRack.Text == "")

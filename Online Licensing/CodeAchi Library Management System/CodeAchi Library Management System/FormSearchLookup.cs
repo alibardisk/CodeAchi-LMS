@@ -276,7 +276,7 @@ namespace CodeAchi_Library_Management_System
                         cmbSearch.Items.Add("Email Id");
                         cmbSearch.Items.Add("Contact");
                         cmbSearch.Items.Add("Membership Plan");
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -418,7 +418,7 @@ namespace CodeAchi_Library_Management_System
                         cmbSearch.Items.Add("No of Pages");
                         cmbSearch.Items.Add("Price");
 
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -577,7 +577,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 cmbCategory.Items.Clear();
                 cmbCategory.Items.Add("-------Select-------");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -658,7 +658,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 cmbCategory.Items.Clear();
                 cmbCategory.Items.Add("-------Select-------");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -794,7 +794,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     if (queryString != "")
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -941,7 +941,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     if (queryString != "")
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -1050,7 +1050,7 @@ namespace CodeAchi_Library_Management_System
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1522,7 +1522,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     if (conditionString != "")
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -1810,7 +1810,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     if (conditionString != "")
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)

@@ -32,7 +32,7 @@ namespace CodeAchi_Library_Management_System
         {
             dgvWishList.RowsDefaultCellStyle.BackColor = Color.AntiqueWhite;//FromArgb(255, 255, 192);
             dgvWishList.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -150,7 +150,7 @@ namespace CodeAchi_Library_Management_System
                 txtbPublication.Select();
                 return;
             }
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -286,7 +286,7 @@ namespace CodeAchi_Library_Management_System
 
         private void btnCsv_Click(object sender, EventArgs e)
         {
-            if (globalVarLms.licenseType == "Demo")
+            if (!globalVarLms.isLicensed)
             {
                 MessageBox.Show("This feature is not available in the trial version", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;

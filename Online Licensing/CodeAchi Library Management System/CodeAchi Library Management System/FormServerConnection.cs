@@ -22,9 +22,9 @@ namespace CodeAchi_Library_Management_System
         {
             txtbPassword.UseSystemPasswordChar = true;
             btnUpdate.Enabled = false;
-            if (!Properties.Settings.Default.sqliteDatabase)
+            if (!globalVarLms.sqliteData)
             {
-                string[] dataList = Properties.Settings.Default.databasePath.Split(';');
+                string[] dataList = globalVarLms.connectionString.Split(';');
                 txtbHostIp.Text = dataList[0].Replace("server=", "");
                 txtbUserName.Text = dataList[2].Replace(" user id=", "");
                 txtbPassword.Text = dataList[3].Replace(" password=", "");
@@ -120,7 +120,7 @@ namespace CodeAchi_Library_Management_System
                         FormActivate activateProduct = new FormActivate();
                         activateProduct.licenseKey = licenseKey;
                         activateProduct.ShowDialog();
-                        if (globalVarLms.licenseType == "Colossal" || licenseType == "Grand" || globalVarLms.licenseType == "Jumbo")
+                        if (globalVarLms.licenseName == "Colossal" || globalVarLms.licenseName == "Grand" || globalVarLms.licenseName == "Jumbo")
                         {
                             byte[] compName = Encoding.UTF8.GetBytes("CodeAchi");
                             byte[] byteData = Encoding.UTF8.GetBytes(Application.ProductName);
@@ -141,7 +141,7 @@ namespace CodeAchi_Library_Management_System
                             regKey.SetValue("Data2", Convert.ToBase64String(byteData)); //key
                             regKey.Close();
                             Properties.Settings.Default.databasePath = connectionstring;
-                            Properties.Settings.Default.sqliteDatabase = false;
+                            globalVarLms.sqliteData = false;
                             Properties.Settings.Default.Save();
                             MessageBox.Show("Database setting updated successfully.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Application.Exit();
@@ -177,7 +177,7 @@ namespace CodeAchi_Library_Management_System
                     regKey.SetValue("Data2", Convert.ToBase64String(byteData)); //key
                     regKey.Close();
                     Properties.Settings.Default.databasePath = connectionstring;
-                    Properties.Settings.Default.sqliteDatabase = false;
+                    globalVarLms.sqliteData = false;
                     Properties.Settings.Default.Save();
                     MessageBox.Show("Database setting updated successfully.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Application.Exit();

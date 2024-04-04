@@ -80,7 +80,7 @@ namespace CodeAchi_Library_Management_System
             }
             if (btnSave.Text == "Sa&ve")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -160,7 +160,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -254,7 +254,7 @@ namespace CodeAchi_Library_Management_System
                         return;
                     }
                 }
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -314,7 +314,7 @@ namespace CodeAchi_Library_Management_System
             }
             else
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -391,7 +391,7 @@ namespace CodeAchi_Library_Management_System
             if(dgvItemCategory.SelectedRows.Count == 1)
             {
                 dgvItemSubcat.Rows.Clear();
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1092,7 +1092,7 @@ namespace CodeAchi_Library_Management_System
         private void updateSubcategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             catName= dgvItemCategory.SelectedCells[0].Value.ToString();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1159,7 +1159,7 @@ namespace CodeAchi_Library_Management_System
 
         private void updatetoolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1261,7 +1261,7 @@ namespace CodeAchi_Library_Management_System
                 List<string> itemList = new List<string> { };
                 string currentDateTime = DateTime.Now.Day.ToString("00") + DateTime.Now.Month.ToString("00") + DateTime.Now.Year.ToString("0000") + DateTime.Now.ToString("hhmmss");
                
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     string sourceFile = Properties.Settings.Default.databasePath + @"\LMS.sl3";
                     string destFile = globalVarLms.backupPath + @"\Backup_before_delete_" + dgvItemCategory.SelectedCells[0].Value.ToString().Replace("/", "_").Replace(@"\", "_") + "_Items_category_" + currentDateTime + ".sl3";
@@ -1445,7 +1445,7 @@ namespace CodeAchi_Library_Management_System
 
                 List<string> itemList = new List<string> { };
                 string currentDateTime = DateTime.Now.Day.ToString("00") + DateTime.Now.Month.ToString("00") + DateTime.Now.Year.ToString("0000") + DateTime.Now.ToString("hhmmss");
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     string sourceFile = Properties.Settings.Default.databasePath + @"\LMS.sl3";
                     string destFile = globalVarLms.backupPath + @"\Backup_before_delete_" + dgvItemSubcat.SelectedCells[0].Value.ToString().Replace("/", "_").Replace(@"\", "_") + "_Items_subcategory_" + currentDateTime + ".sl3";

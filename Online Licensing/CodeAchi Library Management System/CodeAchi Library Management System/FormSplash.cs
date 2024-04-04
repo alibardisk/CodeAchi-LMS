@@ -1,9 +1,11 @@
 ﻿using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
+using System.Management;
 using System.Text;
 using System.Windows.Forms;
 
@@ -17,6 +19,7 @@ namespace CodeAchi_Library_Management_System
         }
 
         FormDashBoard mainForm = new FormDashBoard();
+        PasswordHasher passwordHasher = new PasswordHasher();
 
         private void FormSplash_Load(object sender, EventArgs e)
         {
@@ -35,147 +38,76 @@ namespace CodeAchi_Library_Management_System
                 }
                 File.Move(Application.StartupPath + "/Updater1.exe", Application.StartupPath + "/Updater.exe");
             }
-            byte[] compName = Encoding.UTF8.GetBytes("CodeAchi");
-            byte[] byteData = Encoding.UTF8.GetBytes(Application.ProductName);
-            RegistryKey newregKey = null;
-            if (Environment.Is64BitProcess)
+            string configFilePath = Application.StartupPath + "/clms.json";
+            if (File.Exists(configFilePath))
             {
-                newregKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), false);
-                if (newregKey != null)
-                {
-                    object o1 = newregKey.GetValue("Data1");
-                    byteData = Convert.FromBase64String(o1.ToString());
-                    globalVarLms.machineId = Encoding.UTF8.GetString(byteData);
-                    o1 = newregKey.GetValue("Data2");
-                    byteData = Convert.FromBase64String(o1.ToString());
-                    Properties.Settings.Default.databasePath = Encoding.UTF8.GetString(byteData);
-                    Properties.Settings.Default.Save();
-                }
-            }
-            else
-            {
-                newregKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), false);
-                if (newregKey != null)
-                {
-                    object o1 = newregKey.GetValue("Data1");
-                    byteData = Convert.FromBase64String(o1.ToString());
-                    globalVarLms.machineId = Encoding.UTF8.GetString(byteData);
-                    o1 = newregKey.GetValue("Data2");
-                    byteData = Convert.FromBase64String(o1.ToString());
-                    Properties.Settings.Default.databasePath = Encoding.UTF8.GetString(byteData);
-                    Properties.Settings.Default.Save();
-                }
-            }
+                string jsonString = passwordHasher.Decrypt(File.ReadAllText(configFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                globalVarLms.connectionString = jsonObject.ConnectionString;
+                globalVarLms.machineId = jsonObject.InstallationId;
+                globalVarLms.sqliteData = jsonObject.SQLiteData;
 
-            if (newregKey == null)
-            {
-                RegistryKey regKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData), true);
-                if (regKey != null)
+                string ttlUser = "0";
+                if (globalVarLms.sqliteData)
                 {
-                    object o1 = regKey.GetValue("Data1");
-                    byteData = Convert.FromBase64String(o1.ToString());
-                    globalVarLms.machineId = Encoding.UTF8.GetString(byteData);
-                    o1 = regKey.GetValue("Data2");
-                    byteData = Convert.FromBase64String(o1.ToString());
-                    Properties.Settings.Default.databasePath = Encoding.UTF8.GetString(byteData);
-                    Properties.Settings.Default.Save();
+                    SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
+                    if (sqltConn.State == ConnectionState.Closed)
+                    {
+                        sqltConn.Open();
+                    }
+                    SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
+                    sqltCommnd = sqltConn.CreateCommand();
+                    sqltCommnd.CommandText = "select count(id) from userDetails;";
+                    sqltCommnd.CommandType = CommandType.Text;
+                    ttlUser = sqltCommnd.ExecuteScalar().ToString();
+                   
+                    sqltCommnd.CommandText = "SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name = 'marketingDetails'";
+                    sqltCommnd.CommandType = CommandType.Text;
+                    if (Convert.ToInt32(sqltCommnd.ExecuteScalar()) > 0)
+                    {
+                        sqltCommnd.CommandText = "SELECT * FROM marketingDetails WHERE compName != 'CodeAchi'";
+                        sqltCommnd.CommandType = CommandType.Text;
+                        SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
+                        if (dataReader.HasRows)
+                        {
+                            while (dataReader.Read())
+                            {
+                                lblCompny.Text = "Marketed by " + dataReader["compName"].ToString();
+                            }
+                            lblCompny.Visible = true;
+                        }
+                        dataReader.Close();
+                    }
+                    sqltConn.Close();
+                }
+                //else
+                //{
+                //    //mysqlConn = ConnectionClass.mysqlConnection();
+                //    //if(mysqlConn.State==ConnectionState.Closed)
+                //    //{
+                //    //    mysqlConn.Open();
+                //    //}
+                //    //MySqlCommand mysqlCmd;
+                //    //string queryString= "SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name = 'marketingDetails'";
+                //    //mysqlCmd =new MySqlCommand()
+                //}
+                if (Convert.ToInt32(ttlUser) > 1)
+                {
+                    DatabaseChecking.CreerBase();
+                    mainForm.bWorkerGetDetails.RunWorkerAsync();
+                    timer1.Start();
                 }
                 else
                 {
-                    //Change Registry Location===========
-                    regKey = Registry.CurrentUser.OpenSubKey(Convert.ToBase64String(byteData), true);
-                    if (regKey != null)
-                    {
-                        object o1 = regKey.GetValue("Data1");
-                        byteData = Convert.FromBase64String(o1.ToString());
-                        globalVarLms.machineId = Encoding.UTF8.GetString(byteData);
-                        o1 = regKey.GetValue("Data2");
-                        byteData = Convert.FromBase64String(o1.ToString());
-                        Properties.Settings.Default.databasePath = Encoding.UTF8.GetString(byteData);
-                        Properties.Settings.Default.Save();
-
-                        compName = Encoding.UTF8.GetBytes("CodeAchi");
-                        byteData = Encoding.UTF8.GetBytes(Application.ProductName);
-                        regKey = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
-                        byteData = Encoding.UTF8.GetBytes(globalVarLms.machineId);
-                        regKey.SetValue("Data1", Convert.ToBase64String(byteData));
-                        byteData = Encoding.UTF8.GetBytes(Properties.Settings.Default.databasePath);
-                        regKey.SetValue("Data2", Convert.ToBase64String(byteData));
-
-                        byteData = Encoding.UTF8.GetBytes(Application.ProductName);
-                        Registry.CurrentUser.DeleteSubKey(Convert.ToBase64String(byteData));
-                    }
-                    else
-                    {
-                        if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\LMS.js"))
-                        {
-                            compName = Encoding.UTF8.GetBytes("CodeAchi");
-                            byteData = Encoding.UTF8.GetBytes(Application.ProductName);
-                            regKey = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\" + Convert.ToBase64String(compName) + @"\" + Convert.ToBase64String(byteData));
-                            globalVarLms.machineId = BinaryToString(File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\LMS.js"));
-                            byteData = Encoding.UTF8.GetBytes(globalVarLms.machineId);
-                            regKey.SetValue("Data1", Convert.ToBase64String(byteData)); //key
-                            string databasePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName;
-                            if (File.Exists(databasePath + @"\LMS.config"))
-                            {
-                                Properties.Settings.Default.databasePath = File.ReadAllText(databasePath + @"\LMS.config");
-                                Properties.Settings.Default.Save();
-                                byteData = Encoding.UTF8.GetBytes(Properties.Settings.Default.databasePath);
-                                regKey.SetValue("Data2", Convert.ToBase64String(byteData)); //key
-                                File.Delete(databasePath + @"\LMS.config");
-                            }
-                            File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\LMS.js");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data retrieving fail.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Application.Exit();
-                        }
-                    }
+                    FormWizard wizardForm = new FormWizard();
+                    wizardForm.ShowDialog();
                 }
-            }
-
-            if (Properties.Settings.Default.sqliteDatabase)
-            {
-                SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
-                if (sqltConn.State == ConnectionState.Closed)
-                {
-                    sqltConn.Open();
-                }
-                SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                sqltCommnd.CommandText = "SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name = 'marketingDetails'";
-                sqltCommnd.CommandType = CommandType.Text;
-                if (Convert.ToInt32(sqltCommnd.ExecuteScalar()) > 0)
-                {
-                    sqltCommnd.CommandText = "SELECT * FROM marketingDetails WHERE compName != 'CodeAchi'";
-                    sqltCommnd.CommandType = CommandType.Text;
-                    SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                    if (dataReader.HasRows)
-                    {
-                        while (dataReader.Read())
-                        {
-                            lblCompny.Text = "Marketed by " + dataReader["compName"].ToString();
-                        }
-                        lblCompny.Visible = true;
-                    }
-                    dataReader.Close();
-                }
-                sqltConn.Close();
             }
             else
             {
-                //mysqlConn = ConnectionClass.mysqlConnection();
-                //if(mysqlConn.State==ConnectionState.Closed)
-                //{
-                //    mysqlConn.Open();
-                //}
-                //MySqlCommand mysqlCmd;
-                //string queryString= "SELECT count(*) FROM sqlite_master WHERE type = 'table' AND name = 'marketingDetails'";
-                //mysqlCmd =new MySqlCommand()
+                FormWizard wizardForm = new FormWizard();
+                wizardForm.ShowDialog();
             }
-            DatabaseChecking.CreerBase();
-            mainForm.bWorkerGetDetails.RunWorkerAsync();
-            timer1.Start();
         }
 
         public static string BinaryToString(string data)

@@ -58,7 +58,7 @@ namespace CodeAchi_Library_Management_System
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)

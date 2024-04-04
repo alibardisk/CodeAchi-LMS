@@ -63,7 +63,7 @@ namespace CodeAchi_Library_Management_System
             dtpIssue.TabIndex = 9;
             GenerateBorrowerId();
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -328,7 +328,7 @@ namespace CodeAchi_Library_Management_System
                 MySqlConnection mysqlConn = null;
                 MySqlCommand mysqlCmd = null;
                 string queryString = "";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -571,7 +571,7 @@ namespace CodeAchi_Library_Management_System
                 try
                 {
                     string fileName = "";
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         if (pcbBrrImage.Image != Properties.Resources.blankBrrImage && pcbBrrImage.Image != Properties.Resources.uploadingFail)
                         {
@@ -704,7 +704,7 @@ namespace CodeAchi_Library_Management_System
         {
             string brrContact = "", instName = "", instAddress = "", instContact = "", instWebsite = "", instMail = "", cuurShort = "";
             System.Drawing.Image instLogo = null;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1607,7 +1607,7 @@ namespace CodeAchi_Library_Management_System
         private void cmbSearchBy_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtbSearch.Clear();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1868,7 +1868,7 @@ namespace CodeAchi_Library_Management_System
 
         private void GenerateBorrowerId()
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -2265,7 +2265,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (dgvBrrDetails.SelectedRows.Count == 1)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -2436,7 +2436,7 @@ namespace CodeAchi_Library_Management_System
             {
                 if (MessageBox.Show("Are you sure want to delete ?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -2531,7 +2531,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (dgvBrrDetails.Rows.Count > 0)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -2637,7 +2637,7 @@ namespace CodeAchi_Library_Management_System
                 if (txtbSearch.Text != "")
                 {
                     dgvBrrDetails.Rows.Clear();
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3031,7 +3031,7 @@ namespace CodeAchi_Library_Management_System
             memFees = 0.00;
             if (cmbPlan.SelectedIndex != 0)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

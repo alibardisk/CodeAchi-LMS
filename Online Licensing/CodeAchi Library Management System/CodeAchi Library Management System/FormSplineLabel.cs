@@ -93,7 +93,7 @@ namespace CodeAchi_Library_Management_System
 
         public static void GetAccession()
         {
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -220,7 +220,7 @@ namespace CodeAchi_Library_Management_System
                 txtbInfo.Clear();
                 Application.DoEvents();
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -341,7 +341,7 @@ namespace CodeAchi_Library_Management_System
             {
                 if (txtbInfo.Text != "")
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -461,7 +461,7 @@ namespace CodeAchi_Library_Management_System
             string filterDate = "";
             dgvAccnList.Rows.Clear();
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -547,7 +547,7 @@ namespace CodeAchi_Library_Management_System
             string filterDate = "";
             dgvAccnList.Rows.Clear();
 
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -767,7 +767,7 @@ namespace CodeAchi_Library_Management_System
                 return;
             }
             string orderedBy = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -850,6 +850,34 @@ namespace CodeAchi_Library_Management_System
             }
 
             if (cmbPaper.Text == "A4_21L (3x7)")
+            {
+                try
+                {
+                    PdfBarcodeFor3x7(fileName, orderedBy);
+
+                    if (rdbPrinter.Checked)//============Print Barcode===============
+                    {
+                        printA4Paper(fileName);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Items spline label generated Successfully.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        try
+                        {
+                            Process.Start(txtbPath.Text);
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if(cmbPaper.Text== "A4_40L (4x10)")
             {
                 try
                 {
@@ -1249,6 +1277,143 @@ namespace CodeAchi_Library_Management_System
                 }
                 pdfToCreate.Close();
                 outputStream.Close();
+            }
+        }
+
+        private void PdfBarcodeFor4x10(string fileName, string orderedBy)
+        {
+            using (FileStream outputStream = new FileStream(fileName, FileMode.Create))
+            {
+                Document pdfToCreate = new Document(PageSize.A4);
+
+                float pageWidth = pdfToCreate.PageSize.Width;
+                float pageHeight = pdfToCreate.PageSize.Height;
+                int leaveBarcode = Convert.ToInt32(numUpBlock.Value), rowsPerPage = 10, columnsPerPage = 4;
+
+                pdfToCreate.SetMargins(0, 0, 0, 0);
+                PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
+                BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                pdfToCreate.Open();
+                PdfContentByte pdfContent = pdWriter.DirectContent;
+
+                PdfPTable pdfTable = new PdfPTable(columnsPerPage);
+                float[] columnWidth = new float[columnsPerPage];
+                for (int i = 0; i < columnsPerPage; i++)
+                {
+                    columnWidth[i] = 595 / columnsPerPage;
+                }
+                pdfTable.SetTotalWidth(columnWidth);
+                PdfPCell pdfCell = null;
+
+                iTextSharp.text.Font headerFont = new iTextSharp.text.Font(baseFont, 8);
+                iTextSharp.text.Font bodyFont = new iTextSharp.text.Font(baseFont, 6);
+                //................................leave barcode.........................
+                int columnCount = 0;
+                for (int barcodeCount = 0; barcodeCount <= leaveBarcode - 1; barcodeCount++)
+                {
+                    pdfCell = new PdfPCell(new Phrase(" ", headerFont));
+                    pdfCell.Border = 0;
+                    pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    pdfCell.FixedHeight = 84.2f;
+                    pdfTable.AddCell(pdfCell);
+                    columnCount++;
+                    if (columnCount == columnsPerPage)
+                    {
+                        columnCount = 0;
+                    }
+                }
+
+                //........................print barcode.....................................
+                PdfPTable pdfCellContent = new PdfPTable(1);
+                pdfCellContent.TotalWidth = 525 / columnsPerPage;
+                pdfCellContent.SpacingAfter = 10f;
+                pdfCellContent.SpacingBefore = 10f;
+                pdfCellContent.PaddingTop = 0;
+
+                string itemAccn = "BRC-1234567";
+                DataGridViewRow[] dgvCheckedRows = dgvAccnList.Rows.OfType<DataGridViewRow>().Where(x => (bool)x.Cells[0].Value == true).ToArray<DataGridViewRow>();
+                foreach (DataGridViewRow dataRow in dgvCheckedRows)
+                {
+                    itemAccn = dataRow.Cells[1].Value.ToString();
+                    if (itemAccn != "")
+                    {
+                        pdfCell = new PdfPCell(new Phrase(dataRow.Cells[4].Value.ToString().ToUpper(), bodyFont));
+                        pdfCell.PaddingTop = 0;
+                        pdfCell.Border = 0;
+                        pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        pdfCellContent.AddCell(pdfCell);
+
+                        pdfCell = new PdfPCell(new Phrase(itemAccn, headerFont));
+                        pdfCell.Border = 0;
+                        pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        pdfCellContent.AddCell(pdfCell);
+
+                        columnCount++;
+                        pdfCell = new PdfPCell(pdfCellContent);
+                        pdfCell.Border = 0;
+                        pdfCell.FixedHeight = 84.2f;
+                        pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        pdfCell.VerticalAlignment = Element.ALIGN_MIDDLE;
+                        if (columnsPerPage == columnCount)
+                        {
+                            pdfCell.PaddingLeft = 10;
+                            columnCount = 0;
+                        }
+                        pdfTable.AddCell(pdfCell);
+
+                        //Redeclare table
+                        pdfCellContent = new PdfPTable(1);
+                        pdfCellContent.TotalWidth = 525 / columnsPerPage;
+                        pdfCellContent.SpacingAfter = 10f;
+                        pdfCellContent.SpacingBefore = 10f;
+                        pdfCellContent.PaddingTop = 0;
+                    }
+                }
+                WriteTableData(pdfToCreate, pdfContent, pdfTable, rowsPerPage);
+                //pdfTable.WriteSelectedRows(0, -1, 0, 842, pdfContent);
+                pdfToCreate.Close();
+                outputStream.Close();
+            }
+        }
+
+        private void WriteTableData(Document pdfToCreate, PdfContentByte pdfContent, PdfPTable pdfTable, int rowsPerPage)
+        {
+            int totalRows = pdfTable.Rows.Count;
+            int startRow = 0;
+            int endRow = 0;
+            int currentPage = 1;
+            float posY = 842; // Initial position at the top of the page
+
+            while (startRow < totalRows)
+            {
+                // Determine the end row for the current page
+                if (totalRows - endRow > rowsPerPage)
+                {
+                    endRow += rowsPerPage;
+                }
+                else
+                {
+                    endRow = totalRows;
+                }
+
+                // Write the selected rows for the current page
+                pdfTable.WriteSelectedRows(startRow, endRow, 0, posY, pdfContent);
+
+                // Move to the next page if there are more rows remaining
+                if (endRow < totalRows)
+                {
+                    pdfToCreate.NewPage();
+                    currentPage++;
+                    posY = 842; // Reset posY for the new page
+                }
+
+                // Update startRow and posY for the next iteration
+                startRow = endRow;
+                posY = 842;// - pdfTable.TotalHeight;
             }
         }
 

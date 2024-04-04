@@ -12,7 +12,7 @@ namespace CodeAchi_Library_Management_System.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,30 +20,6 @@ namespace CodeAchi_Library_Management_System.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Demo")]
-        public string licenseType {
-            get {
-                return ((string)(this["licenseType"]));
-            }
-            set {
-                this["licenseType"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string serialKey {
-            get {
-                return ((string)(this["serialKey"]));
-            }
-            set {
-                this["serialKey"] = value;
             }
         }
         
@@ -61,30 +37,6 @@ namespace CodeAchi_Library_Management_System.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool productBlocked {
-            get {
-                return ((bool)(this["productBlocked"]));
-            }
-            set {
-                this["productBlocked"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("expiryDate")]
-        public string expiryDate {
-            get {
-                return ((string)(this["expiryDate"]));
-            }
-            set {
-                this["expiryDate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string lastChecked {
             get {
@@ -92,30 +44,6 @@ namespace CodeAchi_Library_Management_System.Properties {
             }
             set {
                 this["lastChecked"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string machineLimits {
-            get {
-                return ((string)(this["machineLimits"]));
-            }
-            set {
-                this["machineLimits"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
-        public int itemLimits {
-            get {
-                return ((int)(this["itemLimits"]));
-            }
-            set {
-                this["itemLimits"] = value;
             }
         }
         
@@ -392,18 +320,6 @@ namespace CodeAchi_Library_Management_System.Properties {
             }
             set {
                 this["callSettingsUpgrade"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool sqliteDatabase {
-            get {
-                return ((bool)(this["sqliteDatabase"]));
-            }
-            set {
-                this["sqliteDatabase"] = value;
             }
         }
         

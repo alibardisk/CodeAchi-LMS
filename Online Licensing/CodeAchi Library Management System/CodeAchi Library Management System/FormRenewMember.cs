@@ -41,7 +41,7 @@ namespace CodeAchi_Library_Management_System
             cmbPaymentMode.SelectedIndex = 0;
             cmbPlan.Items.Add("--Select--");
             dtpIssue.CustomFormat = Properties.Settings.Default.dateFormat;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -199,7 +199,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (txtbBrrId.Text != "")
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -382,7 +382,7 @@ namespace CodeAchi_Library_Management_System
             }
             string renewDate = dtpIssue.Value.Day.ToString("00") + "/" + dtpIssue.Value.Month.ToString("00") + "/" + dtpIssue.Value.Year.ToString("0000");
             string renewlFees = txtbFees.Text.Replace(globalVarLms.currSymbol, "");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -493,7 +493,7 @@ namespace CodeAchi_Library_Management_System
             string brrContact = "";
             System.Drawing.Image instLogo = null;
             string instName = "", instAddress = "", instContact = "", instWebsite = "", instMail = "", cuurShort = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -1377,7 +1377,7 @@ namespace CodeAchi_Library_Management_System
             {
                 validDays = 0;
                 memFees = 0.0;
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

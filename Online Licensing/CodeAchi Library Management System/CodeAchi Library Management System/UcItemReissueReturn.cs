@@ -204,7 +204,7 @@ namespace CodeAchi_Library_Management_System
             string strresIssue = reissueDate.Day.ToString("00") + "/" + reissueDate.Month.ToString("00") + "/" + reissueDate.Year.ToString("0000");
             if (!haveFine)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -279,7 +279,7 @@ namespace CodeAchi_Library_Management_System
                 if (!avoidFine)
                 {
                     string strReturnDate = dtpReturn.Value.Day.ToString("00") + "/" + dtpReturn.Value.Month.ToString("00") + "/" + dtpReturn.Value.Year.ToString("0000");
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -657,7 +657,7 @@ namespace CodeAchi_Library_Management_System
             MySqlConnection mysqlConn = null;
             MySqlCommand mysqlCmd = null;
             MySqlDataReader mydataReader = null;
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -898,7 +898,7 @@ namespace CodeAchi_Library_Management_System
                     foreach (string reissueItem in tempReissueList)
                     {
                         accnList = reissueItem.Split('|');
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -1155,7 +1155,7 @@ namespace CodeAchi_Library_Management_System
                     foreach (string reissueItem in tempReissueList)
                     {
                         accnList = reissueItem.Split('|');
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -1412,7 +1412,7 @@ namespace CodeAchi_Library_Management_System
                     foreach (string reissueItem in tempReissueList)
                     {
                         accnList = reissueItem.Split('|');
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -1651,7 +1651,7 @@ namespace CodeAchi_Library_Management_System
             {
                 if (dataRow.Cells[0].Value.ToString() == "True" && Convert.ToDouble(dataRow.Cells[7].Value.ToString()) > 0)
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -1783,7 +1783,7 @@ namespace CodeAchi_Library_Management_System
                 {
                     if (globalVarLms.itemList.IndexOf(dataRow.Cells[2].Value.ToString()) >= 0)
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -1870,7 +1870,7 @@ namespace CodeAchi_Library_Management_System
                         if (reserveId != "")
                         {
                             FormReservation reserveItem = new FormReservation();
-                            if (Properties.Settings.Default.sqliteDatabase)
+                            if (globalVarLms.sqliteData)
                             {
                                 sqltConn = ConnectionClass.sqliteConnection();
                                 if (sqltConn.State == ConnectionState.Closed)
@@ -2029,7 +2029,7 @@ namespace CodeAchi_Library_Management_System
             fileName = folderPath + @"\" + fileName + ".pdf";
             System.Drawing.Image instLogo = null;
             string instName = "", instAddress = "", instContact = "", instWebsite = "", instMail = "", cuurShort = "";
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -2848,7 +2848,7 @@ namespace CodeAchi_Library_Management_System
                 htmlBody = false;
                 if (Convert.ToBoolean(jsonObj["ReturnMail"].ToString()))
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3017,7 +3017,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 if (Convert.ToBoolean(jsonObj["ReturnSms"].ToString()))
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3131,7 +3131,7 @@ namespace CodeAchi_Library_Management_System
                 mngmntMail = ""; reciverId1 = ""; htmlBody = false;
                 if (Convert.ToBoolean(jsonObj["ReissueMail"].ToString()))
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3300,7 +3300,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 if (Convert.ToBoolean(jsonObj["ReissueSms"].ToString()))
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3412,7 +3412,7 @@ namespace CodeAchi_Library_Management_System
             htmlBody = false;
             if (Convert.ToBoolean(jsonObj["ArrivedMail"].ToString()))
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -3579,7 +3579,7 @@ namespace CodeAchi_Library_Management_System
             }
             if (Convert.ToBoolean(jsonObj["ArrivedSms"].ToString()))
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -3698,7 +3698,7 @@ namespace CodeAchi_Library_Management_System
             {
                 if (dgvBook.Rows.Count == 0)
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3782,7 +3782,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 else
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -3891,7 +3891,7 @@ namespace CodeAchi_Library_Management_System
                 daysLate = 0;
                 reissueDate = DateTime.Now.Date;
                 int issueDay = 0;
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -4378,7 +4378,7 @@ namespace CodeAchi_Library_Management_System
         private void timerAccession_Tick(object sender, EventArgs e)
         {
             timerAccession.Stop();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -4444,7 +4444,7 @@ namespace CodeAchi_Library_Management_System
         private void timerIsbn_Tick(object sender, EventArgs e)
         {
             timerIsbn.Stop();
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -4607,7 +4607,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -4771,7 +4771,7 @@ namespace CodeAchi_Library_Management_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -4975,7 +4975,7 @@ namespace CodeAchi_Library_Management_System
                 string strReturnDate = dtpReturn.Value.Day.ToString("00") + "/" + dtpReturn.Value.Month.ToString("00") + "/" + dtpReturn.Value.Year.ToString("0000");
                 dgvBook.Rows.Clear();
                 bool avoidFine = false; string brrCategory = "";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)

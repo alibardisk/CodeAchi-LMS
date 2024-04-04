@@ -17,23 +17,28 @@ namespace CodeAchi_Library_Management_System
         public static List<string> priviledgeList = new List<string> { };
         public static List<String> ItemDetails = new List<String> { };
 
-        public static int itemLimits=5000;
+        public static int itemLimit=0;
+        public static int memberLimit = 0;
+        public static int librarianLimit = 0;
         public static int backupHour;
 
         public static bool mailSending = false;
         public static bool productExpire;
         public static bool productBlocked;
         public static bool isAdmin=false;
-        public static bool opacAvailable;
+        public static bool opacAvailable=false;
         public static bool issueReciept;
         public static bool reissueReciept;
         public static bool returnReciept;
         public static bool paymentReciept;
         public static bool backupRequired=false;
+        public static bool sqliteData;
+        public static bool reportGeneration=false;
+        public static bool excelImport=false;
+        public static bool isLicensed=false;
 
-        public static string licenseKey;
-        public static string licenseType;
-        public static String insertApi= "http://codeachi.com/Product/LMS/InsertData.php?Q=";
+        public static string licenseName;
+        public static String insertApi = "http://codeachi.com/Product/LMS/InsertData.php?Q=";
         public static String selectApi = "http://codeachi.com/Product/LMS/SelectData.php?Q=";
         public static String updateApi = "http://codeachi.com/Product/LMS/UpdateData.php?Q=";
         public static String dateApi = "http://codeachi.com/Product/LMS/serverdate.php";
@@ -54,6 +59,8 @@ namespace CodeAchi_Library_Management_System
         public static string machineId;
         public static string recieptPrinter;
         public static string recieptPaper;
+        public static string connectionString;
+        public static string blockedReason;
 
         public static DateTime expiryDate;
         public static DateTime currentDate;

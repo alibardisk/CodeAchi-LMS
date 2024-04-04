@@ -38,7 +38,7 @@ namespace CodeAchi_Library_Management_System
             dgvItemDetails.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
             cmbItemCategory.Items.Clear();
             cmbItemCategory.Items.Add("-------Select-------");
-            if (Properties.Settings.Default.sqliteDatabase)
+            if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                 if (sqltConn.State == ConnectionState.Closed)
@@ -193,7 +193,7 @@ namespace CodeAchi_Library_Management_System
                 cmbSearch.Items.Add("No of Pages");
                 cmbSearch.Items.Add("Price");
 
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -358,7 +358,7 @@ namespace CodeAchi_Library_Management_System
                 }
                 if (queryString != "")
                 {
-                    if (Properties.Settings.Default.sqliteDatabase)
+                    if (globalVarLms.sqliteData)
                     {
                         SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                         if (sqltConn.State == ConnectionState.Closed)
@@ -716,7 +716,7 @@ namespace CodeAchi_Library_Management_System
                     }
                     if (conditionString != "")
                     {
-                        if (Properties.Settings.Default.sqliteDatabase)
+                        if (globalVarLms.sqliteData)
                         {
                             SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                             if (sqltConn.State == ConnectionState.Closed)
@@ -921,7 +921,7 @@ namespace CodeAchi_Library_Management_System
             {
                 List<string> catList = globalVarLms.tempValue.Split('$').ToList();
                 string catAccess = "";
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1027,7 +1027,7 @@ namespace CodeAchi_Library_Management_System
             jsonObj = JObject.Parse(jsonString);
             if (Convert.ToBoolean(jsonObj["ReservedMail"].ToString()))
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
@@ -1154,7 +1154,7 @@ namespace CodeAchi_Library_Management_System
             }
             if (Convert.ToBoolean(jsonObj["ReservedSms"].ToString()))
             {
-                if (Properties.Settings.Default.sqliteDatabase)
+                if (globalVarLms.sqliteData)
                 {
                     SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
                     if (sqltConn.State == ConnectionState.Closed)
