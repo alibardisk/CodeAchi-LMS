@@ -38,10 +38,10 @@ namespace CodeAchi_Library_Management_System
         public static bool isLicensed=false;
 
         public static string licenseName;
-        public static String insertApi = "http://codeachi.com/Product/LMS/InsertData.php?Q=";
+        //public static String insertApi = "http://codeachi.com/Product/LMS/InsertData.php?Q=";
         public static String selectApi = "http://codeachi.com/Product/LMS/SelectData.php?Q=";
-        public static String updateApi = "http://codeachi.com/Product/LMS/UpdateData.php?Q=";
-        public static String dateApi = "http://codeachi.com/Product/LMS/serverdate.php";
+        //public static String updateApi = "http://codeachi.com/Product/LMS/UpdateData.php?Q=";
+        //public static String dateApi = "http://codeachi.com/Product/LMS/serverdate.php";
         public static string instName;
         public static string instAddress;
         public static string currentPassword;

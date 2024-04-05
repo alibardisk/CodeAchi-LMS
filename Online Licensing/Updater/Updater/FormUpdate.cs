@@ -33,22 +33,22 @@ namespace Updater
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            using (ZipFile zip = ZipFile.Read(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+@"\"+Application.ProductName + @"\Setup files.zip"))
+            using (ZipFile zip = ZipFile.Read(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+@"\"+Application.ProductName + @"\Setup_files.zip"))
             {
-                if(Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files"))
+                if(Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files"))
                 {
-                    Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files", true);
+                    Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files", true);
                 }
-                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files");
-                zip.ExtractAll(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files\");
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files");
+                zip.ExtractAll(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files\");
             }
-            string[] fileList = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files");
+            string[] fileList = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files");
             foreach(string fileName in fileList)
             {
                 File.Copy(fileName, Application.StartupPath + @"\" + Path.GetFileName(fileName),true);
             }
-            Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files", true);
-            File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup files.zip");
+            Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files", true);
+            File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\" + Application.ProductName + @"\Setup_files.zip");
             MessageBox.Show("Updated successfully.",Application.ProductName,MessageBoxButtons.OK,MessageBoxIcon.Information);
             Process.Start(Application.StartupPath + @"\" + Application.ProductName + ".exe");
             Application.Exit();

@@ -42,8 +42,8 @@ namespace CodeAchi_Library_Management_System
             bWorkerGetDetails.RunWorkerAsync();
             btnCancel.Enabled = false;
             btnUpdate.Enabled = false;
-            IntPtr hMenu = GetSystemMenu(this.Handle, false);
-            EnableMenuItem(hMenu, SC_CLOSE, MF_GRAYED);
+            //IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            //EnableMenuItem(hMenu, SC_CLOSE, MF_GRAYED);
         }
 
         private void bWorkerGetDetails_DoWork(object sender, DoWorkEventArgs e)
@@ -71,9 +71,9 @@ namespace CodeAchi_Library_Management_System
             {
                 btnCancel.Enabled = true;
                 btnUpdate.Enabled = true;
-                IntPtr hMenu = GetSystemMenu(this.Handle, false);
-                EnableMenuItem(hMenu, SC_CLOSE, MF_ENABLED);
-                btnUpdate_Click(null, null);
+                //IntPtr hMenu = GetSystemMenu(this.Handle, false);
+                //EnableMenuItem(hMenu, SC_CLOSE, MF_ENABLED);
+                //btnUpdate_Click(null, null);
             }
         }
 

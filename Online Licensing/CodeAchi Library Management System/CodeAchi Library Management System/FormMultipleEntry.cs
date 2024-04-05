@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,8 @@ namespace CodeAchi_Library_Management_System
         }
 
         string lastAccession = "";
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
         private void FormMultipleEntry_Paint(object sender, PaintEventArgs e)
         {
@@ -32,6 +35,7 @@ namespace CodeAchi_Library_Management_System
         private void btnSave_Click(object sender, EventArgs e)
         {
             string currentDate = DateTime.Now.Day.ToString("00") + "/" + DateTime.Now.Month.ToString("00") + "/" + DateTime.Now.Year.ToString("0000");
+            int copyAdded = 0;
             if (globalVarLms.sqliteData)
             {
                 SQLiteConnection sqltConn = ConnectionClass.sqliteConnection();
@@ -124,6 +128,7 @@ namespace CodeAchi_Library_Management_System
 
                         progressBar1.Value = copyCount;
                         lblCount.Text = "Item Added - " + copyCount.ToString();
+                        copyAdded = copyCount;
                         Application.DoEvents();
                         //===============generate itemaccession=====================
                         sqltCommnd.CommandText = "select itemAccession from itemDetails";
@@ -207,6 +212,7 @@ namespace CodeAchi_Library_Management_System
 
                             progressBar1.Value = copyCount;
                             lblCount.Text = "Item Added - " + copyCount.ToString();
+                            copyAdded = copyCount;
                             Application.DoEvents();
                             //===============generate itemaccession=====================
                             sqltCommnd.CommandText = "select itemAccession from itemDetails";
@@ -337,6 +343,7 @@ namespace CodeAchi_Library_Management_System
 
                         progressBar1.Value = copyCount;
                         lblCount.Text = "Item Added - " + copyCount.ToString();
+                        copyAdded = copyCount;
                         Application.DoEvents();
                         //===============generate itemaccession=====================
                         queryString = "select itemAccession from item_details";
@@ -422,6 +429,7 @@ namespace CodeAchi_Library_Management_System
 
                             progressBar1.Value = copyCount;
                             lblCount.Text = "Item Added - " + copyCount.ToString();
+                            copyAdded = copyCount;
                             Application.DoEvents();
                             //===============generate itemaccession=====================
                             queryString = "select itemAccession from item_details";
@@ -450,6 +458,11 @@ namespace CodeAchi_Library_Management_System
                     }
                 }
             }
+            string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+            dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+            jsonObject.Usage["total-items"] = Convert.ToInt32(jsonObject.Usage["total-items"])+copyAdded;
+            jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+            File.WriteAllText(usageFilePath, jsonString);
             globalVarLms.backupRequired = true;
             MessageBox.Show("Inserted Successfully.",Application.ProductName,MessageBoxButtons.OK,MessageBoxIcon.Information);
         }

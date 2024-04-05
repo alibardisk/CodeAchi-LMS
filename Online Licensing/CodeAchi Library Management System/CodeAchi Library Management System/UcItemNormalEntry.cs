@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,8 @@ namespace CodeAchi_Library_Management_System
         {
             InitializeComponent();
         }
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
         string controlName = "", categoryLabel = "", accessionLabel = "", subcategoryLabel = "";
         bool isUpdate = false;
@@ -637,6 +640,12 @@ namespace CodeAchi_Library_Management_System
                 clearData();
                 isUpdate = false;
                 GenerateAccession();
+
+                string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                jsonObject.Usage["total-items"] =dgvItemDetails.Rows.Count;
+                jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                File.WriteAllText(usageFilePath, jsonString);
             }
             else //====================Item updating===============
             {
@@ -1524,6 +1533,12 @@ namespace CodeAchi_Library_Management_System
                     globalVarLms.backupRequired = true;
                     lblUserMessage.Text = "Item deleted successfully !";
                     showNotification();
+
+                    string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                    dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                    jsonObject.Usage["total-items"] = dgvItemDetails.Rows.Count;
+                    jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                    File.WriteAllText(usageFilePath, jsonString);
                 }
                 dgvItemDetails.ClearSelection();
             }

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace CodeAchi_Library_Management_System
         {
             InitializeComponent();
         }
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
         private void FormAdminSetting_Load(object sender, EventArgs e)
         {
@@ -400,7 +403,12 @@ namespace CodeAchi_Library_Management_System
                 txtbMailId.Enabled = true;
                 MessageBox.Show("User updated successfully.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
+            string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+            dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+            jsonObject.Usage["total-librarian"] = dgvUserList.Rows.Count+1;
+            jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+            File.WriteAllText(usageFilePath, jsonString);
         }
 
         private void chkbAll_CheckedChanged(object sender, EventArgs e)
@@ -713,6 +721,12 @@ namespace CodeAchi_Library_Management_System
                 }
                 dgvUserList.ClearSelection();
                 clesrField();
+
+                string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                jsonObject.Usage["total-librarian"] = dgvUserList.Rows.Count + 1;
+                jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                File.WriteAllText(usageFilePath, jsonString);
             }
         }
 

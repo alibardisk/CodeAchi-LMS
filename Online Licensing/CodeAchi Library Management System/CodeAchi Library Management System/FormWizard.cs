@@ -37,6 +37,7 @@ namespace CodeAchi_Library_Management_System
         string configFilePath = Application.StartupPath + "/clms.json";
         string usageFilePath = Application.StartupPath + "/usage.json";
 
+
         private async void FormWizard_Load(object sender, EventArgs e)
         {
             btnNext.Enabled = false;
@@ -58,66 +59,74 @@ namespace CodeAchi_Library_Management_System
             string responseBody = await apiRequest.GenerateUniqueId(jsonString);
             if (responseBody != "")
             {
-                btnNext.Enabled = true;
-                // Deserialize the JSON response
-                var responseObject = JsonConvert.DeserializeObject<dynamic>(responseBody);
-                // Sample data to serialize
-                string connectionString = "Data Source=" + txtbDatabasePath.Text + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
-                var dataToSerialize = new
+                if (IsValidJson(responseBody))
                 {
-                    InstallationId = responseObject.machineId,
-                    KeyFeatures = responseObject.features,
-                    ConnectionString=connectionString,
-                    SQLiteData = true
-                };
-                string jsonData = JsonConvert.SerializeObject(dataToSerialize);
-                jsonData = passwordHasher.Encrypt(jsonData);
-                File.WriteAllText(configFilePath, jsonData);
-                globalVarLms.machineId = responseObject.machineId;
-                globalVarLms.sqliteData = true;
-
-                var Usage = new
-                {
-                    Usage = responseObject.features,
-                };
-                jsonData = JsonConvert.SerializeObject(Usage);
-                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonData);
-                jsonObject.Usage["total-items"] = 0;
-                jsonObject.Usage["total-member"] = 0;
-                jsonData = passwordHasher.Encrypt(jsonObject.Usage.ToString());
-                File.WriteAllText(usageFilePath, jsonData);
-                btnNext.Enabled = true;
-
-                SQLiteConnection sqltConn = new SQLiteConnection(connectionString);
-                if (sqltConn.State == ConnectionState.Closed)
-                {
-                    try
+                    btnNext.Enabled = true;
+                    // Deserialize the JSON response
+                    var responseObject = JsonConvert.DeserializeObject<dynamic>(responseBody);
+                    // Sample data to serialize
+                    string connectionString = "Data Source=" + txtbDatabasePath.Text + @"\LMS.sl3;Version=3;Password=codeachi@lmssl;";
+                    var dataToSerialize = new
                     {
-                        sqltConn.Open();
-                    }
-                    catch
+                        InstallationId = responseObject.machineId,
+                        KeyFeatures = responseObject.features,
+                        ConnectionString = connectionString,
+                        SQLiteData = true
+                    };
+                    string jsonData = JsonConvert.SerializeObject(dataToSerialize);
+                    jsonData = passwordHasher.Encrypt(jsonData);
+                    File.WriteAllText(configFilePath, jsonData);
+                    globalVarLms.machineId = responseObject.machineId;
+                    globalVarLms.sqliteData = true;
+                    Properties.Settings.Default.afterInstallURL = responseObject.afterInstall;
+                    Properties.Settings.Default.Save();
+                    var Usage = new
                     {
+                        Usage = responseObject.features,
+                    };
+                    jsonData = JsonConvert.SerializeObject(Usage);
+                    dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonData);
+                    jsonObject.Usage["total-items"] = 0;
+                    jsonObject.Usage["total-member"] = 0;
+                    jsonData = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                    File.WriteAllText(usageFilePath, jsonData);
+                    btnNext.Enabled = true;
+
+                    SQLiteConnection sqltConn = new SQLiteConnection(connectionString);
+                    if (sqltConn.State == ConnectionState.Closed)
+                    {
+                        try
+                        {
+                            sqltConn.Open();
+                        }
+                        catch
+                        {
+                        }
                     }
+                    SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
+                    string queryString = "select [countryName] from countryDetails";
+                    sqltCommnd.CommandText = queryString;
+                    SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
+                    if (dataReader.HasRows)
+                    {
+                        List<string> countryList = (from IDataRecord r in dataReader select (string)r["countryName"]).ToList();
+                        autoCollData.AddRange(countryList.ToArray());
+                    }
+                    dataReader.Close();
+
+                    txtbOrgCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
+                    txtbOrgCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtbOrgCountry.AutoCompleteCustomSource = autoCollData;
+
+                    txtbUserCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
+                    txtbUserCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    txtbUserCountry.AutoCompleteCustomSource = autoCollData;
+                    globalVarLms.connectionString = connectionString;
                 }
-                SQLiteCommand sqltCommnd = sqltConn.CreateCommand();
-                string queryString = "select [countryName] from countryDetails";
-                sqltCommnd.CommandText = queryString;
-                SQLiteDataReader dataReader = sqltCommnd.ExecuteReader();
-                if (dataReader.HasRows)
+                else
                 {
-                    List<string> countryList = (from IDataRecord r in dataReader select (string)r["countryName"]).ToList();
-                    autoCollData.AddRange(countryList.ToArray());
+                    MessageBox.Show("Connection failure. Contact our support at www.codeachi.com.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                dataReader.Close();
-
-                txtbOrgCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
-                txtbOrgCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txtbOrgCountry.AutoCompleteCustomSource = autoCollData;
-
-                txtbUserCountry.AutoCompleteMode = AutoCompleteMode.Suggest;
-                txtbUserCountry.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txtbUserCountry.AutoCompleteCustomSource = autoCollData;
-                globalVarLms.connectionString = connectionString;
             }
             else
             {
@@ -439,11 +448,19 @@ namespace CodeAchi_Library_Management_System
                             lblStepCount.Text = 3.ToString();
                             btnNext.Enabled = true;
                         }
+                        else
+                        {
+                            MessageBox.Show("Connection failure. Contact our support at www.codeachi.com.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
 
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Connection failure. Contact our support at www.codeachi.com.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else if (lblStepCount.Text == 3.ToString())
@@ -608,6 +625,10 @@ namespace CodeAchi_Library_Management_System
                         }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Connection failure. Contact our support at www.codeachi.com.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if (lblStepCount.Text == 4.ToString())
             {
@@ -675,6 +696,7 @@ namespace CodeAchi_Library_Management_System
                 globalVarLms.currentUserId = txtbMailId.Text;
                 globalVarLms.currentPassword = txtbPassword.Text;
                 Properties.Settings.Default.Save();
+                Process.Start(Properties.Settings.Default.afterInstallURL);
                 Application.Exit();
             }
         }
@@ -1054,6 +1076,19 @@ namespace CodeAchi_Library_Management_System
         {
             FormServerConnection serverConnection = new FormServerConnection();
             serverConnection.ShowDialog();
+        }
+
+        static bool IsValidJson(string jsonString)
+        {
+            try
+            {
+                JToken.Parse(jsonString);
+                return true;
+            }
+            catch (JsonReaderException)
+            {
+                return false;
+            }
         }
     }
 }

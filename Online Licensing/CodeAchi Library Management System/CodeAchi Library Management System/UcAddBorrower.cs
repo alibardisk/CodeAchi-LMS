@@ -1,6 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -23,6 +24,8 @@ namespace CodeAchi_Library_Management_System
             InitializeComponent();
         }
 
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string usageFilePath = Application.StartupPath + "/usage.json";
         int lastNumber = 0, validDays = 0, issueLimit = 0;
         double memFees = 0.00, totalFees = 0.00;
         string controlName = "", categoryLabel = "", idLabel = "";
@@ -565,6 +568,12 @@ namespace CodeAchi_Library_Management_System
                 clearData();
                 //====================Generate Borrower id======================
                 GenerateBorrowerId();
+
+                string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                jsonObject.Usage["total-member"] = dgvBrrDetails.Rows.Count;
+                jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                File.WriteAllText(usageFilePath, jsonString);
             }
             else//===================Borrower updating====================
             {
@@ -2477,6 +2486,12 @@ namespace CodeAchi_Library_Management_System
                     globalVarLms.backupRequired = true;
                     lblUserMessage.Text = "Borrower deleted successfully !";
                     showNotification();
+
+                    string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                    dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                    jsonObject.Usage["total-member"] = dgvBrrDetails.Rows.Count;
+                    jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                    File.WriteAllText(usageFilePath, jsonString);
                 }
                 dgvBrrDetails.ClearSelection();
             }

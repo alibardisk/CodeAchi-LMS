@@ -14,3 +14,14 @@ E:\CurrentProjects\CodeAchi\CodeAchi LMS\Updater\Updater\obj\Debug\Updater.pdb
 \\ALIBARDISK\AliShare\CodeAchi\Updater\Updater\bin\Debug\Updater.exe.config
 \\ALIBARDISK\AliShare\CodeAchi\Updater\Updater\obj\Debug\Updater.exe
 \\ALIBARDISK\AliShare\CodeAchi\Updater\Updater\obj\Debug\Updater.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\bin\Debug\Updater.exe.config
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\bin\Debug\Updater.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\bin\Debug\Updater.pdb
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.csproj.AssemblyReference.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.FormUpdate.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.Properties.Resources.resources
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.csproj.GenerateResource.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.csproj.Up2Date
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.exe
+G:\CurrentProjects\GitHub\CodeAchiProject\CodeAchi-LMS\Online Licensing\Updater\Updater\obj\Debug\Updater.pdb

@@ -122,101 +122,101 @@ namespace CodeAchi_Library_Management_System
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            if (txtbName.Text == "")
-            {
-                MessageBox.Show("Please enter your name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbName.Select();
-                return;
-            }
+            //if (txtbName.Text == "")
+            //{
+            //    MessageBox.Show("Please enter your name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbName.Select();
+            //    return;
+            //}
 
-            if (txtbContact.Text == "")
-            {
-                MessageBox.Show("Please enter your address.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbContact.Select();
-                return;
-            }
+            //if (txtbContact.Text == "")
+            //{
+            //    MessageBox.Show("Please enter your address.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbContact.Select();
+            //    return;
+            //}
 
-            if (txtbAddress.Text == "")
-            {
-                MessageBox.Show("Please enter your address.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbAddress.Select();
-                return;
-            }
-            if (txtbMail.Text == "")
-            {
-                MessageBox.Show("Please enter your email id.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbMail.Select();
-                return;
-            }
+            //if (txtbAddress.Text == "")
+            //{
+            //    MessageBox.Show("Please enter your address.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbAddress.Select();
+            //    return;
+            //}
+            //if (txtbMail.Text == "")
+            //{
+            //    MessageBox.Show("Please enter your email id.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbMail.Select();
+            //    return;
+            //}
 
-            if (txtbOrgani.Text == "")
-            {
-                MessageBox.Show("Please enter the organization name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbOrgani.Select();
-                return;
-            }
+            //if (txtbOrgani.Text == "")
+            //{
+            //    MessageBox.Show("Please enter the organization name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbOrgani.Select();
+            //    return;
+            //}
 
-            if (txtbCountry.Text == "")
-            {
-                MessageBox.Show("Please enter the country name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbCountry.Select();
-                return;
-            }
+            //if (txtbCountry.Text == "")
+            //{
+            //    MessageBox.Show("Please enter the country name.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbCountry.Select();
+            //    return;
+            //}
 
-            if (txtbTtlStock.Text=="")
-            {
-                MessageBox.Show("Please enter the total Stock of Items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbTtlStock.Select();
-                return;
-            }
+            //if (txtbTtlStock.Text=="")
+            //{
+            //    MessageBox.Show("Please enter the total Stock of Items.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbTtlStock.Select();
+            //    return;
+            //}
 
-            if (txtbTtlMember.Text == "")
-            {
-                MessageBox.Show("Please enter the total number of members.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbTtlMember.Select();
-                return;
-            }
+            //if (txtbTtlMember.Text == "")
+            //{
+            //    MessageBox.Show("Please enter the total number of members.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbTtlMember.Select();
+            //    return;
+            //}
 
-            if (cmbPurchase.SelectedIndex==0)
-            {
-                MessageBox.Show("Please select when you want to procure.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmbPurchase.Select();
-                return;
-            }
-            string macAddress = globalVarLms.machineId;
-            if(IsConnectedToInternet())
-            {
-                try
-                {
-                    string currentDate = globalVarLms.currentDate.Day.ToString("00") + "/" + globalVarLms.currentDate.Month.ToString("00") + "/" + globalVarLms.currentDate.Year.ToString("0000");
-                    string insertQuery = "INSERT INTO quotation_request (name,address,country,organization_name,"+
-                        "user_email,contact,product,date_time,stock_books,members,status) values ('"+ txtbName.Text+"',"+
-                        "'"+txtbAddress.Text+ "','" + txtbCountry.Text + "','" + txtbOrgani.Text + "','" + txtbMail.Text + "',"+
-                        "'" + txtbContact.Text + "','" + Application.ProductName + "','" + currentDate + "',"+
-                        "'" + txtbTtlStock.Text + "','" + txtbTtlMember.Text + "','" + cmbPurchase.Text + "')";
-                    //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                    WebRequest webRequest = WebRequest.Create(globalVarLms.insertApi+ insertQuery);
-                    webRequest.Timeout = 600000;
-                    WebResponse webResponse = webRequest.GetResponse();
-                    Stream dataStream = webResponse.GetResponseStream();
-                    StreamReader strmReader = new StreamReader(dataStream);
-                    string requestResult = strmReader.ReadLine();
-                    if(requestResult=="Inserted")
-                    {
-                        MessageBox.Show("Your Request recieved!" + Environment.NewLine + "allow us few time to get back to you," +
-                            Environment.NewLine + "Make sure you added \"lms@codeachi.com\" [Copy]" + Environment.NewLine +
-                            "to your safe sender list to avoid missing email from us.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Please try again.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please check your internet connection.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //if (cmbPurchase.SelectedIndex==0)
+            //{
+            //    MessageBox.Show("Please select when you want to procure.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    cmbPurchase.Select();
+            //    return;
+            //}
+            //string macAddress = globalVarLms.machineId;
+            //if(IsConnectedToInternet())
+            //{
+            //    try
+            //    {
+            //        string currentDate = globalVarLms.currentDate.Day.ToString("00") + "/" + globalVarLms.currentDate.Month.ToString("00") + "/" + globalVarLms.currentDate.Year.ToString("0000");
+            //        string insertQuery = "INSERT INTO quotation_request (name,address,country,organization_name,"+
+            //            "user_email,contact,product,date_time,stock_books,members,status) values ('"+ txtbName.Text+"',"+
+            //            "'"+txtbAddress.Text+ "','" + txtbCountry.Text + "','" + txtbOrgani.Text + "','" + txtbMail.Text + "',"+
+            //            "'" + txtbContact.Text + "','" + Application.ProductName + "','" + currentDate + "',"+
+            //            "'" + txtbTtlStock.Text + "','" + txtbTtlMember.Text + "','" + cmbPurchase.Text + "')";
+            //        //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            //        WebRequest webRequest = WebRequest.Create(globalVarLms.insertApi+ insertQuery);
+            //        webRequest.Timeout = 600000;
+            //        WebResponse webResponse = webRequest.GetResponse();
+            //        Stream dataStream = webResponse.GetResponseStream();
+            //        StreamReader strmReader = new StreamReader(dataStream);
+            //        string requestResult = strmReader.ReadLine();
+            //        if(requestResult=="Inserted")
+            //        {
+            //            MessageBox.Show("Your Request recieved!" + Environment.NewLine + "allow us few time to get back to you," +
+            //                Environment.NewLine + "Make sure you added \"lms@codeachi.com\" [Copy]" + Environment.NewLine +
+            //                "to your safe sender list to avoid missing email from us.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        MessageBox.Show("Please try again.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please check your internet connection.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         public bool IsConnectedToInternet()

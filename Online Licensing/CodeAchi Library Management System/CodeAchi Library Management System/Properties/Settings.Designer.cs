@@ -538,5 +538,65 @@ namespace CodeAchi_Library_Management_System.Properties {
                 this["mailCarbonCopy"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string afterInstallURL {
+            get {
+                return ((string)(this["afterInstallURL"]));
+            }
+            set {
+                this["afterInstallURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string afterOpenURL {
+            get {
+                return ((string)(this["afterOpenURL"]));
+            }
+            set {
+                this["afterOpenURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string afterCloseURL {
+            get {
+                return ((string)(this["afterCloseURL"]));
+            }
+            set {
+                this["afterCloseURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tutorialURL {
+            get {
+                return ((string)(this["tutorialURL"]));
+            }
+            set {
+                this["tutorialURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string contactURL {
+            get {
+                return ((string)(this["contactURL"]));
+            }
+            set {
+                this["contactURL"] = value;
+            }
+        }
     }
 }

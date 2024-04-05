@@ -1,7 +1,9 @@
 ﻿
+using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2016.Excel;
 using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.Wordprocessing;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
@@ -22,6 +24,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static iTextSharp.awt.geom.Point2D;
+using Color = System.Drawing.Color;
+using Document = iTextSharp.text.Document;
+using PageSize = iTextSharp.text.PageSize;
 using Rectangle = iTextSharp.text.Rectangle;
 
 namespace CodeAchi_Library_Management_System
@@ -1074,6 +1079,7 @@ namespace CodeAchi_Library_Management_System
                         printFont = new System.Drawing.Font("Malgun Gothic", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(129)));
                         printFontBig = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(129)));
                     }
+
                     PrintDocument printDocument = new PrintDocument();
                     printDocument.PrinterSettings.PrinterName = txtbPrinterName.Text;
                     printDocument.DefaultPageSettings.Landscape = false;
@@ -1167,7 +1173,6 @@ namespace CodeAchi_Library_Management_System
                         printFont = new System.Drawing.Font("Malgun Gothic", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(129)));
                         printFontBig = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(129)));
                     }
-
                     PrintDocument printDocument = new PrintDocument();
                     printDocument.PrinterSettings.PrinterName = txtbPrinterName.Text;
                     dgvCheckedRows = dgvAccnList.Rows.OfType<DataGridViewRow>().Where(x => (bool)x.Cells[0].Value == true).ToArray<DataGridViewRow>();
@@ -1793,6 +1798,7 @@ namespace CodeAchi_Library_Management_System
                 {
                     baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
+                //baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Nirmala UI.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
 
@@ -2142,6 +2148,7 @@ namespace CodeAchi_Library_Management_System
                 {
                     baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
+
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
 
@@ -2491,9 +2498,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
@@ -2799,9 +2814,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
@@ -3095,9 +3118,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
@@ -3395,9 +3426,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
@@ -3648,9 +3687,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
@@ -3692,26 +3739,6 @@ namespace CodeAchi_Library_Management_System
                 pdfCellContent.SpacingBefore = 10f;
                 pdfCellContent.PaddingTop = 0;
 
-                //PdfPTable pdfCellSubContent = new PdfPTable(2);
-                //float[] width = { columnWidth[0] / 2, columnWidth[0] / 2 };
-                //pdfCellSubContent.SetTotalWidth(width);
-                //pdfCellSubContent.SpacingAfter = 10f;
-                //pdfCellSubContent.SpacingBefore = 10f;
-                //pdfCellSubContent.PaddingTop = 0;
-                //pdfCell = new PdfPCell(new Phrase("CodeAchi LMS", bodyFont));
-                //pdfCell.Border = 0;
-                //pdfCell.Padding = 0;
-                //pdfCell.PaddingLeft = 10f;
-                //pdfCell.HorizontalAlignment = Element.ALIGN_LEFT;
-                //pdfCellSubContent.AddCell(pdfCell);
-
-                //pdfCell = new PdfPCell(new Phrase(DateTime.Now.ToShortDateString(), bodyFont));
-                //pdfCell.Border = 0;
-                //pdfCell.Padding = 0;
-                //pdfCell.PaddingRight = 10f;
-                //pdfCell.HorizontalAlignment = Element.ALIGN_RIGHT;
-                //pdfCellSubContent.AddCell(pdfCell);
-
                 string itemAccn = "BRC-1234567";
                 imgBarcode = barCode.Draw(itemAccn, 25);
                 imgQrcode = qrCode.Draw(itemAccn, 25);
@@ -3721,11 +3748,6 @@ namespace CodeAchi_Library_Management_System
                     itemAccn = dataRow.Cells[1].Value.ToString();
                     if (itemAccn != "")
                     {
-                        //pdfCell = new PdfPCell(pdfCellSubContent);
-                        //pdfCell.Border = 0;
-                        //pdfCell.PaddingBottom = 0;
-                        //pdfCellContent.AddCell(pdfCell);
-
                         if (chkbOn.Checked)
                         {
                             if (rdbFLocation.Checked)
@@ -3815,9 +3837,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;
@@ -3961,9 +3991,17 @@ namespace CodeAchi_Library_Management_System
                 pdfToCreate.SetMargins(0, 0, 0, 0);
                 PdfWriter pdWriter = PdfWriter.GetInstance(pdfToCreate, outputStream);
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //if (File.Exists("c:/windows/Fonts/malgun.ttf"))
+                //{
+                //    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                //}
+                if (File.Exists("c:/windows/Fonts/Arial Unicode Font.ttf"))
                 {
-                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/malgun.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    baseFont = BaseFont.CreateFont("c:/windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                }
+                else if (File.Exists("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf"))
+                {
+                    baseFont = BaseFont.CreateFont("C:/Users/codea/AppData/Local/Microsoft/Windows/Fonts/Arial Unicode Font.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 pdfToCreate.Open();
                 PdfContentByte pdfContent = pdWriter.DirectContent;

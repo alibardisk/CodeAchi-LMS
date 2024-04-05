@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -39,6 +40,8 @@ namespace CodeAchi_Library_Management_System
         int lastNumber = 0;
         bool isAutoGenerate = false, isManualPrefix = false, noPrefix = false; string prefixText = "", joiningChar = "";
         List<string> accnList = new List<string> { };
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
         private void rdbAuto_CheckedChanged(object sender, EventArgs e)
         {
@@ -1016,6 +1019,11 @@ namespace CodeAchi_Library_Management_System
                             }
                         }
                     }
+                    string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                    dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                    jsonObject.Usage["total-items"] = Convert.ToInt32(jsonObject.Usage["total-items"]) + itemCount;
+                    jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                    File.WriteAllText(usageFilePath, jsonString);
                     btnImport.Enabled = true;
                     EnableMenuItem(hMenu, SC_CLOSE, MF_ENABLED);
                     txtbFileName.Clear();

@@ -68,66 +68,66 @@ namespace CodeAchi_Library_Management_System
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(txtbDetails.Text=="")
-            {
-                MessageBox.Show("Please describe your problem.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbDetails.Select();
-                return;
-            }
-            if (txtbId.Text == "")
-            {
-                MessageBox.Show("Please enter your contact id.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtbId.Select();
-                return;
-            }
-            if (cmbHour.SelectedIndex==0)
-            {
-                MessageBox.Show("Please select your available time.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmbHour.Select();
-                return;
-            }
-            if(IsConnectedToInternet())
-            {
-                try
-                {
-                    WebRequest webRequest = WebRequest.Create(globalVarLms.dateApi);
-                    webRequest.Timeout = 8000;
-                    WebResponse webResponse = webRequest.GetResponse();
-                    Stream dataStream = webResponse.GetResponseStream();
-                    StreamReader strmReader = new StreamReader(dataStream);
-                    string currentDate = strmReader.ReadLine();
-                    string currentTime = DateTime.Now.ToString("HH:mm:ss tt");
-                    string contactType = "";
-                    if(rdbWhatsApp.Checked)
-                    {
-                        contactType = rdbWhatsApp.Text;
-                    }
-                    if (rdbSkype.Checked)
-                    {
-                        contactType = rdbSkype.Text;
-                    }
-                    if (rdbPhone.Checked)
-                    {
-                        contactType = rdbPhone.Text;
-                    }
-                    string queryToInsert = "INSERT INTO technical_support (macId,productName,problemDescription,"+
-                        "contactType,contactId,requestDate,requestTime,availableTime) VALUES('"+globalVarLms.machineId+"','" + Application.ProductName + "',"+
-                        "'" + txtbDetails.Text + "','" + contactType + "','" + txtbId.Text + "','" + currentDate + "','" + currentTime + "','" + cmbHour.Text + "')";
-                    //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                    webRequest = WebRequest.Create(globalVarLms.insertApi + queryToInsert);
-                    webRequest.Timeout = 8000;
-                    webResponse = webRequest.GetResponse();
-                    MessageBox.Show("We have recived your request, "+Environment.NewLine+"We will contact as soon as possible!",Application.ProductName,MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show("Please try again.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please check your internet connection.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //if(txtbDetails.Text=="")
+            //{
+            //    MessageBox.Show("Please describe your problem.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbDetails.Select();
+            //    return;
+            //}
+            //if (txtbId.Text == "")
+            //{
+            //    MessageBox.Show("Please enter your contact id.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtbId.Select();
+            //    return;
+            //}
+            //if (cmbHour.SelectedIndex==0)
+            //{
+            //    MessageBox.Show("Please select your available time.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    cmbHour.Select();
+            //    return;
+            //}
+            //if(IsConnectedToInternet())
+            //{
+            //    try
+            //    {
+            //        WebRequest webRequest = WebRequest.Create(globalVarLms.dateApi);
+            //        webRequest.Timeout = 8000;
+            //        WebResponse webResponse = webRequest.GetResponse();
+            //        Stream dataStream = webResponse.GetResponseStream();
+            //        StreamReader strmReader = new StreamReader(dataStream);
+            //        string currentDate = strmReader.ReadLine();
+            //        string currentTime = DateTime.Now.ToString("HH:mm:ss tt");
+            //        string contactType = "";
+            //        if(rdbWhatsApp.Checked)
+            //        {
+            //            contactType = rdbWhatsApp.Text;
+            //        }
+            //        if (rdbSkype.Checked)
+            //        {
+            //            contactType = rdbSkype.Text;
+            //        }
+            //        if (rdbPhone.Checked)
+            //        {
+            //            contactType = rdbPhone.Text;
+            //        }
+            //        string queryToInsert = "INSERT INTO technical_support (macId,productName,problemDescription,"+
+            //            "contactType,contactId,requestDate,requestTime,availableTime) VALUES('"+globalVarLms.machineId+"','" + Application.ProductName + "',"+
+            //            "'" + txtbDetails.Text + "','" + contactType + "','" + txtbId.Text + "','" + currentDate + "','" + currentTime + "','" + cmbHour.Text + "')";
+            //        //ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            //        webRequest = WebRequest.Create(globalVarLms.insertApi + queryToInsert);
+            //        webRequest.Timeout = 8000;
+            //        webResponse = webRequest.GetResponse();
+            //        MessageBox.Show("We have recived your request, "+Environment.NewLine+"We will contact as soon as possible!",Application.ProductName,MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //    }
+            //    catch
+            //    {
+            //        MessageBox.Show("Please try again.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please check your internet connection.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         public bool IsConnectedToInternet()

@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFA68581-1BA2-4265-BDB9-18CE63C4386F}|Setup\\Setup.csproj|G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\setup\\forminstall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95EDF076-F320-4E39-B6FC-FA2588C38689}|UNINSTALL\\UNINSTALL.vbproj|g:\\currentprojects\\github\\codeachiproject\\codeachi-lms\\online licensing\\codeachilmssetup\\uninstall\\formuninstall.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{95EDF076-F320-4E39-B6FC-FA2588C38689}|UNINSTALL\\UNINSTALL.vbproj|solutionrelative:uninstall\\formuninstall.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFA68581-1BA2-4265-BDB9-18CE63C4386F}|Setup\\Setup.csproj|g:\\currentprojects\\github\\codeachiproject\\codeachi-lms\\online licensing\\codeachilmssetup\\setup\\forminstall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFA68581-1BA2-4265-BDB9-18CE63C4386F}|Setup\\Setup.csproj|solutionrelative:setup\\forminstall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -12,9 +16,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Setup||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFA68581-1BA2-4265-BDB9-18CE63C4386F}|Setup\\Setup.csproj|g:\\currentprojects\\github\\codeachiproject\\codeachi-lms\\online licensing\\codeachilmssetup\\setup\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,39 +30,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormUninstall.vb",
+              "DocumentMoniker": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\UNINSTALL\\FormUninstall.vb",
+              "RelativeDocumentMoniker": "UNINSTALL\\FormUninstall.vb",
+              "ToolTip": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\UNINSTALL\\FormUninstall.vb",
+              "RelativeToolTip": "UNINSTALL\\FormUninstall.vb",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-05T08:34:54.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormInstall.cs",
               "DocumentMoniker": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\Setup\\FormInstall.cs",
               "RelativeDocumentMoniker": "Setup\\FormInstall.cs",
               "ToolTip": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\Setup\\FormInstall.cs",
               "RelativeToolTip": "Setup\\FormInstall.cs",
-              "ViewState": "AQIAAAwCAAAAAAAAAAAuwBsCAABMAAAA",
+              "ViewState": "AQIAABACAAAAAAAAAADwvx0CAAB3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T06:13:42.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormInstall.cs [Design]",
               "DocumentMoniker": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\Setup\\FormInstall.cs",
               "RelativeDocumentMoniker": "Setup\\FormInstall.cs",
               "ToolTip": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\Setup\\FormInstall.cs [Design]",
               "RelativeToolTip": "Setup\\FormInstall.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T06:13:38.275Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-28T06:13:38.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Setup",
               "DocumentMoniker": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\Setup\\Setup.csproj",
               "RelativeDocumentMoniker": "Setup\\Setup.csproj",
               "ToolTip": "G:\\CurrentProjects\\GitHub\\CodeAchiProject\\CodeAchi-LMS\\Online Licensing\\CodeAchiLmsSetup\\Setup\\Setup.csproj",
               "RelativeToolTip": "Setup\\Setup.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2023-07-14T08:31:06.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-07-14T08:31:06.689Z"
             }
           ]
         }

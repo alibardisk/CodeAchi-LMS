@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,6 +35,8 @@ namespace CodeAchi_Library_Management_System
         double memFees = 0.00, totalFees = 0.00;
         bool isAutoGenerate = false, isManualPrefix = false; string prefixText = "", joiningChar = "";
         List<string> brrIdList = new List<string> { };
+        PasswordHasher passwordHasher = new PasswordHasher();
+        string usageFilePath = Application.StartupPath + "/usage.json";
 
         private void FormImportExcelBorrower_Paint(object sender, PaintEventArgs e)
         {
@@ -1334,6 +1337,11 @@ namespace CodeAchi_Library_Management_System
                     EnableMenuItem(hMenu, SC_CLOSE, MF_ENABLED);
                     txtbFileName.Clear();
                     globalVarLms.backupRequired = true;
+                    string jsonString = passwordHasher.Decrypt(File.ReadAllText(usageFilePath));
+                    dynamic jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+                    jsonObject.Usage["total-member"] = Convert.ToInt32(jsonObject.Usage["total-member"]) + itemCount;
+                    jsonString = passwordHasher.Encrypt(jsonObject.Usage.ToString());
+                    File.WriteAllText(usageFilePath, jsonString);
                     MessageBox.Show("Borrower successfully imported.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (existData.Count > 0)
                     {

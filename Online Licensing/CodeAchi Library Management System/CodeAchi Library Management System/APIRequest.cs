@@ -334,6 +334,46 @@ namespace CodeAchi_Library_Management_System
             return responseResult;
         }
 
+        public async Task<string> CheckForUpdate(string jsonString)
+        {
+            string responseResult = "";
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+                    // Make a POST request with the data
+                    HttpResponseMessage response = await client.PostAsync(hostUrl + "/api/reg/software-update", content);
+
+                    // Check if the request was successful
+                    if (response.IsSuccessStatusCode)
+                    {
+                        responseResult = await response.Content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Failed with status code: {response.StatusCode}");
+                        // Log the response content if available
+                        if (response.Content != null)
+                        {
+                            string errorResponse = await response.Content.ReadAsStringAsync();
+                            Console.WriteLine($"Response content: {errorResponse}");
+                        }
+                    }
+                }
+                catch (HttpRequestException ex)
+                {
+                    Console.WriteLine($"HTTP request failed: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+            return responseResult;
+        }
+
         public string GetHardwareId()
         {
             //// Get UUID ID
